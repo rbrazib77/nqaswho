@@ -1,0 +1,812 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>External Examiner Reports</title>
+    <!-- Bootstrap 5 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Google Frontend -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap Icons -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <!-- Main Style CSS -->
+    <link rel="stylesheet" href="asstes/css/style.css" />
+    <!-- Responsive Style CSS -->
+    <link rel="stylesheet" href="asstes/css/media.css" />
+  </head>
+
+  <body>
+    <div class="main-wrapper">
+      <div class="main-card">
+        <!-- =========== NQAS System Header Section Start============== -->
+        <div class="nqas-system-header">
+          <!-- Logo -->
+          <div class="nqas-system-header-icon">
+            <img
+              src="asstes/images/12013.jpg"
+              width="150"
+              height="150"
+              alt="NQAS Logo"
+            />
+          </div>
+
+          <!-- Content -->
+          <div class="nqas-system-header-content">
+            <div class="nqas-system-header-title">
+              NQAS Data Collection System
+            </div>
+
+            <div class="nqas-system-header-subtitle">
+              Organized by
+              <strong> Directorate General of Medical Education (DGME) </strong>
+            </div>
+
+            <div class="nqas-system-header-support">
+              Supported by
+              <strong> World Health Organization (WHO), Bangladesh </strong>
+            </div>
+          </div>
+        </div>
+        <!-- =========NQAS System Header Section End ============== -->
+        <div class="nqas-card-content">
+          <!-- ==========================  External Examiner's Report========================== -->
+
+          <div class="nqas-form-report-wrapper">
+            <div class="nqas-form-report-body">
+              <div class="nqas-form-section-title">
+                <i class="bi bi-journal-text"></i>
+                External Examiner's Report Entry Form
+              </div>
+              <form>
+                <div class="row g-3 mb-4">
+                  <div class="col-12 col-md-6">
+                    <label for="medical_college" class="form-label">
+                      1. Name of Medical College:
+                    </label>
+
+                    <select
+                      name="medical_college"
+                      id="medical_college"
+                      class="form-select"
+                      required
+                    >
+                      <option value="" selected disabled>
+                        Select Medical College
+                      </option>
+                      <option value="Dhaka Medical College">
+                        Dhaka Medical College
+                      </option>
+                      <option value="Sir Salimullah Medical College">
+                        Sir Salimullah Medical College
+                      </option>
+                      <option value="Shaheed Suhrawardy Medical College">
+                        Shaheed Suhrawardy Medical College
+                      </option>
+                      <option value="Mymensingh Medical College">
+                        Mymensingh Medical College
+                      </option>
+                      <option value="Chattogram Medical College">
+                        Chattogram Medical College
+                      </option>
+                      <option value="Rajshahi Medical College">
+                        Rajshahi Medical College
+                      </option>
+                      <option value="MAG Osmani Medical College">
+                        MAG Osmani Medical College
+                      </option>
+                      <option value="Sher-E-Bangla Medical College">
+                        Sher-E-Bangla Medical College
+                      </option>
+                      <option value="Rangpur Medical College">
+                        Rangpur Medical College
+                      </option>
+                      <option value="Khulna Medical College">
+                        Khulna Medical College
+                      </option>
+                    </select>
+                  </div>
+
+                  <div class="col-12 col-md-6">
+                    <label class="form-label">2. Subject:</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Enter subject"
+                    />
+                  </div>
+                </div>
+                <!-- 3 -->
+                <div class="row g-3 mb-4">
+                  <div class="col-12 col-md-4">
+                    <label class="form-label">3. Period of Examination:</label>
+                  </div>
+
+                  <div class="col-12 col-sm-6 col-md-4">
+                    <label class="form-label">Starting Date</label>
+                    <input type="date" class="form-control" />
+                  </div>
+
+                  <div class="col-12 col-sm-6 col-md-4">
+                    <label class="form-label">Ending Date</label>
+                    <input type="date" class="form-control" />
+                  </div>
+                </div>
+
+                <!-- 4 -->
+                <div class="nqas-question">
+                  <label class="form-label nqas-question-label">
+                    4. Name Of Prof Only:
+                  </label>
+                  <div class="nqas-choice-box">
+                    <label class="nqas-choice">
+                      <input type="radio" name="phase" value="1st" />
+                      First Prof.
+                    </label>
+
+                    <label class="nqas-choice">
+                      <input type="radio" name="phase" value="2nd" />
+                      Second Prof.
+                    </label>
+
+                    <label class="nqas-choice">
+                      <input type="radio" name="phase" value="3rd" />
+                      Third Prof.
+                    </label>
+
+                    <label class="nqas-choice">
+                      <input type="radio" name="phase" value="4th" />
+                      Final Prof.
+                    </label>
+                  </div>
+                </div>
+
+                <!-- 5 -->
+                <div class="nqas-question">
+                  <label class="form-label nqas-question-label">
+                    5. Formative Assessment Procedures and documentation (All
+                    term & card exam.):
+                    <span class="assessment-note">
+                      (SA-strongly agree, A-agree, U-undecided, DA-disagree,
+                      SDA-strongly disagree)
+                    </span>
+                  </label>
+
+                  <div class="table-scroll">
+                    <table class="table table-bordered report-table">
+                      <thead>
+                        <tr>
+                          <th width="55">SL. No.</th>
+                          <th class="statement">Statements</th>
+                          <th>SA</th>
+                          <th>A</th>
+                          <th>U</th>
+                          <th>DA</th>
+                          <th>SDA</th>
+                        </tr>
+                      </thead>
+
+                      <tbody>
+                        <tr>
+                          <td class="text-center">1</td>
+                          <td>
+                            The formative assessment procedures were
+                            satisfactory
+                          </td>
+                          <td class="text-center">
+                            <input type="radio" name="q1" />
+                          </td>
+                          <td class="text-center">
+                            <input type="radio" name="q1" />
+                          </td>
+                          <td class="text-center">
+                            <input type="radio" name="q1" />
+                          </td>
+                          <td class="text-center">
+                            <input type="radio" name="q1" />
+                          </td>
+                          <td class="text-center">
+                            <input type="radio" name="q1" />
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <td class="text-center">2</td>
+                          <td>Records of formative assessment were adequate</td>
+                          <td class="text-center">
+                            <input type="radio" name="q2" />
+                          </td>
+                          <td class="text-center">
+                            <input type="radio" name="q2" />
+                          </td>
+                          <td class="text-center">
+                            <input type="radio" name="q2" />
+                          </td>
+                          <td class="text-center">
+                            <input type="radio" name="q2" />
+                          </td>
+                          <td class="text-center">
+                            <input type="radio" name="q2" />
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <td class="text-center">3</td>
+                          <td>
+                            Question papers and scripts were readily available
+                          </td>
+                          <td class="text-center">
+                            <input type="radio" name="q3" />
+                          </td>
+                          <td class="text-center">
+                            <input type="radio" name="q3" />
+                          </td>
+                          <td class="text-center">
+                            <input type="radio" name="q3" />
+                          </td>
+                          <td class="text-center">
+                            <input type="radio" name="q3" />
+                          </td>
+                          <td class="text-center">
+                            <input type="radio" name="q3" />
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <td class="text-center">4</td>
+                          <td>Examiner could review scripts</td>
+                          <td class="text-center">
+                            <input type="radio" name="q4" />
+                          </td>
+                          <td class="text-center">
+                            <input type="radio" name="q4" />
+                          </td>
+                          <td class="text-center">
+                            <input type="radio" name="q4" />
+                          </td>
+                          <td class="text-center">
+                            <input type="radio" name="q4" />
+                          </td>
+                          <td class="text-center">
+                            <input type="radio" name="q4" />
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+
+                <!-- 6 -->
+                <div class="nqas-question">
+                  <label class="form-label nqas-question-label">
+                    6. Documents Available for formative assessment were:
+                  </label>
+
+                  <div class="row g-2">
+                    <div class="col-12 col-md-6">
+                      <div class="form-check">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          id="attendance"
+                        />
+                        <label class="form-check-label" for="attendance"
+                          >Attendance</label
+                        >
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-md-6">
+                      <div class="form-check">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          id="marks"
+                        />
+                        <label class="form-check-label" for="marks"
+                          >Marks of Term Examination</label
+                        >
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-md-6">
+                      <div class="form-check">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          id="assignments"
+                        />
+                        <label class="form-check-label" for="assignments"
+                          >Assignments</label
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 7 -->
+                <div class="nqas-question">
+                  <label class="form-label nqas-question-label">
+                    7. Formative assessment can be further improved by:
+                  </label>
+
+                  <textarea
+                    name="comments"
+                    id="comments"
+                    class="form-control"
+                    rows="5"
+                    maxlength="500"
+                    placeholder="Enter your comments and suggestions..."
+                  ></textarea>
+
+                  <small class="text-danger">Maximum 500 Characters</small>
+                </div>
+
+                <!-- 8 -->
+                <div class="nqas-question">
+                  <label class="form-label nqas-question-label">
+                    8. Quality of Summative Assessment:
+                  </label>
+
+                  <div class="table-scroll">
+                    <table class="table table-bordered report-table">
+                      <thead>
+                        <tr>
+                          <th width="55">SL. No.</th>
+                          <th class="statement">Statements</th>
+                          <th>SA</th>
+                          <th>A</th>
+                          <th>U</th>
+                          <th>DA</th>
+                          <th>SDA</th>
+                        </tr>
+                      </thead>
+
+                      <tbody>
+                        <tr>
+                          <td class="text-center">1</td>
+                          <td>Quality of OSPE/OSCE was appropriate</td>
+                          <td class="text-center">
+                            <input type="radio" name="q5" />
+                          </td>
+                          <td class="text-center">
+                            <input type="radio" name="q5" />
+                          </td>
+                          <td class="text-center">
+                            <input type="radio" name="q5" />
+                          </td>
+                          <td class="text-center">
+                            <input type="radio" name="q5" />
+                          </td>
+                          <td class="text-center">
+                            <input type="radio" name="q5" />
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <td class="text-center">2</td>
+                          <td>
+                            Quality of clinical skill assessments was
+                            appropriate
+                          </td>
+                          <td class="text-center">
+                            <input type="radio" name="q6" />
+                          </td>
+                          <td class="text-center">
+                            <input type="radio" name="q6" />
+                          </td>
+                          <td class="text-center">
+                            <input type="radio" name="q6" />
+                          </td>
+                          <td class="text-center">
+                            <input type="radio" name="q6" />
+                          </td>
+                          <td class="text-center">
+                            <input type="radio" name="q6" />
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <td class="text-center">3</td>
+                          <td>
+                            Quality of practical assessments was appropriate
+                          </td>
+                          <td class="text-center">
+                            <input type="radio" name="q7" />
+                          </td>
+                          <td class="text-center">
+                            <input type="radio" name="q7" />
+                          </td>
+                          <td class="text-center">
+                            <input type="radio" name="q7" />
+                          </td>
+                          <td class="text-center">
+                            <input type="radio" name="q7" />
+                          </td>
+                          <td class="text-center">
+                            <input type="radio" name="q7" />
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <td class="text-center">4</td>
+                          <td>
+                            Quality of practical assessments was appropriate
+                          </td>
+                          <td class="text-center">
+                            <input type="radio" name="q8" />
+                          </td>
+                          <td class="text-center">
+                            <input type="radio" name="q8" />
+                          </td>
+                          <td class="text-center">
+                            <input type="radio" name="q8" />
+                          </td>
+                          <td class="text-center">
+                            <input type="radio" name="q8" />
+                          </td>
+                          <td class="text-center">
+                            <input type="radio" name="q8" />
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <td class="text-center">5</td>
+                          <td>
+                            Quality of practical assessments was appropriate
+                          </td>
+                          <td class="text-center">
+                            <input type="radio" name="q9" />
+                          </td>
+                          <td class="text-center">
+                            <input type="radio" name="q9" />
+                          </td>
+                          <td class="text-center">
+                            <input type="radio" name="q9" />
+                          </td>
+                          <td class="text-center">
+                            <input type="radio" name="q9" />
+                          </td>
+                          <td class="text-center">
+                            <input type="radio" name="q9" />
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+
+                <!-- 9 -->
+                <div class="nqas-question">
+                  <label class="form-label nqas-question-label">
+                    9. Information about OSPE/OSCE:
+                  </label>
+
+                  <div class="row g-3 nqas-inline-field ms-3">
+                    <div class="col-12 col-md-4">
+                      <label class="form-label">i) Procedural station</label>
+                    </div>
+                    <div class="col-12 col-md-8">
+                      <textarea
+                        name="procedural_station"
+                        class="form-control"
+                      ></textarea>
+                      <small class="text-danger">Maximum 200 Characters</small>
+                    </div>
+                  </div>
+
+                  <div class="row g-3 nqas-inline-field mt-1 ms-3">
+                    <div class="col-12 col-md-4">
+                      <label class="form-label">ii) Question station</label>
+                    </div>
+                    <div class="col-12 col-md-8">
+                      <textarea
+                        name="question_station"
+                        class="form-control"
+                      ></textarea>
+                      <small class="text-danger">Maximum 200 Characters</small>
+                    </div>
+                  </div>
+
+                  <div class="row g-3 nqas-inline-field mt-1 ms-3">
+                    <div class="col-12 col-md-4">
+                      <label class="form-label">iii) Checklist used</label>
+                    </div>
+                    <div class="col-12 col-md-8">
+                      <textarea
+                        name="checklist_used"
+                        class="form-control"
+                      ></textarea>
+                      <small class="text-danger">Maximum 200 Characters</small>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 10 -->
+                <div class="nqas-question">
+                  <label class="form-label nqas-question-label">
+                    10. Information about SOE:
+                  </label>
+
+                  <div class="row g-3 nqas-inline-field">
+                    <div class="col-12 col-md-7">
+                      <label class="form-label">
+                        i) No. of question sets/cards for SOE
+                      </label>
+                    </div>
+                    <div class="col-12 col-md-5">
+                      <input
+                        type="number"
+                        name="question_sets_cards"
+                        class="form-control"
+                        placeholder="Enter number"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="row g-3 nqas-inline-field mt-1">
+                    <div class="col-12 col-md-7">
+                      <label class="form-label">
+                        ii) Availability of structured answer/rating scale
+                      </label>
+                    </div>
+                    <div class="col-12 col-md-5">
+                      <input
+                        type="number"
+                        name="structured_answer_rating_scale"
+                        class="form-control"
+                        placeholder="Enter number"
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 10 -->
+                <div class="nqas-question">
+                  <label class="form-label nqas-question-label">
+                    10. The quality of SOE,OSPE,Pratical,clinical skil
+                    assessment can be further improved by:
+                  </label>
+                  <textarea
+                    class="form-control comment-box"
+                    placeholder="Enter your comments and suggestions..."
+                  ></textarea>
+                </div>
+                <!-- 11 -->
+                <div class="nqas-question">
+                  <label class="form-label nqas-question-label">
+                    11. Marking by internal examiner in professional
+                    Examination:
+                  </label>
+
+                  <div class="table-scroll">
+                    <table class="table table-bordered report-table">
+                      <thead>
+                        <tr>
+                          <th width="55">SL. No.</th>
+                          <th class="statement">Statements</th>
+                          <th>SA</th>
+                          <th>A</th>
+                          <th>U</th>
+                          <th>DA</th>
+                          <th>SDA</th>
+                        </tr>
+                      </thead>
+
+                      <tbody>
+                        <tr>
+                          <td class="text-center">1</td>
+                          <td>
+                            The formative assessment procedures were
+                            satisfactory
+                          </td>
+                          <td class="text-center">
+                            <input type="radio" name="q1" />
+                          </td>
+                          <td class="text-center">
+                            <input type="radio" name="q1" />
+                          </td>
+                          <td class="text-center">
+                            <input type="radio" name="q1" />
+                          </td>
+                          <td class="text-center">
+                            <input type="radio" name="q1" />
+                          </td>
+                          <td class="text-center">
+                            <input type="radio" name="q1" />
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <td class="text-center">2</td>
+                          <td>Records of formative assessment were adequate</td>
+                          <td class="text-center">
+                            <input type="radio" name="q2" />
+                          </td>
+                          <td class="text-center">
+                            <input type="radio" name="q2" />
+                          </td>
+                          <td class="text-center">
+                            <input type="radio" name="q2" />
+                          </td>
+                          <td class="text-center">
+                            <input type="radio" name="q2" />
+                          </td>
+                          <td class="text-center">
+                            <input type="radio" name="q2" />
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <td class="text-center">3</td>
+                          <td>
+                            Question papers and scripts were readily available
+                          </td>
+                          <td class="text-center">
+                            <input type="radio" name="q3" />
+                          </td>
+                          <td class="text-center">
+                            <input type="radio" name="q3" />
+                          </td>
+                          <td class="text-center">
+                            <input type="radio" name="q3" />
+                          </td>
+                          <td class="text-center">
+                            <input type="radio" name="q3" />
+                          </td>
+                          <td class="text-center">
+                            <input type="radio" name="q3" />
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <td class="text-center">4</td>
+                          <td>Examiner could review scripts</td>
+                          <td class="text-center">
+                            <input type="radio" name="q4" />
+                          </td>
+                          <td class="text-center">
+                            <input type="radio" name="q4" />
+                          </td>
+                          <td class="text-center">
+                            <input type="radio" name="q4" />
+                          </td>
+                          <td class="text-center">
+                            <input type="radio" name="q4" />
+                          </td>
+                          <td class="text-center">
+                            <input type="radio" name="q4" />
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <!-- 13 -->
+                <div class="nqas-question">
+                  <label class="form-label nqas-question-label">
+                    13. Overall,the performance of the students relation to list
+                    of competencies and outcome defned in curriculum:
+                  </label>
+
+                  <div class="row g-3 nqas-inline-field ms-3">
+                    <div class="col-12 col-md-4">
+                      <label class="form-label">i) Below expectation</label>
+                    </div>
+                    <div class="col-12 col-md-8">
+                      <textarea
+                        name="procedural_station"
+                        class="form-control"
+                      ></textarea>
+                      <small class="text-danger">Maximum 200 Characters</small>
+                    </div>
+                  </div>
+
+                  <div class="row g-3 nqas-inline-field mt-1 ms-3">
+                    <div class="col-12 col-md-4">
+                      <label class="form-label">ii) Met expectation</label>
+                    </div>
+                    <div class="col-12 col-md-8">
+                      <textarea
+                        name="question_station"
+                        class="form-control"
+                      ></textarea>
+                      <small class="text-danger">Maximum 200 Characters</small>
+                    </div>
+                  </div>
+
+                  <div class="row g-3 nqas-inline-field mt-1 ms-3">
+                    <div class="col-12 col-md-4">
+                      <label class="form-label">iii) Above expectation</label>
+                    </div>
+                    <div class="col-12 col-md-8">
+                      <textarea
+                        name="checklist_used"
+                        class="form-control"
+                      ></textarea>
+                      <small class="text-danger">Maximum 200 Characters</small>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="nqas-question">
+                  <label class="form-label nqas-question-label">
+                    14. The quality of SOE,OSPE,Pratical,clinical skil
+                    assessment can be further improved by:
+                  </label>
+                  <textarea
+                    class="form-control comment-box"
+                    placeholder="Enter your comments and suggestions..."
+                  ></textarea>
+                </div>
+
+                <!-- Signature -->
+                <div class="signature-box mb-4">
+                  <div class="row g-3">
+                    <div class="col-12 col-md-6">
+                      <label class="form-label">Examiner Name</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="Enter examiner name"
+                      />
+                    </div>
+
+                    <div class="col-12 col-sm-6 col-md-3">
+                      <label class="form-label">Date</label>
+                      <input type="date" class="form-control" />
+                    </div>
+
+                    <div class="col-12 col-sm-6 col-md-3">
+                      <label class="form-label">Signature</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="Signature"
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Buttons -->
+                <div class="form-actions d-flex gap-2 justify-content-end">
+                  <button
+                    type="reset"
+                    class="btn btn-outline-secondary btn-reset"
+                  >
+                    <i class="bi bi-arrow-counterclockwise me-1"></i>
+                    Reset
+                  </button>
+
+                  <button type="submit" class="btn btn-submit">
+                    <i class="bi bi-check-circle me-1"></i>
+                    Submit Report
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <!-- ===========Footer============== -->
+        <footer class="footer">
+          © 2026 NQAS Data Collection System<span>|</span
+          ><a target="_blank" href="https://dgme.gov.bd/">DGME</a> <span>|</span
+          ><a target="_blank" href="https://www.who.int/">WHO Bangladesh</a>
+        </footer>
+      </div>
+    </div>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

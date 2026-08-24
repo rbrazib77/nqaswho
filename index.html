@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NQAS Data Collection System</title>
+    <!-- Bootstrap 5 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Google Frontend -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap Icons -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <!-- Main Style CSS -->
+    <link rel="stylesheet" href="asstes/css/style.css" />
+    <!-- Responsive Style CSS -->
+    <link rel="stylesheet" href="asstes/css/media.css" />
+  </head>
+
+  <body>
+    <div class="main-wrapper">
+      <div class="main-card">
+        <!-- =========== NQAS System Header Section Start============== -->
+        <div class="nqas-system-header">
+          <!-- Logo -->
+          <div class="nqas-system-header-icon">
+            <img
+              src="asstes/images/12013.jpg"
+              width="150"
+              height="150"
+              alt="NQAS Logo"
+            />
+          </div>
+
+          <!-- Content -->
+          <div class="nqas-system-header-content">
+            <div class="nqas-system-header-title">
+              NQAS Data Collection System
+            </div>
+
+            <div class="nqas-system-header-subtitle">
+              Organized by
+              <strong> Directorate General of Medical Education (DGME) </strong>
+            </div>
+
+            <div class="nqas-system-header-support">
+              Supported by
+              <strong> World Health Organization (WHO), Bangladesh </strong>
+            </div>
+          </div>
+        </div>
+        <!-- =========NQAS System Header Section End ============== -->
+        <div class="nqas-card-content">
+          <div class="nqas-action-buttons">
+            <!-- External Examiner -->
+            <a
+              href="externalexaminer.html"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="nqas-action-btn"
+            >
+              <i class="bi bi-file-earmark-text"></i>
+              <span>External Examiner's Report</span>
+            </a>
+            <!-- Teachers Evaluation -->
+            <a
+              href="teachersEvaluation.html"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="nqas-action-btn"
+            >
+              <i class="bi bi-clipboard-check"></i>
+              <span>
+                Teachers Evaluation Form
+                <small>(by Student)</small>
+              </span>
+            </a>
+            <!-- ONLY LOGIN BUTTON -->
+            <button
+              type="button"
+              id="loginToggle"
+              class="nqas-action-btn login-btn"
+              onclick="toggleLogin()"
+            >
+              <i class="bi bi-graph-up"></i>
+              <span> Annual Report </span>
+            </button>
+          </div>
+
+          <!-- LOGIN FORM -->
+          <div id="loginForm" class="login-section">
+            <div class="row justify-content-center">
+              <div class="col-md-7">
+                <div class="text-center mb-4">
+                  <div class="login-icon">
+                    <i class="bi bi-person-circle"></i>
+                  </div>
+
+                  <h5 class="fw-bold">Annual Report</h5>
+
+                  <p class="text-muted">Login to access the Annual Report</p>
+                </div>
+                <form>
+                  <!-- Username -->
+
+                  <div class="mb-3">
+                    <label class="form-label"> Email </label>
+
+                    <div class="input-group">
+                      <span class="input-group-text">
+                        <i class="bi bi-person"></i>
+                      </span>
+
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="Enter username"
+                      />
+                    </div>
+                  </div>
+
+                  <!-- Password -->
+                  <div class="mb-3">
+                    <label class="form-label"> Password </label>
+                    <div class="input-group">
+                      <span class="input-group-text">
+                        <i class="bi bi-lock"></i>
+                      </span>
+
+                      <input
+                        type="password"
+                        class="form-control"
+                        placeholder="Enter password"
+                      />
+                    </div>
+                  </div>
+
+                  <!-- Remember -->
+                  <div class="d-flex justify-content-between mb-4">
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        id="remember"
+                      />
+                      <label class="form-check-label" for="remember">
+                        Remember me
+                      </label>
+                    </div>
+                    <a href="#" class="text-decoration-none">
+                      Forgot Password?
+                    </a>
+                  </div>
+
+                  <!-- Login -->
+                  <button type="submit" class="btn btn-main w-100">
+                    <i class="bi bi-box-arrow-in-right me-1"></i>
+                    Login
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- ===========Footer============== -->
+        <footer class="footer">
+          © 2026 NQAS Data Collection System<span>|</span
+          ><a target="_blank" href="https://dgme.gov.bd/">DGME</a> <span>|</span
+          ><a target="_blank" href="https://www.who.int/">WHO Bangladesh</a>
+        </footer>
+      </div>
+    </div>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      function toggleLogin() {
+        const loginForm = document.getElementById("loginForm");
+        const loginButton = document.getElementById("loginToggle");
+
+        if (loginForm.style.display === "block") {
+          // Hide Login Form
+          loginForm.style.display = "none";
+
+          // Remove Active
+          loginButton.classList.remove("active");
+        } else {
+          // Show Login Form
+          loginForm.style.display = "block";
+
+          // Add Active
+          loginButton.classList.add("active");
+
+          // Scroll to form
+          loginForm.scrollIntoView({
+            behavior: "smooth",
+            block: "center",
+          });
+        }
+      }
+    </script>
+  </body>
+</html>
