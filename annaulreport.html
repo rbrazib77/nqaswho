@@ -409,6 +409,194 @@
     }
 
 }
+/* =====================================================
+   NQAS Annual Report - Additional Questions
+===================================================== */
+
+.nqas-annual-report__followup {
+    margin-top: 15px;
+    padding-left: 20px;
+}
+
+.nqas-annual-report__followup > label {
+    display: block;
+    margin-bottom: 7px;
+    color: #475467;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+
+/* =====================================================
+   Hint
+===================================================== */
+
+.nqas-annual-report__hint {
+    color: #667085;
+    font-size: 12px;
+    font-weight: 400;
+    font-style: italic;
+}
+
+
+/* =====================================================
+   Number List
+===================================================== */
+
+.nqas-annual-report__number-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.nqas-annual-report__number-item {
+    display: grid;
+    grid-template-columns: 25px minmax(0, 1fr);
+    align-items: center;
+    gap: 8px;
+}
+
+.nqas-annual-report__number-item > span {
+    color: #475467;
+    font-size: 13px;
+}
+
+
+/* =====================================================
+   Nested Questions
+===================================================== */
+
+.nqas-annual-report__nested-question {
+    padding-left: 25px;
+}
+
+.nqas-annual-report__nested-question::before {
+    content: "";
+}
+
+
+/* =====================================================
+   Percentage Input
+===================================================== */
+
+.nqas-annual-report__input-suffix {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    max-width: 220px;
+}
+
+.nqas-annual-report__input-suffix .form-control {
+    flex: 1;
+}
+
+.nqas-annual-report__input-suffix > span {
+    color: #475467;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+
+/* =====================================================
+   Publication / Paper
+===================================================== */
+
+.nqas-annual-report__publication-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+.nqas-annual-report__publication-item {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 180px;
+    align-items: center;
+    gap: 15px;
+}
+
+.nqas-annual-report__publication-item > span {
+    color: #475467;
+    font-size: 13px;
+}
+
+
+/* =====================================================
+   Note
+===================================================== */
+
+.nqas-annual-report__note {
+    margin-top: 25px;
+    padding: 14px 16px;
+    background: #f8fafc;
+    border-left: 3px solid #087f8c;
+    border-radius: 5px;
+    color: #667085;
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+.nqas-annual-report__note strong {
+    color: #344054;
+}
+
+
+/* =====================================================
+   Textarea
+===================================================== */
+
+.nqas-form--annual-report textarea.form-control {
+    min-height: 95px;
+    resize: vertical;
+}
+
+
+/* =====================================================
+   File Input
+===================================================== */
+
+.nqas-form--annual-report input[type="file"] {
+    min-height: 42px;
+    padding: 8px 10px;
+    font-size: 13px;
+}
+
+
+/* =====================================================
+   Mobile Responsive
+===================================================== */
+
+@media (max-width: 767px) {
+
+    .nqas-annual-report__followup {
+        padding-left: 0;
+    }
+
+    .nqas-annual-report__nested-question {
+        padding-left: 0;
+    }
+
+    .nqas-annual-report__number-item {
+        grid-template-columns: 25px minmax(0, 1fr);
+    }
+
+    .nqas-annual-report__input-suffix {
+        max-width: 100%;
+    }
+
+    .nqas-annual-report__publication-item {
+        grid-template-columns: 1fr;
+        gap: 6px;
+    }
+
+    .nqas-annual-report__publication-item .form-control {
+        max-width: 180px;
+    }
+
+    .nqas-annual-report__note {
+        font-size: 11px;
+    }
+}
 </style>
   <body>
     <div class="main-wrapper">
@@ -443,211 +631,766 @@
           </div>
         </div>
         <!-- =========NQAS System Header Section End ============== -->
-<form class="nqas-form nqas-form--annual-report">
-
-   
-      <div class="nqas-form-section-title">
-                <i class="bi bi-journal-text"></i>
-                Annual Report 
-             Form <strong>(by Medical College)</strong>
-              </div>
-        <!-- <h1 class="nqas-annual-report__title">
-    
-             
-        </h1> -->
-
-    
-
-
-    <!-- ================================
-         A. Cover Page
-    ================================= -->
-
-    <section class="nqas-annual-report__section">
-
-        <div class="row g-3">
-
-            <!-- Medical College -->
-            <div class="col-md-6">
-
-                <label class="nqas-annual-report__label">
-                    i) Name of the Medical College / Dental College
-                </label>
-
-                <input
-                    type="text"
-                    name="college_name"
-                    class="form-control"
-                    placeholder="Enter medical / dental college name"
-                >
-
+        <form class="nqas-form nqas-form--annual-report">
+            <div class="nqas-form-section-title">
+                        <i class="bi bi-journal-text"></i>
+                        Annual Report 
+                    Form <strong>(by Medical College)</strong>
             </div>
+            <!-- ====================== A. Cover Page ============================ -->
+            <section class="nqas-annual-report__section">
+
+                <div class="row g-3">
+
+                    <!-- Medical College -->
+                    <div class="col-md-6">
+
+                        <label class="nqas-annual-report__label">
+                            i) Name of the Medical College / Dental College
+                        </label>
+
+                        <input
+                            type="text"
+                            name="college_name"
+                            class="form-control"
+                            placeholder="Enter medical / dental college name"
+                        >
+
+                    </div>
 
 
-            <!-- Year -->
-            <div class="col-md-6">
+                    <!-- Year -->
+                    <div class="col-md-6">
 
-                <label class="nqas-annual-report__label">
-                    ii) Year of Establishment
-                </label>
+                        <label class="nqas-annual-report__label">
+                            ii) Year of Establishment
+                        </label>
 
-                <input
-                    type="number"
-                    name="establishment_year"
-                    class="form-control"
-                    placeholder="Enter year"
-                >
+                        <input
+                            type="number"
+                            name="establishment_year"
+                            class="form-control"
+                            placeholder="Enter year"
+                        >
 
-            </div>
+                    </div>
 
 
-            <!-- Mailing Address -->
-            <div class="col-md-12">
+                    <!-- Mailing Address -->
+                    <div class="col-md-12">
 
-                <label class="nqas-annual-report__label">
-                    iii) Mailing Address
-                </label>
+                        <label class="nqas-annual-report__label">
+                            iii) Mailing Address
+                        </label>
+
+                        <textarea
+                            name="mailing_address"
+                            class="form-control"
+                            rows="2"
+                            placeholder="Enter mailing address"
+                        ></textarea>
+
+                    </div>
+
+
+                    <!-- Phone -->
+                    <div class="col-md-6">
+
+                        <label class="nqas-annual-report__label">
+                            iv) Contact Phone / WhatsApp
+                        </label>
+                        <input
+                            type="tel"
+                            name="phone"
+                            class="form-control"
+                            placeholder="Enter phone / WhatsApp number"
+                        >
+                    </div>
+
+
+                    <!-- Fax -->
+                    <div class="col-md-6">
+
+                        <label class="nqas-annual-report__label">
+                            v) Fax
+                        </label>
+
+                        <input
+                            type="text"
+                            name="fax"
+                            class="form-control"
+                            placeholder="Enter fax number"
+                        >
+
+                    </div>
+
+
+                    <!-- Email -->
+                    <div class="col-md-6">
+
+                        <label class="nqas-annual-report__label">
+                            vi) E-mail <span class="text-danger">*</span>
+                        </label>
+
+                        <input
+                            type="email"
+                            name="email"
+                            class="form-control"
+                            placeholder="Enter email address"
+                        >
+
+                    </div>
+
+
+                    <!-- Website -->
+                    <div class="col-md-6">
+
+                        <label class="nqas-annual-report__label">
+                            vii) Website
+                        </label>
+
+                        <input
+                            type="url"
+                            name="website"
+                            class="form-control"
+                            placeholder="https://example.com"
+                        >
+
+                    </div>
+
+                </div>
+
+            </section>
+            <!-- =====================B. Executive Summary============================ -->
+            <section class="nqas-annual-report__section">
+
+                <div class="nqas-annual-report__subsection-title">
+                    B. Executive Summary
+                </div>
+
+                <div class="nqas-annual-report__guideline">
+                    Guideline: A brief description of strength and future prospects
+                </div>
 
                 <textarea
-                    name="mailing_address"
+                    name="executive_summary"
                     class="form-control"
-                    rows="2"
-                    placeholder="Enter mailing address"
+                    rows="5"
+                    placeholder="Write a brief description of strength and future prospects..."
                 ></textarea>
 
-            </div>
+            </section>
+            <!-- =======================C. Details Information======================== -->
+            <section class="nqas-annual-report__section">
+                <!-- 1. Basic Information -->
+
+                <div class="nqas-annual-report__subsection">
+
+                    <h3 class="nqas-annual-report__subsection-title">
+                        1. Basic Information of the Medical College / Institute
+                    </h3>
+
+                    <div class="row">
+                    <div class="col-md-6">
+                        <!-- Name -->
+                    <div class="nqas-annual-report__question">
+
+                        <label>
+                            i) Name of medical / Dental college
+                        </label>
+
+                        <input
+                            type="text"
+                            name="basic_college_name"
+                            class="form-control"
+                            placeholder="Enter medical / dental college name"
+                        >
+                    </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="nqas-annual-report__question">
+
+                            <label>
+                                ii) Type of medical / Dental college
+                            </label>
+
+                            <div class="nqas-annual-report__radio-group">
+
+                                <label class="nqas-annual-report__radio">
+                                    <input
+                                        type="radio"
+                                        name="college_type"
+                                        value="private"
+                                    >
+                                    <span>Private</span>
+                                </label>
+
+                                <label class="nqas-annual-report__radio">
+                                    <input
+                                        type="radio"
+                                        name="college_type"
+                                        value="public"
+                                    >
+                                    <span>Public</span>
+                                </label>
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <!-- Teachers -->
+                        <div class="nqas-annual-report__question">
+
+                            <label>
+                                iii) How many teachers are working in your college at present?
+                            </label>
+
+                            <input
+                                type="file"
+                                name="total_teachers"
+                                class="form-control "
+                                min="0"
+                            >
+
+                        </div>
+                    </div>
+                        <div class="col-md-6">
+                            <div class="nqas-annual-report__question">
+                                <label>
+                                    iv) How many teachers are working part-time?
+                                </label>
+                                <input
+                                    type="number"
+                                    name="part_time_teachers"
+                                    class="form-control"
+                                    min="0"
+                                >
+
+                            </div>
+                        </div>
+                    <div class="col-md-6">
+                        <div class="nqas-annual-report__question">
+                            <label>
+                                v) How many students are studying in your college at present?
+                            </label>
+                            <input
+                                type="number"
+                                name="total_students"
+                                class="form-control"
+                                min="0"
+                            >
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <!-- ========================2. QAS Background====================== -->
+                <div class="nqas-annual-report__subsection">
+
+                    <h3 class="nqas-annual-report__subsection-title">
+                        2. Quality Assurance Scheme—Background Information of QAS
+                        of your medical college
+                    </h3>
+
+                    <div class="row">
+                    
+                    <div class="col-md-6">
+                    <div class="nqas-annual-report__question">
+
+                        <label>
+                            a. In your Institute QAS is —
+                        </label>
+
+                        <div class="nqas-annual-report__radio-group">
+
+                            <label class="nqas-annual-report__radio">
+                                <input
+                                    type="radio"
+                                    name="qas_status"
+                                    value="ongoing"
+                                >
+                                <span>Going on</span>
+                            </label>
+
+                            <label class="nqas-annual-report__radio">
+                                <input
+                                    type="radio"
+                                    name="qas_status"
+                                    value="not_going"
+                                >
+                                <span>Not going on</span>
+                            </label>
+
+                            <label class="nqas-annual-report__radio">
+                                <input
+                                    type="radio"
+                                    name="qas_status"
+                                    value="yet_to_start"
+                                >
+                                <span>Yet to be started</span>
+                            </label>
+
+                        </div>
+
+                    </div>
+                    </div>
+
+                    <div class="col-md-6">
+                    <div class="nqas-annual-report__question">
+
+                        <label>
+                            b. Scheme started in the year
+                        </label>
+
+                        <input
+                            type="number"
+                            name="qas_start_year"
+                            class="form-control "
+                        >
+                    </div>
+                    </div>
+                    </div>
+
+                    <!-- Coordinator -->
+
+                    <div class="nqas-annual-report__question">
+
+                        <label>
+                            c. Name of the academic coordinator with designation
+                        </label>
+
+                        <input
+                            type="text"
+                            name="academic_coordinator"
+                            class="form-control"
+                            placeholder="Name and designation"
+                        >
+
+                    </div>
 
 
-            <!-- Phone -->
-            <div class="col-md-6">
+                    <!-- Phase Coordinators -->
 
-                <label class="nqas-annual-report__label">
-                    iv) Contact Phone / WhatsApp
-                </label>
-                <input
-                    type="tel"
-                    name="phone"
-                    class="form-control"
-                    placeholder="Enter phone / WhatsApp number"
-                >
-            </div>
+                    <div class="nqas-annual-report__question">
+
+                        <label>
+                            d. Names of phase coordinators with designation
+                        </label>
 
 
-            <!-- Fax -->
-            <div class="col-md-6">
+                        <div class="nqas-annual-report__phase-list">
 
-                <label class="nqas-annual-report__label">
-                    v) Fax
-                </label>
+                            <div class="nqas-annual-report__phase-item">
+                                <span>1st Phase</span>
+                                <input
+                                    type="text"
+                                    name="phase_1_coordinator"
+                                    class="form-control"
+                                    placeholder="Name and designation"
+                                >
+                            </div>
 
-                <input
-                    type="text"
-                    name="fax"
-                    class="form-control"
-                    placeholder="Enter fax number"
-                >
+                            <div class="nqas-annual-report__phase-item">
+                                <span>2nd Phase</span>
+                                <input
+                                    type="text"
+                                    name="phase_2_coordinator"
+                                    class="form-control"
+                                    placeholder="Name and designation"
+                                >
+                            </div>
 
-            </div>
+                            <div class="nqas-annual-report__phase-item">
+                                <span>3rd Phase</span>
+                                <input
+                                    type="text"
+                                    name="phase_3_coordinator"
+                                    class="form-control"
+                                    placeholder="Name and designation"
+                                >
+                            </div>
 
+                            <div class="nqas-annual-report__phase-item">
+                                <span>Final Phase</span>
+                                <input
+                                    type="text"
+                                    name="final_phase_coordinator"
+                                    class="form-control"
+                                    placeholder="Name and designation"
+                                >
+                            </div>
 
-            <!-- Email -->
-            <div class="col-md-6">
+                        </div>
 
-                <label class="nqas-annual-report__label">
-                    vi) E-mail <span class="text-danger">*</span>
-                </label>
+                    </div>
+                    <!-- Meetings -->
+                    <div class="nqas-annual-report__question">
 
-                <input
-                    type="email"
-                    name="email"
-                    class="form-control"
-                    placeholder="Enter email address"
-                >
-
-            </div>
-
-
-            <!-- Website -->
-            <div class="col-md-6">
-
-                <label class="nqas-annual-report__label">
-                    vii) Website
-                </label>
-
-                <input
-                    type="url"
-                    name="website"
-                    class="form-control"
-                    placeholder="https://example.com"
-                >
-
-            </div>
-
-        </div>
-
-    </section>
+                        <label>
+                            e. Total number of meetings within last 12 months
+                        </label>
 
 
-    <!-- ================================
-         B. Executive Summary
-    ================================= -->
+                        <div class="nqas-annual-report__meeting-list">
 
-    <section class="nqas-annual-report__section">
+                            <div class="nqas-annual-report__meeting-item">
+                                <span>Academic Council</span>
+                                <input
+                                    type="number"
+                                    name="academic_council_meeting"
+                                    class="form-control"
+                                    min="0"
+                                >
+                            </div>
 
-        <div class="nqas-annual-report__subsection-title">
-            B. Executive Summary
-        </div>
+                            <div class="nqas-annual-report__meeting-item">
+                                <span>Academic Coordinator Committee</span>
+                                <input
+                                    type="number"
+                                    name="academic_coordinator_meeting"
+                                    class="form-control"
+                                    min="0"
+                                >
+                            </div>
 
-        <div class="nqas-annual-report__guideline">
-            Guideline: A brief description of strength and future prospects
-        </div>
+                            <div class="nqas-annual-report__meeting-item">
+                                <span>Faculty Development Review Committee</span>
+                                <input
+                                    type="number"
+                                    name="faculty_development_meeting"
+                                    class="form-control"
+                                    min="0"
+                                >
+                            </div>
 
-        <textarea
-            name="executive_summary"
-            class="form-control"
-            rows="5"
-            placeholder="Write a brief description of strength and future prospects..."
-        ></textarea>
+                            <div class="nqas-annual-report__meeting-item">
+                                <span>1st Phase Committee Meeting</span>
+                                <input
+                                    type="number"
+                                    name="phase_1_meeting"
+                                    class="form-control"
+                                    min="0"
+                                >
+                            </div>
 
-    </section>
+                            <div class="nqas-annual-report__meeting-item">
+                                <span>2nd Phase Committee Meeting</span>
+                                <input
+                                    type="number"
+                                    name="phase_2_meeting"
+                                    class="form-control"
+                                    min="0"
+                                >
+                            </div>
+
+                            <div class="nqas-annual-report__meeting-item">
+                                <span>3rd Phase Committee Meeting</span>
+                                <input
+                                    type="number"
+                                    name="phase_3_meeting"
+                                    class="form-control"
+                                    min="0"
+                                >
+                            </div>
+
+                            <div class="nqas-annual-report__meeting-item">
+                                <span>Final Phase Committee Meeting</span>
+                                <input
+                                    type="number"
+                                    name="final_phase_meeting"
+                                    class="form-control"
+                                    min="0"
+                                >
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+                <!-- =================== 3. Curriculum Execution============================ -->
+                <div class="nqas-annual-report__subsection">
+
+                    <h3 class="nqas-annual-report__subsection-title">
+                        3. Curriculum Execution
+                    </h3>
 
 
-    <!-- ================================
-         C. Details Information
-    ================================= -->
+                    <!-- Question -->
 
-    <section class="nqas-annual-report__section">
+                    <div class="nqas-annual-report__yesno-question">
 
-        <!-- 1. Basic Information -->
+                        <span>
+                            a. The college has academic calendar for each batch
+                        </span>
 
-        <div class="nqas-annual-report__subsection">
+                        <label>
+                            <input type="radio" name="academic_calendar" value="yes">
+                            Yes
+                        </label>
 
-            <h3 class="nqas-annual-report__subsection-title">
-                1. Basic Information of the Medical College / Institute
-            </h3>
+                        <label>
+                            <input type="radio" name="academic_calendar" value="no">
+                            No
+                        </label>
 
-            <div class="row">
-              <div class="col-md-6">
-                 <!-- Name -->
-            <div class="nqas-annual-report__question">
+                    </div>
 
-                <label>
-                    i) Name of medical / Dental college
-                </label>
 
-                <input
-                    type="text"
-                    name="basic_college_name"
-                    class="form-control"
-                     placeholder="Enter medical / dental college name"
-                >
-            </div>
-              </div>
-              <div class="col-md-6">
+                    <div class="nqas-annual-report__yesno-question">
+
+                        <span>
+                            b. The college has daily schedule for each batch
+                            compatible to curriculum
+                        </span>
+
+                        <label>
+                            <input type="radio" name="daily_schedule" value="yes">
+                            Yes
+                        </label>
+
+                        <label>
+                            <input type="radio" name="daily_schedule" value="no">
+                            No
+                        </label>
+
+                    </div>
+
+
+                    <div class="nqas-annual-report__yesno-question">
+
+                        <span>
+                            c. The college has regular schedule of Integrated teaching
+                        </span>
+
+                        <label>
+                            <input type="radio" name="integrated_teaching" value="yes">
+                            Yes
+                        </label>
+
+                        <label>
+                            <input type="radio" name="integrated_teaching" value="no">
+                            No
+                        </label>
+
+                    </div>
+
+
+                    <div class="nqas-annual-report__yesno-question">
+
+                        <span>
+                            d. The college has regular schedule of generic topics
+                        </span>
+
+                        <label>
+                            <input type="radio" name="generic_topics" value="yes">
+                            Yes
+                        </label>
+
+                        <label>
+                            <input type="radio" name="generic_topics" value="no">
+                            No
+                        </label>
+
+                    </div>
+
+                </div>
+            </section>
+            <!-- ==========================4.Student Performance / Course Appraisal========== -->
+            <div class="nqas-annual-report__subsection">
+                <h3 class="nqas-annual-report__subsection-title">
+                    4. Student Performance/Course Appraisal
+                </h3>
+                <!-- 4.a -->
+                <div class="nqas-annual-report__question">
+                    <label>
+                        a. Do your college collect questionnaire of phase wise evaluation by students?
+                    </label>
+                    <div class="nqas-annual-report__radio-group">
+                        <label class="nqas-annual-report__radio">
+                            <input type="radio" name="phase_wise_evaluation" value="yes">
+                            <span>Yes</span>
+                        </label>
+
+                        <label class="nqas-annual-report__radio">
+                            <input type="radio" name="phase_wise_evaluation" value="no">
+                            <span>No</span>
+                        </label>
+                    </div>
+
+                    <div class="nqas-annual-report__followup">
+                        <label>
+                            If yes, how often do you do that?
+                        </label>
+
+                        <input
+                            type="text"
+                            name="phase_evaluation_frequency"
+                            class="form-control"
+                            placeholder="Mention frequency"
+                        >
+                    </div>
+
+                </div>
+
+
+                <!-- 4.b -->
                 <div class="nqas-annual-report__question">
 
                     <label>
-                        ii) Type of medical / Dental college
+                        b. What were the major suggestions given by the students?
+                    </label>
+
+                    <div class="nqas-annual-report__phase-list">
+
+                        <div class="nqas-annual-report__phase-item">
+                            <span>1st Phase</span>
+                            <input
+                                type="text"
+                                name="student_suggestion_1st_phase"
+                                class="form-control"
+                                placeholder="Major suggestion"
+                            >
+                        </div>
+
+                        <div class="nqas-annual-report__phase-item">
+                            <span>2nd Phase</span>
+                            <input
+                                type="text"
+                                name="student_suggestion_2nd_phase"
+                                class="form-control"
+                                placeholder="Major suggestion"
+                            >
+                        </div>
+
+                        <div class="nqas-annual-report__phase-item">
+                            <span>3rd Phase</span>
+                            <input
+                                type="text"
+                                name="student_suggestion_3rd_phase"
+                                class="form-control"
+                                placeholder="Major suggestion"
+                            >
+                        </div>
+
+                        <div class="nqas-annual-report__phase-item">
+                            <span>Final Phase</span>
+                            <input
+                                type="text"
+                                name="student_suggestion_final_phase"
+                                class="form-control"
+                                placeholder="Major suggestion"
+                            >
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- 4.c -->
+                <div class="nqas-annual-report__question">
+
+                    <label>
+                        c. What percentage of students passed in the last year?
+                    </label>
+
+                    <div class="nqas-annual-report__phase-list">
+
+                        <div class="nqas-annual-report__phase-item">
+                            <span>1st Prof.</span>
+                            <div class="nqas-annual-report__input-suffix">
+                                <input
+                                    type="number"
+                                    name="pass_percentage_1st_prof"
+                                    class="form-control"
+                                    min="0"
+                                    max="100"
+                                    step="0.01"
+                                    placeholder="0"
+                                >
+                                <span>%</span>
+                            </div>
+                        </div>
+
+                        <div class="nqas-annual-report__phase-item">
+                            <span>2nd Prof.</span>
+                            <div class="nqas-annual-report__input-suffix">
+                                <input
+                                    type="number"
+                                    name="pass_percentage_2nd_prof"
+                                    class="form-control"
+                                    min="0"
+                                    max="100"
+                                    step="0.01"
+                                    placeholder="0"
+                                >
+                                <span>%</span>
+                            </div>
+                        </div>
+
+                        <div class="nqas-annual-report__phase-item">
+                            <span>3rd Prof.</span>
+                            <div class="nqas-annual-report__input-suffix">
+                                <input
+                                    type="number"
+                                    name="pass_percentage_3rd_prof"
+                                    class="form-control"
+                                    min="0"
+                                    max="100"
+                                    step="0.01"
+                                    placeholder="0"
+                                >
+                                <span>%</span>
+                            </div>
+                        </div>
+
+                        <div class="nqas-annual-report__phase-item">
+                            <span>Final Prof.</span>
+                            <div class="nqas-annual-report__input-suffix">
+                                <input
+                                    type="number"
+                                    name="pass_percentage_final_prof"
+                                    class="form-control"
+                                    min="0"
+                                    max="100"
+                                    step="0.01"
+                                    placeholder="0"
+                                >
+                                <span>%</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- 4.d -->
+                <div class="nqas-annual-report__yesno-question">
+
+                    <span>
+                        d. Do you give feedback about their performance?
+                    </span>
+
+                    <label>
+                        <input type="radio" name="performance_feedback" value="yes">
+                        Yes
+                    </label>
+
+                    <label>
+                        <input type="radio" name="performance_feedback" value="no">
+                        No
+                    </label>
+
+                </div>
+
+
+                <!-- 4.e -->
+                <div class="nqas-annual-report__question">
+
+                    <label>
+                        e. If yes, how do you do that?
                     </label>
 
                     <div class="nqas-annual-report__radio-group">
@@ -655,90 +1398,388 @@
                         <label class="nqas-annual-report__radio">
                             <input
                                 type="radio"
-                                name="college_type"
-                                value="private"
+                                name="feedback_level"
+                                value="individual"
                             >
-                            <span>Private</span>
+                            <span>Individual level</span>
                         </label>
 
                         <label class="nqas-annual-report__radio">
                             <input
                                 type="radio"
-                                name="college_type"
-                                value="public"
+                                name="feedback_level"
+                                value="group"
                             >
-                            <span>Public</span>
+                            <span>Group level</span>
                         </label>
 
                     </div>
 
                 </div>
-              </div>
-              <div class="col-md-6">
-                <!-- Teachers -->
+
+
+                <!-- 4.f -->
+                <div class="nqas-annual-report__yesno-question">
+
+                    <span>
+                        f. Do you have functioning students' support system?
+                    </span>
+
+                    <label>
+                        <input type="radio" name="student_support_system" value="yes">
+                        Yes
+                    </label>
+
+                    <label>
+                        <input type="radio" name="student_support_system" value="no">
+                        No
+                    </label>
+
+                </div>
+
+
+                <!-- 4.g -->
+                <div class="nqas-annual-report__yesno-question">
+
+                    <span>
+                        g. Do you have provision for student counseling?
+                    </span>
+
+                    <label>
+                        <input type="radio" name="student_counseling" value="yes">
+                        Yes
+                    </label>
+
+                    <label>
+                        <input type="radio" name="student_counseling" value="no">
+                        No
+                    </label>
+
+                </div>
+
+
+                <!-- Counselor -->
                 <div class="nqas-annual-report__question">
 
                     <label>
-                        iii) How many teachers are working in your college at present?
+                        Do you divide your faculty members for group of students as counselor?
+                    </label>
+
+                    <div class="nqas-annual-report__radio-group">
+
+                        <label class="nqas-annual-report__radio">
+                            <input
+                                type="radio"
+                                name="faculty_as_counselor"
+                                value="yes"
+                            >
+                            <span>Yes</span>
+                        </label>
+
+                        <label class="nqas-annual-report__radio">
+                            <input
+                                type="radio"
+                                name="faculty_as_counselor"
+                                value="no"
+                            >
+                            <span>No</span>
+                        </label>
+
+                    </div>
+
+                    <div class="nqas-annual-report__followup">
+
+                        <label>
+                            Please mention the name of counselors—
+                        </label>
+
+                        <div class="nqas-annual-report__number-list">
+
+                            <div class="nqas-annual-report__number-item">
+                                <span>i)</span>
+                                <input
+                                    type="text"
+                                    name="counselor_1"
+                                    class="form-control"
+                                    placeholder="Name of counselor"
+                                >
+                            </div>
+
+                            <div class="nqas-annual-report__number-item">
+                                <span>ii)</span>
+                                <input
+                                    type="text"
+                                    name="counselor_2"
+                                    class="form-control"
+                                    placeholder="Name of counselor"
+                                >
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+            <!-- =========================5. Exchange Review Visit Between Pair Colleges========= -->
+            <div class="nqas-annual-report__subsection">
+
+                <h3 class="nqas-annual-report__subsection-title">
+                    5. Exchange Review Visit Between Pair Colleges
+                </h3>
+
+                <div class="nqas-annual-report__yesno-question">
+
+                    <span>
+                        a. Do you have a pair college?
+                    </span>
+
+                    <label>
+                        <input type="radio" name="pair_college" value="yes">
+                        Yes
+                    </label>
+
+                    <label>
+                        <input type="radio" name="pair_college" value="no">
+                        No
+                    </label>
+
+                </div>
+
+
+                <div class="nqas-annual-report__question">
+
+                    <label>
+                        b. If yes, Name of the pair college:
                     </label>
 
                     <input
-                        type="file"
-                        name="total_teachers"
-                        class="form-control "
-                        min="0"
+                        type="text"
+                        name="pair_college_name"
+                        class="form-control"
+                        placeholder="Enter pair college name"
                     >
 
                 </div>
-              </div>
-                <div class="col-md-6">
-                    <div class="nqas-annual-report__question">
-                        <label>
-                            iv) How many teachers are working part-time?
-                        </label>
+
+
+                <div class="nqas-annual-report__question">
+
+                    <label>
+                        c. Number of visits by academic coordinator of the pair college:
+                    </label>
+
+                    <input
+                        type="number"
+                        name="pair_college_visits"
+                        class="form-control nqas-annual-report__small-input"
+                        min="0"
+                        placeholder="Number of visits"
+                    >
+
+                </div>
+
+
+                <div class="nqas-annual-report__question">
+
+                    <label>
+                        d. Major suggestions given by the academic coordinator of the pair college:
+                    </label>
+
+                    <textarea
+                        name="pair_college_suggestions"
+                        class="form-control"
+                        rows="3"
+                        placeholder="Write major suggestions..."
+                    ></textarea>
+
+                </div>
+
+
+                <div class="nqas-annual-report__question">
+
+                    <label>
+                        e. If your medical/Dental college does not have a pair college mention Why:
+                    </label>
+
+                    <textarea
+                        name="no_pair_college_reason"
+                        class="form-control"
+                        rows="3"
+                        placeholder="Mention reason..."
+                    ></textarea>
+
+                </div>
+
+            </div>
+            <!-- ========================6. External Examiners===================== -->
+            <div class="nqas-annual-report__subsection">
+
+                <h3 class="nqas-annual-report__subsection-title">
+                    6. External Examiners
+                </h3>
+
+                <div class="nqas-annual-report__yesno-question">
+
+                    <span>
+                        a. External examiners' report collected during professional examinations
+                    </span>
+
+                    <label>
                         <input
-                            type="number"
-                            name="part_time_teachers"
-                            class="form-control"
-                            min="0"
+                            type="radio"
+                            name="external_examiner_report"
+                            value="yes"
+                        >
+                        Yes
+                    </label>
+
+                    <label>
+                        <input
+                            type="radio"
+                            name="external_examiner_report"
+                            value="no"
+                        >
+                        No
+                    </label>
+
+                </div>
+
+
+                <div class="nqas-annual-report__question">
+
+                    <label>
+                        b. Major Suggestions given by external examiners:
+                    </label>
+
+                    <div class="nqas-annual-report__number-list">
+
+                        <div class="nqas-annual-report__number-item">
+                            <span>i)</span>
+                            <input
+                                type="text"
+                                name="external_examiner_suggestion_1"
+                                class="form-control"
+                                placeholder="Major suggestion"
+                            >
+                        </div>
+
+                        <div class="nqas-annual-report__number-item">
+                            <span>ii)</span>
+                            <input
+                                type="text"
+                                name="external_examiner_suggestion_2"
+                                class="form-control"
+                                placeholder="Major suggestion"
+                            >
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+            <!-- ===================7. External Review Visi============================ -->
+            <div class="nqas-annual-report__subsection">
+
+                <h3 class="nqas-annual-report__subsection-title">
+                    7. External Review Visit by Representatives of MOH, DGME, BMRC,
+                    Respective University Dean
+                </h3>
+
+                <div class="nqas-annual-report__question">
+
+                    <label>
+                        a. Have your college gone through the external review visit?
+                    </label>
+
+                    <div class="nqas-annual-report__radio-group">
+
+                        <label class="nqas-annual-report__radio">
+                            <input
+                                type="radio"
+                                name="external_review_visit"
+                                value="yes"
+                            >
+                            <span>Yes</span>
+                        </label>
+
+                        <label class="nqas-annual-report__radio">
+                            <input
+                                type="radio"
+                                name="external_review_visit"
+                                value="no"
+                            >
+                            <span>No</span>
+                        </label>
+
+                    </div>
+
+                    <div class="nqas-annual-report__followup">
+
+                        <label>
+                            If yes, when?
+                        </label>
+
+                        <input
+                            type="date"
+                            name="external_review_visit_date"
+                            class="form-control nqas-annual-report__small-input"
                         >
 
                     </div>
+
                 </div>
-              <div class="col-md-6">
-                  <div class="nqas-annual-report__question">
+
+
+                <div class="nqas-annual-report__question">
+
                     <label>
-                        v) How many students are studying in your college at present?
+                        b. Major suggestions given by external review visit team:
                     </label>
-                    <input
-                        type="number"
-                        name="total_students"
-                        class="form-control"
-                        min="0"
-                    >
+
+                    <div class="nqas-annual-report__number-list">
+
+                        <div class="nqas-annual-report__number-item">
+                            <span>i)</span>
+                            <input
+                                type="text"
+                                name="external_review_suggestion_1"
+                                class="form-control"
+                                placeholder="Major suggestion"
+                            >
+                        </div>
+
+                        <div class="nqas-annual-report__number-item">
+                            <span>ii)</span>
+                            <input
+                                type="text"
+                                name="external_review_suggestion_2"
+                                class="form-control"
+                                placeholder="Major suggestion"
+                            >
+                        </div>
+
+                    </div>
+
                 </div>
-              </div>
+
             </div>
-        </div>
-
-        <!-- =================================
-             2. QAS Background
-        ================================== -->
-
+<!-- =========================================================
+     8. Faculty Development and Review Scheme
+========================================================= -->
         <div class="nqas-annual-report__subsection">
 
             <h3 class="nqas-annual-report__subsection-title">
-                2. Quality Assurance Scheme—Background Information of QAS
-                of your medical college
+                8. Faculty Development and Review Scheme
             </h3>
 
-            <div class="row">
-              
-            <div class="col-md-6">
-               <div class="nqas-annual-report__question">
+
+            <div class="nqas-annual-report__question">
 
                 <label>
-                    a. In your Institute QAS is —
+                    a. Do you have faculty development program in your medical college?
                 </label>
 
                 <div class="nqas-annual-report__radio-group">
@@ -746,200 +1787,142 @@
                     <label class="nqas-annual-report__radio">
                         <input
                             type="radio"
-                            name="qas_status"
-                            value="ongoing"
+                            name="faculty_development_program"
+                            value="yes"
                         >
-                        <span>Going on</span>
+                        <span>Yes</span>
                     </label>
 
                     <label class="nqas-annual-report__radio">
                         <input
                             type="radio"
-                            name="qas_status"
-                            value="not_going"
+                            name="faculty_development_program"
+                            value="no"
                         >
-                        <span>Not going on</span>
+                        <span>No</span>
+                    </label>
+
+                </div>
+
+            </div>
+
+
+            <div class="nqas-annual-report__question nqas-annual-report__nested-question">
+
+                <label>
+                    i) Do your faculty members fill up the personal review form?
+                </label>
+
+                <div class="nqas-annual-report__radio-group">
+
+                    <label class="nqas-annual-report__radio">
+                        <input
+                            type="radio"
+                            name="personal_review_form"
+                            value="yes"
+                        >
+                        <span>Yes</span>
                     </label>
 
                     <label class="nqas-annual-report__radio">
                         <input
                             type="radio"
-                            name="qas_status"
-                            value="yet_to_start"
+                            name="personal_review_form"
+                            value="no"
                         >
-                        <span>Yet to be started</span>
+                        <span>No</span>
                     </label>
 
                 </div>
 
             </div>
-            </div>
 
-            <div class="col-md-6">
-               <div class="nqas-annual-report__question">
 
-                <label>
-                    b. Scheme started in the year
-                </label>
-
-                <input
-                    type="number"
-                    name="qas_start_year"
-                    class="form-control "
-                >
-            </div>
-            </div>
-            </div>
-
-            <!-- Coordinator -->
-
-            <div class="nqas-annual-report__question">
+            <div class="nqas-annual-report__question nqas-annual-report__nested-question">
 
                 <label>
-                    c. Name of the academic coordinator with designation
+                    ii) Do you have provision of an annual review meeting for faculty development?
                 </label>
 
-                <input
-                    type="text"
-                    name="academic_coordinator"
-                    class="form-control"
-                    placeholder="Name and designation"
-                >
+                <div class="nqas-annual-report__radio-group">
 
-            </div>
-
-
-            <!-- Phase Coordinators -->
-
-            <div class="nqas-annual-report__question">
-
-                <label>
-                    d. Names of phase coordinators with designation
-                </label>
-
-
-                <div class="nqas-annual-report__phase-list">
-
-                    <div class="nqas-annual-report__phase-item">
-                        <span>1st Phase</span>
+                    <label class="nqas-annual-report__radio">
                         <input
-                            type="text"
-                            name="phase_1_coordinator"
-                            class="form-control"
-                            placeholder="Name and designation"
+                            type="radio"
+                            name="annual_faculty_review"
+                            value="yes"
                         >
-                    </div>
+                        <span>Yes</span>
+                    </label>
 
-                    <div class="nqas-annual-report__phase-item">
-                        <span>2nd Phase</span>
+                    <label class="nqas-annual-report__radio">
                         <input
-                            type="text"
-                            name="phase_2_coordinator"
-                            class="form-control"
-                            placeholder="Name and designation"
+                            type="radio"
+                            name="annual_faculty_review"
+                            value="no"
                         >
-                    </div>
-
-                    <div class="nqas-annual-report__phase-item">
-                        <span>3rd Phase</span>
-                        <input
-                            type="text"
-                            name="phase_3_coordinator"
-                            class="form-control"
-                            placeholder="Name and designation"
-                        >
-                    </div>
-
-                    <div class="nqas-annual-report__phase-item">
-                        <span>Final Phase</span>
-                        <input
-                            type="text"
-                            name="final_phase_coordinator"
-                            class="form-control"
-                            placeholder="Name and designation"
-                        >
-                    </div>
+                        <span>No</span>
+                    </label>
 
                 </div>
 
             </div>
-            <!-- Meetings -->
+
+
+            <!-- 8.c -->
+            <div class="nqas-annual-report__yesno-question">
+
+                <span>
+                    c. Do you have provision to evaluate class by students?
+                </span>
+
+                <label>
+                    <input
+                        type="radio"
+                        name="class_evaluation_by_students"
+                        value="yes"
+                    >
+                    Yes
+                </label>
+
+                <label>
+                    <input
+                        type="radio"
+                        name="class_evaluation_by_students"
+                        value="no"
+                    >
+                    No
+                </label>
+
+            </div>
+
+
+            <!-- 8.d -->
             <div class="nqas-annual-report__question">
 
                 <label>
-                    e. Total number of meetings within last 12 months
+                    d. Specific Recommendations for Faculty Development &amp; Review scheme:
                 </label>
 
+                <div class="nqas-annual-report__number-list">
 
-                <div class="nqas-annual-report__meeting-list">
-
-                    <div class="nqas-annual-report__meeting-item">
-                        <span>Academic Council</span>
+                    <div class="nqas-annual-report__number-item">
+                        <span>i)</span>
                         <input
-                            type="number"
-                            name="academic_council_meeting"
+                            type="text"
+                            name="faculty_development_recommendation_1"
                             class="form-control"
-                            min="0"
+                            placeholder="Specific recommendation"
                         >
                     </div>
 
-                    <div class="nqas-annual-report__meeting-item">
-                        <span>Academic Coordinator Committee</span>
+                    <div class="nqas-annual-report__number-item">
+                        <span>ii)</span>
                         <input
-                            type="number"
-                            name="academic_coordinator_meeting"
+                            type="text"
+                            name="faculty_development_recommendation_2"
                             class="form-control"
-                            min="0"
-                        >
-                    </div>
-
-                    <div class="nqas-annual-report__meeting-item">
-                        <span>Faculty Development Review Committee</span>
-                        <input
-                            type="number"
-                            name="faculty_development_meeting"
-                            class="form-control"
-                            min="0"
-                        >
-                    </div>
-
-                    <div class="nqas-annual-report__meeting-item">
-                        <span>1st Phase Committee Meeting</span>
-                        <input
-                            type="number"
-                            name="phase_1_meeting"
-                            class="form-control"
-                            min="0"
-                        >
-                    </div>
-
-                    <div class="nqas-annual-report__meeting-item">
-                        <span>2nd Phase Committee Meeting</span>
-                        <input
-                            type="number"
-                            name="phase_2_meeting"
-                            class="form-control"
-                            min="0"
-                        >
-                    </div>
-
-                    <div class="nqas-annual-report__meeting-item">
-                        <span>3rd Phase Committee Meeting</span>
-                        <input
-                            type="number"
-                            name="phase_3_meeting"
-                            class="form-control"
-                            min="0"
-                        >
-                    </div>
-
-                    <div class="nqas-annual-report__meeting-item">
-                        <span>Final Phase Committee Meeting</span>
-                        <input
-                            type="number"
-                            name="final_phase_meeting"
-                            class="form-control"
-                            min="0"
+                            placeholder="Specific recommendation"
                         >
                     </div>
 
@@ -948,127 +1931,615 @@
             </div>
 
         </div>
-
-
-        <!-- =================================
-             3. Curriculum Execution
-        ================================== -->
-
+        <!-- ========================9. Administrative External Review=============================== -->
         <div class="nqas-annual-report__subsection">
 
             <h3 class="nqas-annual-report__subsection-title">
-                3. Curriculum Execution
+                9. Administrative External Review by MEFWD, DGME, BMDC etc. as mentioned earlier
             </h3>
 
-
-            <!-- Question -->
-
-            <div class="nqas-annual-report__yesno-question">
-
-                <span>
-                    a. The college has academic calendar for each batch
-                </span>
+            <div class="nqas-annual-report__question">
 
                 <label>
-                    <input type="radio" name="academic_calendar" value="yes">
-                    Yes
+                    i) Did your college was reviewed by any external review team last year?
+                    If yes-When?
                 </label>
 
-                <label>
-                    <input type="radio" name="academic_calendar" value="no">
-                    No
-                </label>
+                <input
+                    type="date"
+                    name="administrative_external_review_date"
+                    class="form-control nqas-annual-report__small-input"
+                >
 
             </div>
 
 
-            <div class="nqas-annual-report__yesno-question">
-
-                <span>
-                    b. The college has daily schedule for each batch
-                    compatible to curriculum
-                </span>
+            <div class="nqas-annual-report__question">
 
                 <label>
-                    <input type="radio" name="daily_schedule" value="yes">
-                    Yes
+                    ii) Comments of Review Team:
+                    <span class="nqas-annual-report__hint">
+                        (Please Attached)
+                    </span>
                 </label>
 
-                <label>
-                    <input type="radio" name="daily_schedule" value="no">
-                    No
-                </label>
+                <textarea
+                    name="review_team_comments"
+                    class="form-control"
+                    rows="4"
+                    placeholder="Write comments of review team..."
+                ></textarea>
 
-            </div>
-
-
-            <div class="nqas-annual-report__yesno-question">
-
-                <span>
-                    c. The college has regular schedule of Integrated teaching
-                </span>
-
-                <label>
-                    <input type="radio" name="integrated_teaching" value="yes">
-                    Yes
-                </label>
-
-                <label>
-                    <input type="radio" name="integrated_teaching" value="no">
-                    No
-                </label>
-
-            </div>
-
-
-            <div class="nqas-annual-report__yesno-question">
-
-                <span>
-                    d. The college has regular schedule of generic topics
-                </span>
-
-                <label>
-                    <input type="radio" name="generic_topics" value="yes">
-                    Yes
-                </label>
-
-                <label>
-                    <input type="radio" name="generic_topics" value="no">
-                    No
-                </label>
+                <div class="mt-2">
+                    <input
+                        type="file"
+                        name="review_team_attachment"
+                        class="form-control"
+                        accept=".pdf,.doc,.docx,.jpg,.jpeg,.png"
+                    >
+                </div>
 
             </div>
 
         </div>
 
-    </section>
 
+<!-- =========================================================
+     10. Remarkable Achievement
+========================================================= -->
 
-    <!-- ================================
-         Submit
-    ================================= -->
+<div class="nqas-annual-report__subsection">
 
-    <div class="nqas-annual-report__actions">
+    <h3 class="nqas-annual-report__subsection-title">
+        10. Remarkable Achievement under QAS last year
+    </h3>
 
-        <button
-            type="reset"
-            class="btn btn-outline-secondary"
-        >
-            <i class="bi bi-arrow-counterclockwise"></i>
-            Reset
-        </button>
+    <div class="nqas-annual-report__number-list">
 
-        <button
-            type="submit"
-            class="btn btn-main"
-        >
-            <i class="bi bi-check-circle"></i>
-            Save Annual Report
-        </button>
+        <div class="nqas-annual-report__number-item">
+            <span>i)</span>
+            <input
+                type="text"
+                name="remarkable_achievement_1"
+                class="form-control"
+                placeholder="Mention remarkable achievement"
+            >
+        </div>
+
+        <div class="nqas-annual-report__number-item">
+            <span>ii)</span>
+            <input
+                type="text"
+                name="remarkable_achievement_2"
+                class="form-control"
+                placeholder="Mention remarkable achievement"
+            >
+        </div>
 
     </div>
 
-</form>
+</div>
+
+
+<!-- =========================================================
+     11. Journal
+========================================================= -->
+
+<div class="nqas-annual-report__subsection">
+
+    <h3 class="nqas-annual-report__subsection-title">
+        11. Journal
+    </h3>
+
+    <div class="nqas-annual-report__question">
+
+        <label>
+            i) Total No of issues of your Journal published last year:
+            <span class="nqas-annual-report__hint">(Attached)</span>
+        </label>
+
+        <input
+            type="number"
+            name="journal_issues_last_year"
+            class="form-control nqas-annual-report__small-input"
+            min="0"
+            placeholder="Number of issues"
+        >
+
+        <div class="mt-2">
+            <input
+                type="file"
+                name="journal_attachment"
+                class="form-control"
+                accept=".pdf,.doc,.docx,.jpg,.jpeg,.png"
+            >
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- =========================================================
+     12. Medical Education Unit
+========================================================= -->
+
+<div class="nqas-annual-report__subsection">
+
+    <h3 class="nqas-annual-report__subsection-title">
+        12. Medical Education Unit (MEU)
+    </h3>
+
+    <div class="nqas-annual-report__yesno-question">
+
+        <span>
+            i) Do you have functioning Medical Education Unit (MEU) at your college?
+        </span>
+
+        <label>
+            <input
+                type="radio"
+                name="functioning_meu"
+                value="yes"
+            >
+            Yes
+        </label>
+
+        <label>
+            <input
+                type="radio"
+                name="functioning_meu"
+                value="no"
+            >
+            No
+        </label>
+
+    </div>
+
+</div>
+
+
+<!-- =========================================================
+     13. Medical Skill Lab / Simulation Lab
+========================================================= -->
+
+<div class="nqas-annual-report__subsection">
+
+    <h3 class="nqas-annual-report__subsection-title">
+        13. Medical Skill lab/Simulation lab
+    </h3>
+
+    <div class="nqas-annual-report__yesno-question">
+
+        <span>
+            i) Do you have a functioning Medical Skills Centre (MSC) at your college?
+        </span>
+
+        <label>
+            <input
+                type="radio"
+                name="functioning_msc"
+                value="yes"
+            >
+            Yes
+        </label>
+
+        <label>
+            <input
+                type="radio"
+                name="functioning_msc"
+                value="no"
+            >
+            No
+        </label>
+
+    </div>
+
+</div>
+
+
+<!-- =========================================================
+     14. Research
+========================================================= -->
+
+<div class="nqas-annual-report__subsection">
+
+    <h3 class="nqas-annual-report__subsection-title">
+        14. Research
+    </h3>
+
+    <div class="nqas-annual-report__question">
+
+        <label>
+            i) Total number of researches conducted by teachers of your college last year:
+        </label>
+
+        <input
+            type="number"
+            name="total_research_last_year"
+            class="form-control nqas-annual-report__small-input"
+            min="0"
+            placeholder="Total research"
+        >
+
+    </div>
+
+
+    <div class="nqas-annual-report__question">
+
+        <label>
+            ii) Mention name of teachers and department:
+        </label>
+
+        <textarea
+            name="research_teachers_departments"
+            class="form-control"
+            rows="4"
+            placeholder="Mention teacher names and departments..."
+        ></textarea>
+
+    </div>
+
+</div>
+
+
+<!-- =========================================================
+     15. Publications
+========================================================= -->
+
+<div class="nqas-annual-report__subsection">
+
+    <h3 class="nqas-annual-report__subsection-title">
+        15. Publications
+    </h3>
+
+    <div class="nqas-annual-report__question">
+
+        <label>
+            i) Total No of publications done by Teachers of your college last year:
+        </label>
+
+        <div class="nqas-annual-report__publication-list">
+
+            <div class="nqas-annual-report__publication-item">
+
+                <span>National Journal</span>
+
+                <input
+                    type="number"
+                    name="national_journal_publications"
+                    class="form-control"
+                    min="0"
+                    placeholder="Number"
+                >
+
+            </div>
+
+
+            <div class="nqas-annual-report__publication-item">
+
+                <span>International Journal</span>
+
+                <input
+                    type="number"
+                    name="international_journal_publications"
+                    class="form-control"
+                    min="0"
+                    placeholder="Number"
+                >
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- =========================================================
+     16. Paper Presented
+========================================================= -->
+
+<div class="nqas-annual-report__subsection">
+
+    <h3 class="nqas-annual-report__subsection-title">
+        16. Paper Presented
+    </h3>
+
+    <div class="nqas-annual-report__question">
+
+        <label>
+            i) Total No of papers presented by the teachers of your medical college/institute-
+        </label>
+
+        <div class="nqas-annual-report__publication-list">
+
+            <div class="nqas-annual-report__publication-item">
+
+                <span>At national level</span>
+
+                <input
+                    type="number"
+                    name="national_level_papers"
+                    class="form-control"
+                    min="0"
+                    placeholder="Number"
+                >
+
+            </div>
+
+
+            <div class="nqas-annual-report__publication-item">
+
+                <span>At international level</span>
+
+                <input
+                    type="number"
+                    name="international_level_papers"
+                    class="form-control"
+                    min="0"
+                    placeholder="Number"
+                >
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- =========================================================
+     17. Extra-Curricular Activities
+========================================================= -->
+
+<div class="nqas-annual-report__subsection">
+
+    <h3 class="nqas-annual-report__subsection-title">
+        17. Extra-Curricular Activities
+    </h3>
+
+
+    <!-- 17.i -->
+    <div class="nqas-annual-report__yesno-question">
+
+        <span>
+            i) Did your medical college/institute organize annual sports last year?
+        </span>
+
+        <label>
+            <input
+                type="radio"
+                name="annual_sports"
+                value="yes"
+            >
+            Yes
+        </label>
+
+        <label>
+            <input
+                type="radio"
+                name="annual_sports"
+                value="no"
+            >
+            No
+        </label>
+
+    </div>
+
+
+    <!-- 17.ii -->
+    <div class="nqas-annual-report__yesno-question">
+
+        <span>
+            ii) Did your college organize indoor games last year?
+        </span>
+
+        <label>
+            <input
+                type="radio"
+                name="indoor_games"
+                value="yes"
+            >
+            Yes
+        </label>
+
+        <label>
+            <input
+                type="radio"
+                name="indoor_games"
+                value="no"
+            >
+            No
+        </label>
+
+    </div>
+
+
+    <!-- 17.iii -->
+    <div class="nqas-annual-report__yesno-question">
+
+        <span>
+            iii) Did your medical college/institute organize annual cultural function last year?
+        </span>
+
+        <label>
+            <input
+                type="radio"
+                name="annual_cultural_function"
+                value="yes"
+            >
+            Yes
+        </label>
+
+        <label>
+            <input
+                type="radio"
+                name="annual_cultural_function"
+                value="no"
+            >
+            No
+        </label>
+
+    </div>
+
+
+    <!-- 17.iv -->
+    <div class="nqas-annual-report__yesno-question">
+
+        <span>
+            iv) Did your medical college/institute publish annual magazine last year?
+        </span>
+
+        <label>
+            <input
+                type="radio"
+                name="annual_magazine"
+                value="yes"
+            >
+            Yes
+        </label>
+
+        <label>
+            <input
+                type="radio"
+                name="annual_magazine"
+                value="no"
+            >
+            No
+        </label>
+
+    </div>
+
+
+    <!-- 17.v -->
+    <div class="nqas-annual-report__yesno-question">
+
+        <span>
+            v) Did your medical college/institute organize annual parents meeting last year?
+        </span>
+
+        <label>
+            <input
+                type="radio"
+                name="annual_parents_meeting"
+                value="yes"
+            >
+            Yes
+        </label>
+
+        <label>
+            <input
+                type="radio"
+                name="annual_parents_meeting"
+                value="no"
+            >
+            No
+        </label>
+
+    </div>
+
+
+    <!-- 17.vi -->
+    <div class="nqas-annual-report__yesno-question">
+
+        <span>
+            vi) Are there any extracurricular activities which affect academic activity?
+        </span>
+
+        <label>
+            <input
+                type="radio"
+                name="extracurricular_affect_academic"
+                value="yes"
+            >
+            Yes
+        </label>
+
+        <label>
+            <input
+                type="radio"
+                name="extracurricular_affect_academic"
+                value="no"
+            >
+            No
+        </label>
+
+    </div>
+
+
+    <div class="nqas-annual-report__question">
+
+        <label>
+            If yes? Which are those?
+        </label>
+
+        <textarea
+            name="extracurricular_details"
+            class="form-control"
+            rows="3"
+            placeholder="Mention the activities..."
+        ></textarea>
+
+    </div>
+
+</div>
+
+
+<!-- =========================================================
+     18. Suggestions
+========================================================= -->
+
+<div class="nqas-annual-report__subsection">
+
+    <h3 class="nqas-annual-report__subsection-title">
+        18. What is your suggestions to improve quality assurance scheme in your college
+    </h3>
+
+    <textarea
+        name="qas_improvement_suggestions"
+        class="form-control"
+        rows="6"
+        placeholder="Write your suggestions..."
+    ></textarea>
+
+</div>
+
+
+<!-- =========================================================
+     Note
+========================================================= -->
+
+<div class="nqas-annual-report__note">
+
+    <strong>NB:</strong>
+    Institute can also add separate additional sheets to prepare the annual report.
+    Can add additional documents.
+
+</div>
+  <div class="nqas-annual-report__actions">
+
+                <button
+                    type="reset"
+                    class="btn btn-outline-secondary"
+                >
+                    <i class="bi bi-arrow-counterclockwise"></i>
+                    Reset
+                </button>
+
+                <button
+                    type="submit"
+                    class="btn btn-main"
+                >
+                    <i class="bi bi-check-circle"></i>
+                    Save Annual Report
+                </button>
+
+            </div>
+
+        </form>
        
         <!-- ===========Footer============== -->
         <footer class="footer">
