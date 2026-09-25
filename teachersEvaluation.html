@@ -61,202 +61,22 @@
         </div>
         <!-- =========NQAS System Header Section End ============== -->
 
-        <div class="nqas-card-content">
-          <style>
-            :root {
-              --nqas-primary: #087f8c;
-              --nqas-primary-dark: #066b76;
-              --nqas-border: #dfe4ea;
-              --nqas-text: #344054;
-              --nqas-muted: #667085;
-              --nqas-bg: #f3f8fa;
-            }
+        
 
-            * {
-              box-sizing: border-box;
-            }
 
-            body {
-              background: var(--nqas-bg);
-              color: var(--nqas-text);
-              font-family: "Roboto", Arial, sans-serif;
-            }
-
-            /* Rating table */
-            .nqas-rating-info {
-              margin-bottom: 14px;
-              padding: 12px 14px;
-              border-radius: 8px;
-              background: #eef9fa;
-              border: 1px solid #ccebed;
-              font-size: 13px;
-              line-height: 1.6;
-            }
-
-            .nqas-table-wrapper {
-              width: 100%;
-              overflow-x: auto;
-              border: 1px solid var(--nqas-border);
-              border-radius: 9px;
-              -webkit-overflow-scrolling: touch;
-            }
-
-            .nqas-rating-table {
-              width: 100%;
-              min-width: 760px;
-              margin: 0;
-              border-collapse: collapse;
-            }
-
-            .nqas-rating-table th,
-            .nqas-rating-table td {
-              border: 1px solid var(--nqas-border);
-              padding: 9px 8px;
-              vertical-align: middle;
-            }
-
-            .nqas-rating-table thead th {
-              background: #f2f4f7;
-              color: #344054;
-              font-size: 12px;
-              font-weight: 700;
-              text-align: center;
-            }
-
-            .nqas-rating-table .sl-col {
-              width: 55px;
-              text-align: center;
-            }
-
-            .nqas-rating-table .statement-col {
-              min-width: 370px;
-            }
-
-            .nqas-rating-table tbody td {
-              font-size: 12.5px;
-            }
-
-            .nqas-rating-table tbody td:first-child {
-              text-align: center;
-              font-weight: 600;
-            }
-
-            .nqas-rating-table .rating-cell {
-              width: 62px;
-              text-align: center;
-            }
-
-            .nqas-rating-table input[type="radio"] {
-              width: 18px;
-              height: 18px;
-              margin: 0;
-              accent-color: var(--nqas-primary);
-              cursor: pointer;
-            }
-
-            .nqas-rating-table tbody tr:hover {
-              background: #f8fafc;
-            }
-
-            /* Comments */
-            .nqas-comment-box {
-              min-height: 120px;
-              resize: vertical;
-            }
-
-            .nqas-help-text {
-              margin-top: 6px;
-              color: var(--nqas-muted);
-              font-size: 11px;
-            }
-
-            /* Actions */
-            .nqas-form-actions {
-              display: flex;
-              justify-content: flex-end;
-              gap: 10px;
-              padding-top: 8px;
-              border-top: 1px solid #eaecf0;
-            }
-
-            .nqas-btn {
-              min-height: 44px;
-              padding: 9px 20px;
-              border-radius: 8px;
-              border: 1px solid transparent;
-              font-weight: 600;
-              cursor: pointer;
-              transition: all 0.2s ease;
-            }
-
-            .nqas-btn-reset {
-              background: #fff;
-              border-color: #98a2b3;
-              color: #475467;
-            }
-
-            .nqas-btn-reset:hover {
-              background: #f2f4f7;
-            }
-
-            .nqas-btn-submit {
-              background: var(--nqas-primary);
-              color: #fff;
-            }
-
-            .nqas-btn-submit:hover {
-              background: var(--nqas-primary-dark);
-              transform: translateY(-1px);
-              box-shadow: 0 5px 12px rgba(8, 127, 140, 0.18);
-            }
-
-            .nqas-footer {
-              padding: 15px 20px;
-              text-align: center;
-              border-top: 1px solid #eaecf0;
-              color: #98a2b3;
-              font-size: 11px;
-            }
-
-            /* Tablet */
-            @media (max-width: 991.98px) {
-              .nqas-form-wrapper {
-                padding: 18px 12px;
-              }
-
-              .nqas-form-body {
-                padding: 24px 20px;
-              }
-            }
-
-            /* Mobile */
-            @media (max-width: 767.98px) {
-              .nqas-rating-table {
-                min-width: 720px;
-              }
-
-              .nqas-form-actions {
-                flex-direction: column;
-              }
-
-              .nqas-btn {
-                width: 100%;
-              }
-
-              .nqas-footer {
-                font-size: 10px;
-              }
-            }
-          </style>
-
-          <div class="nqas-form-report-wrapper">
-            <div class="nqas-form-report-body">
-              <div class="nqas-form-section-title">
+<div class="nqas-teacher-evaluation nqas-teacher-evaluation__card-content">
+          <div class="nqas-teacher-evaluation__form-report-wrapper">
+            <div class="nqas-teacher-evaluation__form-report-body">
+              <!-- <div class="nqas-teacher-evaluation__form-section-title">
                 <i class="bi bi-journal-text"></i>
                 Teachers Evaluation Form <strong>(by Student)</strong>
-              </div>
+              </div> -->
+              <div class="nqas-form-section-title">
+                        <i class="bi bi-journal-text"></i>
+                        Teachers Evaluation Form <strong>(by Student)</strong>
+            </div>
               <!-- Instructions -->
-              <div class="nqas-form-instruction">
+              <div class="nqas-teacher-evaluation__form-instruction">
                 <strong>Instructions:</strong>
                 This questionnaire is given to you for your opinion about any
                 teacher of your phase. Your opinion is very valuable for the
@@ -265,7 +85,7 @@
                 So your full co-operation is expected.
               </div>
 
-              <form class="nqas-form" id="teacherEvaluationForm">
+              <form class="nqas-teacher-evaluation__form" id="teacherEvaluationForm">
                 <div class="row g-3">
                   <!-- Question 1 -->
                   <div class="col-12 col-md-6">
@@ -321,8 +141,8 @@
                       <span style="color: red">*</span>
                     </label>
 
-                    <div class="nqas-choice-box">
-                      <label class="nqas-choice">
+                    <div class="nqas-teacher-evaluation__choice-box">
+                      <label class="nqas-teacher-evaluation__choice">
                         <input
                           type="radio"
                           name="college_category"
@@ -331,7 +151,7 @@
                         Govt
                       </label>
 
-                      <label class="nqas-choice">
+                      <label class="nqas-teacher-evaluation__choice">
                         <input
                           type="radio"
                           name="college_category"
@@ -397,23 +217,23 @@
                       6. Phase of the Student
                       <span style="color: red">*</span></label
                     >
-                    <div class="nqas-choice-box">
-                      <label class="nqas-choice">
+                    <div class="nqas-teacher-evaluation__choice-box">
+                      <label class="nqas-teacher-evaluation__choice">
                         <input type="radio" name="phase" value="1st" />
                         1st Phase
                       </label>
 
-                      <label class="nqas-choice">
+                      <label class="nqas-teacher-evaluation__choice">
                         <input type="radio" name="phase" value="2nd" />
                         2nd Phase
                       </label>
 
-                      <label class="nqas-choice">
+                      <label class="nqas-teacher-evaluation__choice">
                         <input type="radio" name="phase" value="3rd" />
                         3rd Phase
                       </label>
 
-                      <label class="nqas-choice">
+                      <label class="nqas-teacher-evaluation__choice">
                         <input type="radio" name="phase" value="4th" />
                         4th Phase
                       </label>
@@ -422,146 +242,8 @@
                 </div>
 
                 <!-- Rating Instruction -->
-                <section class="nqas-form-section">
-                  <style>
-                    .nqas-rating-question {
-                      display: flex;
-                      align-items: flex-start;
-                      gap: 12px;
-                      padding: 14px 0;
-                      /* border-bottom: 1px solid #eaecf0; */
-                    }
-
-                    /* Question Number */
-
-                    .nqas-question-number {
-                      flex: 0 0 28px;
-                      width: 28px;
-                      height: 28px;
-                      display: flex;
-                      align-items: center;
-                      justify-content: center;
-                      border-radius: 50%;
-                      background: #e6f7f8;
-                      color: #087f8c;
-                      font-size: 12px;
-                      font-weight: 700;
-                    }
-
-                    /* Question Content */
-
-                    .nqas-question-content {
-                      flex: 1;
-                      min-width: 0;
-                    }
-
-                    /* Question */
-
-                    .nqas-question-text {
-                      color: #344054;
-                      font-size: 13px;
-                      font-weight: 600;
-                      line-height: 1.5;
-
-                      margin-bottom: 10px;
-                    }
-
-                    /* Rating Options */
-
-                    .nqas-rating-options {
-                      display: flex;
-                      align-items: center;
-                      flex-wrap: wrap;
-                      gap: 16px;
-                    }
-
-                    /* Individual Radio */
-
-                    .nqas-rating-option {
-                      display: inline-flex;
-                      align-items: center;
-                      gap: 5px;
-                      cursor: pointer;
-                      color: #475467;
-                      font-size: 12px;
-                      white-space: nowrap;
-                    }
-
-                    /* Radio */
-
-                    .nqas-rating-option input[type="radio"] {
-                      width: 17px;
-                      height: 17px;
-                      margin: 0;
-                      accent-color: #087f8c;
-                      cursor: pointer;
-                    }
-
-                    /* Number */
-
-                    .nqas-rating-option span {
-                      font-weight: 600;
-                      color: #344054;
-                    }
-
-                    /* Label */
-
-                    .nqas-rating-option small {
-                      font-size: 13px;
-                      font-weight: 400;
-                      color: #667085;
-                    }
-
-                    /* Hover */
-
-                    .nqas-rating-option:hover span,
-                    .nqas-rating-option:hover small {
-                      color: #087f8c;
-                    }
-
-                    /* ================================
-   Mobile
-================================ */
-
-                    @media (max-width: 767px) {
-                      .nqas-rating-question {
-                        gap: 8px;
-                        padding: 14px 0;
-                      }
-
-                      .nqas-question-number {
-                        flex: 0 0 26px;
-                        width: 26px;
-                        height: 26px;
-                      }
-
-                      .nqas-question-text {
-                        font-size: 13px;
-                        margin-bottom: 12px;
-                      }
-
-                      .nqas-rating-options {
-                        flex-direction: column;
-                        align-items: flex-start;
-                        gap: 10px;
-                      }
-
-                      .nqas-rating-option {
-                        min-height: 24px;
-                        font-size: 13px;
-                      }
-
-                      .nqas-rating-option input[type="radio"] {
-                        width: 18px;
-                        height: 18px;
-                      }
-
-                      .nqas-rating-option small {
-                        font-size: 12px;
-                      }
-                    }
-                  </style>
-                  <div class="nqas-rating-info mt-4">
+                <section class="nqas-teacher-evaluation__form-section">
+<div class="nqas-teacher-evaluation__rating-info mt-4">
                     The number rating stands for the following:
                     <strong>1 = Never</strong>,
                     <strong>2 = Once in a while</strong>,
@@ -576,40 +258,40 @@
                   </div>
 
                   <!-- Question 7 -->
-                  <div class="nqas-rating-question">
-                    <div class="nqas-question-content pb-0 pb-md-2 border-0 border-md-bottom">
+                  <div class="nqas-teacher-evaluation__rating-question">
+                    <div class="nqas-teacher-evaluation__question-content pb-0 pb-md-2 border-0 border-md-bottom">
                       <label class="form-label">
                         7. Starts class by capturing students' attention
                         <span style="color: rgba(197, 4, 4, 0.993)"
                           >*</span
                         ></label
                       >
-                      <div class="nqas-rating-options">
-                        <label class="nqas-rating-option ms-md-2">
+                      <div class="nqas-teacher-evaluation__rating-options">
+                        <label class="nqas-teacher-evaluation__rating-option ms-md-2">
                           <input type="radio" name="rating[7]" value="1" />
                           <!-- <span>1</span> -->
                           <small>Never</small>
                         </label> 
 
-                        <label class="nqas-rating-option">
+                        <label class="nqas-teacher-evaluation__rating-option">
                           <input type="radio" name="rating[7]" value="2" />
                           <!-- <span>2</span> -->
                           <small>Once in a while</small>
                         </label>
 
-                        <label class="nqas-rating-option">
+                        <label class="nqas-teacher-evaluation__rating-option">
                           <input type="radio" name="rating[7]" value="3" />
                           <!-- <span>3</span> -->
                           <small>Sometimes</small>
                         </label>
 
-                        <label class="nqas-rating-option">
+                        <label class="nqas-teacher-evaluation__rating-option">
                           <input type="radio" name="rating[7]" value="4" />
                           <!-- <span>4</span> -->
                           <small>Most of the time</small>
                         </label>
 
-                        <label class="nqas-rating-option">
+                        <label class="nqas-teacher-evaluation__rating-option">
                           <input type="radio" name="rating[7]" value="5" />
                           <!-- <span>5</span> -->
                           <small>Almost always</small>
@@ -619,40 +301,40 @@
                   </div>
 
                   <!-- Question 8 -->
-                  <div class="nqas-rating-question">
-                    <div class="nqas-question-content pb-0 pb-md-2 border-0 border-md-bottom">
+                  <div class="nqas-teacher-evaluation__rating-question">
+                    <div class="nqas-teacher-evaluation__question-content pb-0 pb-md-2 border-0 border-md-bottom">
                       <label class="form-label">
                         8. Clearly states learning objectives at the start
                         <span style="color: rgba(197, 4, 4, 0.993)"
                           >*</span
                         ></label
                       >
-                      <div class="nqas-rating-options ms-md-2">
-                        <label class="nqas-rating-option">
+                      <div class="nqas-teacher-evaluation__rating-options ms-md-2">
+                        <label class="nqas-teacher-evaluation__rating-option">
                           <input type="radio" name="rating[8]" value="1" />
                           <!-- <span>1</span> -->
                           <small>Never</small>
                         </label>
 
-                        <label class="nqas-rating-option">
+                        <label class="nqas-teacher-evaluation__rating-option">
                           <input type="radio" name="rating[8]" value="2" />
                           <!-- <span>2</span> -->
                           <small>Once in a while</small>
                         </label>
 
-                        <label class="nqas-rating-option">
+                        <label class="nqas-teacher-evaluation__rating-option">
                           <input type="radio" name="rating[8]" value="3" />
                           <!-- <span>3</span> -->
                           <small>Sometimes</small>
                         </label>
 
-                        <label class="nqas-rating-option">
+                        <label class="nqas-teacher-evaluation__rating-option">
                           <input type="radio" name="rating[8]" value="4" />
                           <!-- <span>4</span> -->
                           <small>Most of the time</small>
                         </label>
 
-                        <label class="nqas-rating-option">
+                        <label class="nqas-teacher-evaluation__rating-option">
                           <input type="radio" name="rating[8]" value="5" />
                           <!-- <span>5</span> -->
                           <small>Almost always</small>
@@ -661,40 +343,40 @@
                     </div>
                   </div>
                   <!-- Question 9 -->
-                  <div class="nqas-rating-question">
-                    <div class="nqas-question-content pb-0 pb-md-2 border-0 border-md-bottom">
+                  <div class="nqas-teacher-evaluation__rating-question">
+                    <div class="nqas-teacher-evaluation__question-content pb-0 pb-md-2 border-0 border-md-bottom">
                       <label class="form-label">
                         9.Checks student' prior knowledge
                         <span style="color: rgba(197, 4, 4, 0.993)"
                           >*</span
                         ></label
                       >
-                      <div class="nqas-rating-options ms-2">
-                        <label class="nqas-rating-option">
+                      <div class="nqas-teacher-evaluation__rating-options ms-2">
+                        <label class="nqas-teacher-evaluation__rating-option">
                           <input type="radio" name="rating[9]" value="1" />
                           <!-- <span>1</span> -->
                           <small>Never</small>
                         </label>
 
-                        <label class="nqas-rating-option">
+                        <label class="nqas-teacher-evaluation__rating-option">
                           <input type="radio" name="rating[9]" value="2" />
                           <!-- <span>2</span> -->
                           <small>Once in a while</small>
                         </label>
 
-                        <label class="nqas-rating-option">
+                        <label class="nqas-teacher-evaluation__rating-option">
                           <input type="radio" name="rating[9]" value="3" />
                           <!-- <span>3</span> -->
                           <small>Sometimes</small>
                         </label>
 
-                        <label class="nqas-rating-option">
+                        <label class="nqas-teacher-evaluation__rating-option">
                           <input type="radio" name="rating[9]" value="4" />
                           <!-- <span>4</span> -->
                           <small>Most of the time</small>
                         </label>
 
-                        <label class="nqas-rating-option">
+                        <label class="nqas-teacher-evaluation__rating-option">
                           <input type="radio" name="rating[9]" value="5" />
                           <!-- <span>5</span> -->
                           <small>Almost always</small>
@@ -703,40 +385,40 @@
                     </div>
                   </div>
                   <!-- Question 10 -->
-                  <div class="nqas-rating-question">
-                    <div class="nqas-question-content pb-0 pb-md-2 border-0 border-md-bottom">
+                  <div class="nqas-teacher-evaluation__rating-question">
+                    <div class="nqas-teacher-evaluation__question-content pb-0 pb-md-2 border-0 border-md-bottom">
                       <label class="form-label">
                         10.Manages class time effectively
                         <span style="color: rgba(197, 4, 4, 0.993)"
                           >*</span
                         ></label
                       >
-                      <div class="nqas-rating-options ms-2">
-                        <label class="nqas-rating-option">
+                      <div class="nqas-teacher-evaluation__rating-options ms-2">
+                        <label class="nqas-teacher-evaluation__rating-option">
                           <input type="radio" name="rating[10]" value="1" />
                           <!-- <span>1</span> -->
                           <small>Never</small>
                         </label>
 
-                        <label class="nqas-rating-option">
+                        <label class="nqas-teacher-evaluation__rating-option">
                           <input type="radio" name="rating[10]" value="2" />
                           <!-- <span>2</span> -->
                           <small>Once in a while</small>
                         </label>
 
-                        <label class="nqas-rating-option">
+                        <label class="nqas-teacher-evaluation__rating-option">
                           <input type="radio" name="rating[10]" value="3" />
                           <!-- <span>3</span> -->
                           <small>Sometimes</small>
                         </label>
 
-                        <label class="nqas-rating-option">
+                        <label class="nqas-teacher-evaluation__rating-option">
                           <input type="radio" name="rating[10]" value="4" />
                           <!-- <span>4</span> -->
                           <small>Most of the time</small>
                         </label>
 
-                        <label class="nqas-rating-option">
+                        <label class="nqas-teacher-evaluation__rating-option">
                           <input type="radio" name="rating[10]" value="5" />
                           <!-- <span>5</span> -->
                           <small>Almost always</small>
@@ -745,40 +427,40 @@
                     </div>
                   </div>
                   <!-- Question 11 -->
-                  <div class="nqas-rating-question">
-                    <div class="nqas-question-content pb-0 pb-md-2 border-0 border-md-bottom">
+                  <div class="nqas-teacher-evaluation__rating-question">
+                    <div class="nqas-teacher-evaluation__question-content pb-0 pb-md-2 border-0 border-md-bottom">
                       <label class="form-label">
                         11. Speaks clearly and understandably
                         <span style="color: rgba(197, 4, 4, 0.993)"
                           >*</span
                         ></label
                       >
-                      <div class="nqas-rating-options ms-2">
-                        <label class="nqas-rating-option">
+                      <div class="nqas-teacher-evaluation__rating-options ms-2">
+                        <label class="nqas-teacher-evaluation__rating-option">
                           <input type="radio" name="rating[11]" value="1" />
                           <!-- <span>1</span> -->
                           <small>Never</small>
                         </label>
 
-                        <label class="nqas-rating-option">
+                        <label class="nqas-teacher-evaluation__rating-option">
                           <input type="radio" name="rating[11]" value="2" />
                           <!-- <span>2</span> -->
                           <small>Once in a while</small>
                         </label>
 
-                        <label class="nqas-rating-option">
+                        <label class="nqas-teacher-evaluation__rating-option">
                           <input type="radio" name="rating[11]" value="3" />
                           <!-- <span>3</span> -->
                           <small>Sometimes</small>
                         </label>
 
-                        <label class="nqas-rating-option">
+                        <label class="nqas-teacher-evaluation__rating-option">
                           <input type="radio" name="rating[11]" value="4" />
                           <!-- <span>4</span> -->
                           <small>Most of the time</small>
                         </label>
 
-                        <label class="nqas-rating-option">
+                        <label class="nqas-teacher-evaluation__rating-option">
                           <input type="radio" name="rating[11]" value="5" />
                           <!-- <span>5</span> -->
                           <small>Almost always</small>
@@ -787,40 +469,40 @@
                     </div>
                   </div>
                   <!-- Question 12 -->
-                  <div class="nqas-rating-question">
-                    <div class="nqas-question-content pb-0 pb-md-2 border-0 border-md-bottom">
+                  <div class="nqas-teacher-evaluation__rating-question">
+                    <div class="nqas-teacher-evaluation__question-content pb-0 pb-md-2 border-0 border-md-bottom">
                       <label class="form-label">
                         12. Users effective teaching aids/materials
                         <span style="color: rgba(197, 4, 4, 0.993)"
                           >*</span
                         ></label
                       >
-                      <div class="nqas-rating-options ms-2">
-                        <label class="nqas-rating-option">
-                          <input type="radio" name="rating[11]" value="1" />
+                      <div class="nqas-teacher-evaluation__rating-options ms-2">
+                        <label class="nqas-teacher-evaluation__rating-option">
+                          <input type="radio" name="rating[12]" value="1" />
                           <!-- <span>1</span> -->
                           <small>Never</small>
                         </label>
 
-                        <label class="nqas-rating-option">
+                        <label class="nqas-teacher-evaluation__rating-option">
                           <input type="radio" name="rating[12]" value="2" />
                           <!-- <span>2</span> -->
                           <small>Once in a while</small>
                         </label>
 
-                        <label class="nqas-rating-option">
+                        <label class="nqas-teacher-evaluation__rating-option">
                           <input type="radio" name="rating[12]" value="3" />
                           <!-- <span>3</span> -->
                           <small>Sometimes</small>
                         </label>
 
-                        <label class="nqas-rating-option">
+                        <label class="nqas-teacher-evaluation__rating-option">
                           <input type="radio" name="rating[12]" value="4" />
                           <!-- <span>4</span> -->
                           <small>Most of the time</small>
                         </label>
 
-                        <label class="nqas-rating-option">
+                        <label class="nqas-teacher-evaluation__rating-option">
                           <input type="radio" name="rating[12]" value="5" />
                           <!-- <span>5</span> -->
                           <small>Almost always</small>
@@ -829,41 +511,41 @@
                     </div>
                   </div>
                   <!-- Question 13 -->
-                  <div class="nqas-rating-question">
-                    <div class="nqas-question-content pb-0 pb-md-2 border-0 border-md-bottom">
+                  <div class="nqas-teacher-evaluation__rating-question">
+                    <div class="nqas-teacher-evaluation__question-content pb-0 pb-md-2 border-0 border-md-bottom">
                       <label class="form-label">
                         13. Encourages student participation
                         <span style="color: rgba(197, 4, 4, 0.993)"
                           >*</span
                         ></label
                       >
-                      <div class="nqas-rating-options ms-2">
-                        <label class="nqas-rating-option">
-                          <input type="radio" name="rating[11]" value="1" />
+                      <div class="nqas-teacher-evaluation__rating-options ms-2">
+                        <label class="nqas-teacher-evaluation__rating-option">
+                          <input type="radio" name="rating[13]" value="1" />
                           <!-- <span>1</span> -->
                           <small>Never</small>
                         </label>
 
-                        <label class="nqas-rating-option">
-                          <input type="radio" name="rating[12]" value="2" />
+                        <label class="nqas-teacher-evaluation__rating-option">
+                          <input type="radio" name="rating[13]" value="2" />
                           <!-- <span>2</span> -->
                           <small>Once in a while</small>
                         </label>
 
-                        <label class="nqas-rating-option">
-                          <input type="radio" name="rating[12]" value="3" />
+                        <label class="nqas-teacher-evaluation__rating-option">
+                          <input type="radio" name="rating[13]" value="3" />
                           <!-- <span>3</span> -->
                           <small>Sometimes</small>
                         </label>
 
-                        <label class="nqas-rating-option">
-                          <input type="radio" name="rating[12]" value="4" />
+                        <label class="nqas-teacher-evaluation__rating-option">
+                          <input type="radio" name="rating[13]" value="4" />
                           <!-- <span>4</span> -->
                           <small>Most of the time</small>
                         </label>
 
-                        <label class="nqas-rating-option">
-                          <input type="radio" name="rating[12]" value="5" />
+                        <label class="nqas-teacher-evaluation__rating-option">
+                          <input type="radio" name="rating[13]" value="5" />
                           <!-- <span>5</span> -->
                           <small>Almost always</small>
                         </label>
@@ -871,41 +553,41 @@
                     </div>
                   </div>
                   <!-- Question 14 -->
-                  <div class="nqas-rating-question">
-                    <div class="nqas-question-content pb-0 pb-md-2 border-0 border-md-bottom">
+                  <div class="nqas-teacher-evaluation__rating-question">
+                    <div class="nqas-teacher-evaluation__question-content pb-0 pb-md-2 border-0 border-md-bottom">
                       <label class="form-label">
                         14. Summarizes key points at the end
                         <span style="color: rgba(197, 4, 4, 0.993)"
                           >*</span
                         ></label
                       >
-                      <div class="nqas-rating-options ms-2">
-                        <label class="nqas-rating-option">
-                          <input type="radio" name="rating[11]" value="1" />
+                      <div class="nqas-teacher-evaluation__rating-options ms-2">
+                        <label class="nqas-teacher-evaluation__rating-option">
+                          <input type="radio" name="rating[14]" value="1" />
                           <!-- <span>1</span> -->
                           <small>Never</small>
                         </label>
 
-                        <label class="nqas-rating-option">
-                          <input type="radio" name="rating[12]" value="2" />
+                        <label class="nqas-teacher-evaluation__rating-option">
+                          <input type="radio" name="rating[14]" value="2" />
                           <!-- <span>2</span> -->
                           <small>Once in a while</small>
                         </label>
 
-                        <label class="nqas-rating-option">
-                          <input type="radio" name="rating[12]" value="3" />
+                        <label class="nqas-teacher-evaluation__rating-option">
+                          <input type="radio" name="rating[14]" value="3" />
                           <!-- <span>3</span> -->
                           <small>Sometimes</small>
                         </label>
 
-                        <label class="nqas-rating-option">
-                          <input type="radio" name="rating[12]" value="4" />
+                        <label class="nqas-teacher-evaluation__rating-option">
+                          <input type="radio" name="rating[14]" value="4" />
                           <!-- <span>4</span> -->
                           <small>Most of the time</small>
                         </label>
 
-                        <label class="nqas-rating-option">
-                          <input type="radio" name="rating[12]" value="5" />
+                        <label class="nqas-teacher-evaluation__rating-option">
+                          <input type="radio" name="rating[14]" value="5" />
                           <!-- <span>5</span> -->
                           <small>Almost always</small>
                         </label>
@@ -913,41 +595,41 @@
                     </div>
                   </div>
                   <!-- Question 15 -->
-                  <div class="nqas-rating-question">
-                    <div class="nqas-question-content pb-0 pb-md-2 border-0 border-md-bottom">
+                  <div class="nqas-teacher-evaluation__rating-question">
+                    <div class="nqas-teacher-evaluation__question-content pb-0 pb-md-2 border-0 border-md-bottom">
                       <label class="form-label">
                         15. Provides helpful references for study
                         <span style="color: rgba(197, 4, 4, 0.993)"
                           >*</span
                         ></label
                       >
-                      <div class="nqas-rating-options ms-2">
-                        <label class="nqas-rating-option">
-                          <input type="radio" name="rating[11]" value="1" />
+                      <div class="nqas-teacher-evaluation__rating-options ms-2">
+                        <label class="nqas-teacher-evaluation__rating-option">
+                          <input type="radio" name="rating[15]" value="1" />
                           <!-- <span>1</span> -->
                           <small>Never</small>
                         </label>
 
-                        <label class="nqas-rating-option">
-                          <input type="radio" name="rating[12]" value="2" />
+                        <label class="nqas-teacher-evaluation__rating-option">
+                          <input type="radio" name="rating[15]" value="2" />
                           <!-- <span>2</span> -->
                           <small>Once in a while</small>
                         </label>
 
-                        <label class="nqas-rating-option">
-                          <input type="radio" name="rating[12]" value="3" />
+                        <label class="nqas-teacher-evaluation__rating-option">
+                          <input type="radio" name="rating[15]" value="3" />
                           <!-- <span>3</span> -->
                           <small>Sometimes</small>
                         </label>
 
-                        <label class="nqas-rating-option">
-                          <input type="radio" name="rating[12]" value="4" />
+                        <label class="nqas-teacher-evaluation__rating-option">
+                          <input type="radio" name="rating[15]" value="4" />
                           <!-- <span>4</span> -->
                           <small>Most of the time</small>
                         </label>
 
-                        <label class="nqas-rating-option">
-                          <input type="radio" name="rating[12]" value="5" />
+                        <label class="nqas-teacher-evaluation__rating-option">
+                          <input type="radio" name="rating[15]" value="5" />
                           <!-- <span>5</span> -->
                           <small>Almost always</small>
                         </label>
@@ -955,41 +637,41 @@
                     </div>
                   </div>
                   <!-- Question 16 -->
-                  <div class="nqas-rating-question">
-                    <div class="nqas-question-content pb-0 pb-md-2 border-0 border-md-bottom">
+                  <div class="nqas-teacher-evaluation__rating-question">
+                    <div class="nqas-teacher-evaluation__question-content pb-0 pb-md-2 border-0 border-md-bottom">
                       <label class="form-label">
                         16. Assesses student understanding during class
                         <span style="color: rgba(197, 4, 4, 0.993)"
                           >*</span
                         ></label
                       >
-                      <div class="nqas-rating-options ms-2">
-                        <label class="nqas-rating-option">
-                          <input type="radio" name="rating[11]" value="1" />
+                      <div class="nqas-teacher-evaluation__rating-options ms-2">
+                        <label class="nqas-teacher-evaluation__rating-option">
+                          <input type="radio" name="rating[16]" value="1" />
                           <!-- <span>1</span> -->
                           <small>Never</small>
                         </label>
 
-                        <label class="nqas-rating-option">
-                          <input type="radio" name="rating[12]" value="2" />
+                        <label class="nqas-teacher-evaluation__rating-option">
+                          <input type="radio" name="rating[16]" value="2" />
                           <!-- <span>2</span> -->
                           <small>Once in a while</small>
                         </label>
 
-                        <label class="nqas-rating-option">
-                          <input type="radio" name="rating[12]" value="3" />
+                        <label class="nqas-teacher-evaluation__rating-option">
+                          <input type="radio" name="rating[16]" value="3" />
                           <!-- <span>3</span> -->
                           <small>Sometimes</small>
                         </label>
 
-                        <label class="nqas-rating-option">
-                          <input type="radio" name="rating[12]" value="4" />
+                        <label class="nqas-teacher-evaluation__rating-option">
+                          <input type="radio" name="rating[16]" value="4" />
                           <!-- <span>4</span> -->
                           <small>Most of the time</small>
                         </label>
 
-                        <label class="nqas-rating-option">
-                          <input type="radio" name="rating[12]" value="5" />
+                        <label class="nqas-teacher-evaluation__rating-option">
+                          <input type="radio" name="rating[16]" value="5" />
                           <!-- <span>5</span> -->
                           <small>Almost always</small>
                         </label>
@@ -997,41 +679,41 @@
                     </div>
                   </div>
                   <!-- Question 17 -->
-                  <div class="nqas-rating-question">
-                    <div class="nqas-question-content pb-0 pb-md-2 border-0 border-md-bottom">
+                  <div class="nqas-teacher-evaluation__rating-question">
+                    <div class="nqas-teacher-evaluation__question-content pb-0 pb-md-2 border-0 border-md-bottom">
                       <label class="form-label">
                         17. Creates a supportive learning environment
                         <span style="color: rgba(197, 4, 4, 0.993)"
                           >*</span
                         ></label
                       >
-                      <div class="nqas-rating-options ms-2">
-                        <label class="nqas-rating-option">
-                          <input type="radio" name="rating[11]" value="1" />
+                      <div class="nqas-teacher-evaluation__rating-options ms-2">
+                        <label class="nqas-teacher-evaluation__rating-option">
+                          <input type="radio" name="rating[17]" value="1" />
                           <!-- <span>1</span> -->
                           <small>Never</small>
                         </label>
 
-                        <label class="nqas-rating-option">
-                          <input type="radio" name="rating[12]" value="2" />
+                        <label class="nqas-teacher-evaluation__rating-option">
+                          <input type="radio" name="rating[17]" value="2" />
                           <!-- <span>2</span> -->
                           <small>Once in a while</small>
                         </label>
 
-                        <label class="nqas-rating-option">
-                          <input type="radio" name="rating[12]" value="3" />
+                        <label class="nqas-teacher-evaluation__rating-option">
+                          <input type="radio" name="rating[17]" value="3" />
                           <!-- <span>3</span> -->
                           <small>Sometimes</small>
                         </label>
 
-                        <label class="nqas-rating-option">
-                          <input type="radio" name="rating[12]" value="4" />
+                        <label class="nqas-teacher-evaluation__rating-option">
+                          <input type="radio" name="rating[17]" value="4" />
                           <!-- <span>4</span> -->
                           <small>Most of the time</small>
                         </label>
 
-                        <label class="nqas-rating-option">
-                          <input type="radio" name="rating[12]" value="5" />
+                        <label class="nqas-teacher-evaluation__rating-option">
+                          <input type="radio" name="rating[17]" value="5" />
                           <!-- <span>5</span> -->
                           <small>Almost always</small>
                         </label>
@@ -1039,41 +721,41 @@
                     </div>
                   </div>
                   <!-- Question 18 -->
-                  <div class="nqas-rating-question">
-                    <div class="nqas-question-content pb-0 pb-md-2 border-0 border-md-bottom">
+                  <div class="nqas-teacher-evaluation__rating-question">
+                    <div class="nqas-teacher-evaluation__question-content pb-0 pb-md-2 border-0 border-md-bottom">
                       <label class="form-label">
                         18. Motivates students' to learn
                         <span style="color: rgba(197, 4, 4, 0.993)"
                           >*</span
                         ></label
                       >
-                      <div class="nqas-rating-options ms-2">
-                        <label class="nqas-rating-option">
-                          <input type="radio" name="rating[11]" value="1" />
+                      <div class="nqas-teacher-evaluation__rating-options ms-2">
+                        <label class="nqas-teacher-evaluation__rating-option">
+                          <input type="radio" name="rating[18]" value="1" />
                           <!-- <span>1</span> -->
                           <small>Never</small>
                         </label>
 
-                        <label class="nqas-rating-option">
-                          <input type="radio" name="rating[12]" value="2" />
+                        <label class="nqas-teacher-evaluation__rating-option">
+                          <input type="radio" name="rating[18]" value="2" />
                           <!-- <span>2</span> -->
                           <small>Once in a while</small>
                         </label>
 
-                        <label class="nqas-rating-option">
-                          <input type="radio" name="rating[12]" value="3" />
+                        <label class="nqas-teacher-evaluation__rating-option">
+                          <input type="radio" name="rating[18]" value="3" />
                           <!-- <span>3</span> -->
                           <small>Sometimes</small>
                         </label>
 
-                        <label class="nqas-rating-option">
-                          <input type="radio" name="rating[12]" value="4" />
+                        <label class="nqas-teacher-evaluation__rating-option">
+                          <input type="radio" name="rating[18]" value="4" />
                           <!-- <span>4</span> -->
                           <small>Most of the time</small>
                         </label>
 
-                        <label class="nqas-rating-option">
-                          <input type="radio" name="rating[12]" value="5" />
+                        <label class="nqas-teacher-evaluation__rating-option">
+                          <input type="radio" name="rating[18]" value="5" />
                           <!-- <span>5</span> -->
                           <small>Almost always</small>
                         </label>
@@ -1081,40 +763,40 @@
                     </div>
                   </div>
                   <!-- Question 19 -->
-                  <div class="nqas-rating-question">
-                    <div class="nqas-question-content pb-0 pb-md-2 border-0 border-md-bottom">
+                  <div class="nqas-teacher-evaluation__rating-question">
+                    <div class="nqas-teacher-evaluation__question-content pb-0 pb-md-2 border-0 border-md-bottom">
                       <label class="form-label">
                         19. Respects students' opinions
                         <span style="color: rgba(197, 4, 4, 0.993)"
                           >*</span
                         ></label
                       >
-                      <div class="nqas-rating-options ms-2">
-                        <label class="nqas-rating-option">
+                      <div class="nqas-teacher-evaluation__rating-options ms-2">
+                        <label class="nqas-teacher-evaluation__rating-option">
                           <input type="radio" name="rating[19]" value="1" />
                           <!-- <span>1</span> -->
                           <small>Never</small>
                         </label>
 
-                        <label class="nqas-rating-option">
+                        <label class="nqas-teacher-evaluation__rating-option">
                           <input type="radio" name="rating[19]" value="2" />
                           <!-- <span>2</span> -->
                           <small>Once in a while</small>
                         </label>
 
-                        <label class="nqas-rating-option">
+                        <label class="nqas-teacher-evaluation__rating-option">
                           <input type="radio" name="rating[19]" value="3" />
                           <!-- <span>3</span> -->
                           <small>Sometimes</small>
                         </label>
 
-                        <label class="nqas-rating-option">
+                        <label class="nqas-teacher-evaluation__rating-option">
                           <input type="radio" name="rating[19]" value="4" />
                           <!-- <span>4</span> -->
                           <small>Most of the time</small>
                         </label>
 
-                        <label class="nqas-rating-option">
+                        <label class="nqas-teacher-evaluation__rating-option">
                           <input type="radio" name="rating[19]" value="5" />
                           <!-- <span>5</span> -->
                           <small>Almost always</small>
@@ -1123,41 +805,41 @@
                     </div>
                   </div>
                   <!-- Question 20 -->
-                  <div class="nqas-rating-question">
-                    <div class="nqas-question-content pb-0 pb-md-2 border-0 border-md-bottom">
+                  <div class="nqas-teacher-evaluation__rating-question">
+                    <div class="nqas-teacher-evaluation__question-content pb-0 pb-md-2 border-0 border-md-bottom">
                       <label class="form-label">
                         20. Is approachable for help or questions
                         <span style="color: rgba(197, 4, 4, 0.993)"
                           >*</span
                         ></label
                       >
-                      <div class="nqas-rating-options ms-2">
-                        <label class="nqas-rating-option">
-                          <input type="radio" name="rating[19]" value="1" />
+                      <div class="nqas-teacher-evaluation__rating-options ms-2">
+                        <label class="nqas-teacher-evaluation__rating-option">
+                          <input type="radio" name="rating[20]" value="1" />
                           <!-- <span>1</span> -->
                           <small>Never</small>
                         </label>
 
-                        <label class="nqas-rating-option">
-                          <input type="radio" name="rating[19]" value="2" />
+                        <label class="nqas-teacher-evaluation__rating-option">
+                          <input type="radio" name="rating[20]" value="2" />
                           <!-- <span>2</span> -->
                           <small>Once in a while</small>
                         </label>
 
-                        <label class="nqas-rating-option">
-                          <input type="radio" name="rating[19]" value="3" />
+                        <label class="nqas-teacher-evaluation__rating-option">
+                          <input type="radio" name="rating[20]" value="3" />
                           <!-- <span>3</span> -->
                           <small>Sometimes</small>
                         </label>
 
-                        <label class="nqas-rating-option">
-                          <input type="radio" name="rating[19]" value="4" />
+                        <label class="nqas-teacher-evaluation__rating-option">
+                          <input type="radio" name="rating[20]" value="4" />
                           <!-- <span>4</span> -->
                           <small>Most of the time</small>
                         </label>
 
-                        <label class="nqas-rating-option">
-                          <input type="radio" name="rating[19]" value="5" />
+                        <label class="nqas-teacher-evaluation__rating-option">
+                          <input type="radio" name="rating[20]" value="5" />
                           <!-- <span>5</span> -->
                           <small>Almost always</small>
                         </label>
@@ -1165,40 +847,40 @@
                     </div>
                   </div>
                   <!-- Question 21 -->
-                  <div class="nqas-rating-question">
-                    <div class="nqas-question-content pb-0 pb-md-2 border-0 border-md-bottom">
+                  <div class="nqas-teacher-evaluation__rating-question">
+                    <div class="nqas-teacher-evaluation__question-content pb-0 pb-md-2 border-0 border-md-bottom">
                       <label class="form-label">
                         21. Promotes a positive academic atmosphere
                         <span style="color: rgba(197, 4, 4, 0.993)"
                           >*</span
                         ></label
                       >
-                      <div class="nqas-rating-options ms-2">
-                        <label class="nqas-rating-option">
+                      <div class="nqas-teacher-evaluation__rating-options ms-2">
+                        <label class="nqas-teacher-evaluation__rating-option">
                           <input type="radio" name="rating[21]" value="1" />
                           <!-- <span>1</span> -->
                           <small>Never</small>
                         </label>
 
-                        <label class="nqas-rating-option">
+                        <label class="nqas-teacher-evaluation__rating-option">
                           <input type="radio" name="rating[21]" value="2" />
                           <!-- <span>2</span> -->
                           <small>Once in a while</small>
                         </label>
 
-                        <label class="nqas-rating-option">
+                        <label class="nqas-teacher-evaluation__rating-option">
                           <input type="radio" name="rating[21]" value="3" />
                           <!-- <span>3</span> -->
                           <small>Sometimes</small>
                         </label>
 
-                        <label class="nqas-rating-option">
+                        <label class="nqas-teacher-evaluation__rating-option">
                           <input type="radio" name="rating[21]" value="4" />
                           <!-- <span>4</span> -->
                           <small>Most of the time</small>
                         </label>
 
-                        <label class="nqas-rating-option">
+                        <label class="nqas-teacher-evaluation__rating-option">
                           <input type="radio" name="rating[21]" value="5" />
                           <!-- <span>5</span> -->
                           <small>Almost always</small>
@@ -1207,26 +889,26 @@
                     </div>
                   </div>
                   <!-- Question 22 -->
-                  <div class="nqas-rating-question">
-                    <div class="nqas-question-content pb-0 pb-md-2 border-0 border-md-bottom">
+                  <div class="nqas-teacher-evaluation__rating-question">
+                    <div class="nqas-teacher-evaluation__question-content pb-0 pb-md-2 border-0 border-md-bottom">
                       <label class="form-label">
                         22. I follow the teacher as my role model
                         <span style="color: rgba(197, 4, 4, 0.993)"
                           >*</span
                         ></label
                       >
-                      <div class="nqas-rating-options ms-2">
-                        <label class="nqas-rating-option">
+                      <div class="nqas-teacher-evaluation__rating-options ms-2">
+                        <label class="nqas-teacher-evaluation__rating-option">
                           <input type="radio" name="rating[22]" value="1" />
                           <small>To much extent</small>
                         </label>
 
-                        <label class="nqas-rating-option">
+                        <label class="nqas-teacher-evaluation__rating-option">
                           <input type="radio" name="rating[22]" value="2" />
                           <small>All</small>
                         </label>
 
-                        <label class="nqas-rating-option">
+                        <label class="nqas-teacher-evaluation__rating-option">
                           <input type="radio" name="rating[22]" value="3" />
                           <small>Yes</small>
                         </label>
@@ -1235,8 +917,8 @@
                   </div>
                 </section>
 
-                <div class="nqas-question">
-                  <label class="form-label nqas-question-label">
+                <div class="nqas-teacher-evaluation__question">
+                  <label class="form-label nqas-teacher-evaluation__question-label">
                     23. If any other comments please write down below- <span style="color: rgba(197, 4, 4, 0.993)">(Maximum 200 words)</span>
                   </label>
                   <textarea
@@ -1245,13 +927,13 @@
                   ></textarea>
                 </div>
                 <!-- Actions -->
-                <div class="nqas-form-actions">
-                  <button type="reset" class="nqas-btn nqas-btn-reset">
+                <div class="nqas-teacher-evaluation__form-actions">
+                  <button type="reset" class="nqas-teacher-evaluation__btn nqas-teacher-evaluation__btn--reset">
                     <i class="bi bi-arrow-counterclockwise me-1"></i>
                     Reset
                   </button>
 
-                  <button type="submit" class="nqas-btn nqas-btn-submit">
+                  <button type="submit" class="nqas-teacher-evaluation__btn nqas-teacher-evaluation__btn--submit">
                     <i class="bi bi-check-circle me-1"></i>
                     Submit Evaluation
                   </button>

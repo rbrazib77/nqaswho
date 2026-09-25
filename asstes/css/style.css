@@ -289,12 +289,752 @@ body {
   }
 }
 
+.nqas-form--annual-report {
+  max-width: 100%;
+  color: #344054;
+  font-size: 14px;
+  padding: 20px;
+}
+
+/* =====================================================
+   Header
+===================================================== */
+
+.nqas-annual-report__header {
+  padding-bottom: 25px;
+  margin-bottom: 25px;
+  text-align: center;
+  border-bottom: 1px solid #eaecf0;
+}
+
+.nqas-annual-report__annexure {
+  color: #087f8c;
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.nqas-annual-report__title {
+  max-width: 850px;
+  margin: 0 auto;
+  color: #1d2939;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+/* ===================Section============================= */
+
+/* ============== Teachers Evaluation  Start ==================*/
+/* Form Wrapper */
+.nqas-teacher-evaluation__form-report-wrapper {
+  width: 100%;
+}
+.nqas-teacher-evaluation__card-content {
+  padding: 20px;
+}
+.nqas-teacher-evaluation__form-report-body {
+  width: 100%;
+}
+
+/* Section Title */
+.nqas-teacher-evaluation__form-section-title {
+  color: #344054;
+}
+
+/* Instructions */
+.nqas-teacher-evaluation__form-instruction {
+  margin-bottom: 18px;
+  padding: 12px 14px;
+  border: 1px solid #ccebed;
+  border-radius: 8px;
+  background: #eef9fa;
+  color: #344054;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+/* Choice Box */
+.nqas-teacher-evaluation__choice-box {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 15px;
+}
+
+.nqas-teacher-evaluation__choice {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin: 0;
+  cursor: pointer;
+  color: #344054;
+  font-size: 13px;
+}
+
+.nqas-teacher-evaluation__choice input[type="radio"] {
+  width: 17px;
+  height: 17px;
+  margin: 0;
+  accent-color: #087f8c;
+  cursor: pointer;
+}
+
+/* Rating Section */
+.nqas-teacher-evaluation__form-section {
+  width: 100%;
+}
+
+.nqas-teacher-evaluation__rating-info {
+  margin-bottom: 14px;
+  padding: 12px 14px;
+  border: 1px solid #ccebed;
+  border-radius: 8px;
+  background: #eef9fa;
+  color: #344054;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+/* Rating Question */
+.nqas-teacher-evaluation__rating-question {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  width: 100%;
+  padding: 14px 0;
+}
+
+/* Question Content */
+.nqas-teacher-evaluation__question-content {
+  flex: 1;
+  min-width: 0;
+}
+
+/* Question Text */
+.nqas-teacher-evaluation__question-content .form-label {
+  display: block;
+  margin-bottom: 10px;
+  color: #344054;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+/* Rating Options */
+.nqas-teacher-evaluation__rating-options {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+/* Individual Radio Option */
+.nqas-teacher-evaluation__rating-option {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin: 0;
+  cursor: pointer;
+  color: #344054;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.nqas-teacher-evaluation__rating-option input[type="radio"] {
+  width: 17px;
+  height: 17px;
+  margin: 0;
+  accent-color: #087f8c;
+  cursor: pointer;
+}
+
+.nqas-teacher-evaluation__rating-option span {
+  font-weight: 600;
+  color: #344054;
+}
+
+.nqas-teacher-evaluation__rating-option small {
+  color: #667085;
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.nqas-teacher-evaluation__rating-option:hover span,
+.nqas-teacher-evaluation__rating-option:hover small {
+  color: #087f8c;
+}
+
+/* Question 23 */
+.nqas-teacher-evaluation__question {
+  width: 100%;
+}
+
+.nqas-teacher-evaluation__question-label {
+  color: #344054;
+  font-weight: 600;
+}
+
+.nqas-teacher-evaluation__question .comment-box {
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* Form Actions */
+.nqas-teacher-evaluation__form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  padding-top: 12px;
+  margin-top: 18px;
+  border-top: 1px solid #eaecf0;
+}
+
+/* Buttons */
+.nqas-teacher-evaluation__btn {
+  min-height: 44px;
+  padding: 9px 20px;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.nqas-teacher-evaluation__btn--reset {
+  background: #fff;
+  border-color: #98a2b3;
+  color: #475467;
+}
+
+.nqas-teacher-evaluation__btn--reset:hover {
+  background: #f2f4f7;
+}
+
+.nqas-teacher-evaluation__btn--submit {
+  background: #087f8c;
+  color: #fff;
+}
+
+.nqas-teacher-evaluation__btn--submit:hover {
+  background: #066b76;
+  transform: translateY(-1px);
+  box-shadow: 0 5px 12px rgba(8, 127, 140, 0.18);
+}
+
+/* -----------Tablet Responsive----------------- */
+
+@media (max-width: 991.98px) {
+  .nqas-teacher-evaluation__form-report-wrapper {
+    width: 100%;
+  }
+
+  .nqas-teacher-evaluation__form-report-body {
+    width: 100%;
+  }
+
+  .nqas-teacher-evaluation__rating-options {
+    gap: 13px;
+  }
+}
+
+/* ------Mobile Responsive---------*/
+@media (max-width: 767.98px) {
+  .nqas-teacher-evaluation__choice-box {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .nqas-teacher-evaluation__rating-question {
+    gap: 8px;
+    padding: 14px 0;
+  }
+
+  .nqas-teacher-evaluation__rating-options {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    margin-left: 0 !important;
+  }
+
+  .nqas-teacher-evaluation__rating-option {
+    min-height: 24px;
+    font-size: 13px;
+    white-space: normal;
+  }
+
+  .nqas-teacher-evaluation__rating-option input[type="radio"] {
+    flex: 0 0 auto;
+    width: 18px;
+    height: 18px;
+  }
+
+  .nqas-teacher-evaluation__rating-option small {
+    font-size: 12px;
+  }
+
+  .nqas-teacher-evaluation__form-actions {
+    flex-direction: column;
+  }
+
+  .nqas-teacher-evaluation__btn {
+    width: 100%;
+  }
+}
+/* ============== NQAS Teacher Evaluation  End======================== */
+
+/* ==============NQAS Annaul Report Start======================== */
+.nqas-annual-report__section {
+  margin-bottom: 30px;
+}
+.nqas-annual-report__subsection {
+  margin-top: 25px;
+}
+
+.nqas-annual-report__subsection-title {
+  margin-bottom: 18px;
+  color: #344054;
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 1.5;
+}
+
+/* ==================Labels & Inputs============================= */
+.nqas-annual-report__label {
+  display: block;
+  margin-bottom: 7px;
+  color: #344054;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.nqas-annual-report__section .form-control {
+  min-height: 42px;
+  border: 1px solid #d0d5dd;
+  border-radius: 7px;
+  color: #344054;
+  font-size: 15px;
+  box-shadow: none;
+}
+
+.nqas-form--annual-report .form-control:focus {
+  border-color: #087f8c;
+
+  box-shadow: 0 0 0 3px rgba(8, 127, 140, 0.08);
+}
+
+.nqas-form--annual-report textarea.form-control {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.nqas-annual-report__small-input {
+  max-width: 180px;
+}
+
+/* =====================================================
+   Questions
+===================================================== */
+
+.nqas-annual-report__question {
+  padding: 13px 0;
+
+  /* border-bottom: 1px solid #f0f2f5; */
+}
+
+/* =====================================================
+   Radio
+===================================================== */
+
+.nqas-annual-report__radio-group {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 22px;
+}
+
+.nqas-annual-report__radio {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  cursor: pointer;
+  color: #475467;
+  font-size: 14px;
+}
+
+.nqas-annual-report__radio input {
+  width: 17px;
+  height: 17px;
+
+  margin: 0;
+
+  accent-color: #087f8c;
+
+  cursor: pointer;
+}
+
+/* ----Phase Coordinator----- */
+
+.nqas-annual-report__phase-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.nqas-annual-report__phase-item {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  align-items: center;
+  gap: 12px;
+  margin-left: 10px;
+}
+
+.nqas-annual-report__phase-item > span {
+  color: #475467;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+/* ----Meeting List---- */
+.nqas-annual-report__meeting-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.nqas-annual-report__meeting-item {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 700px;
+  align-items: center;
+  gap: 15px;
+  margin-left: 10px;
+}
+
+.nqas-annual-report__meeting-item span {
+  color: #475467;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.nqas-annual-report__meeting-item .form-control {
+  min-height: 38px;
+}
+
+/* -----Yes / No Questions---- */
+
+.nqas-annual-report__yesno-question {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px 20px;
+  padding: 10px 0;
+  border-bottom: 1px solid #f0f2f5;
+  font-size: 17px;
+  margin-left: 15px;
+}
+
+/* Question */
+.nqas-annual-report__yesno-question > span {
+  flex: 0 0 100%;
+  color: #475467;
+  font-size: 15px;
+  line-height: 1.5;
+  font-weight: 600;
+}
+
+/* Yes / No */
+.nqas-annual-report__yesno-question label {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: #475467;
+  font-size: 15px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.nqas-annual-report__yesno-question input {
+  width: 16px;
+  height: 16px;
+  margin: 0;
+  accent-color: #087f8c;
+}
+
+/* ===================Actions========================= */
+.nqas-annual-report__actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #eaecf0;
+}
+
+.nqas-annual-report__actions .btn {
+  min-height: 42px;
+  padding: 8px 18px;
+
+  border-radius: 7px;
+  font-size: 13px;
+}
+
+/* ============Mobile============================ */
+
+@media (max-width: 767px) {
+  .nqas-form--annual-report {
+    font-size: 13px;
+  }
+  .nqas-annual-report__header {
+    text-align: left;
+  }
+  .nqas-annual-report__title {
+    font-size: 18px;
+  }
+  .nqas-annual-report__subsection-title {
+    font-size: 14px;
+  }
+
+  .nqas-annual-report__small-input {
+    max-width: 100%;
+  }
+
+  /* Radio নিচে নিচে */
+  .nqas-annual-report__radio-group {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  /* Phase */
+
+  .nqas-annual-report__phase-item {
+    grid-template-columns: 1fr;
+    gap: 5px;
+  }
+
+  /* Meeting */
+
+  .nqas-annual-report__meeting-item {
+    grid-template-columns: 1fr;
+    gap: 5px;
+  }
+
+  .nqas-annual-report__meeting-item .form-control {
+    max-width: 120px;
+  }
+
+  /* Yes / No */
+
+  .nqas-annual-report__yesno-question {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 20px;
+  }
+
+  .nqas-annual-report__yesno-question > span {
+    flex: 0 0 100%;
+  }
+
+  /* Buttons */
+
+  .nqas-annual-report__actions {
+    flex-direction: column-reverse;
+  }
+
+  .nqas-annual-report__actions .btn {
+    width: 100%;
+  }
+}
+/* =====================================================
+   NQAS Annual Report - Additional Questions
+===================================================== */
+
+.nqas-annual-report__followup {
+  margin-top: 15px;
+  padding-left: 20px;
+}
+
+.nqas-annual-report__followup > label {
+  display: block;
+  margin-bottom: 7px;
+  color: #475467;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+/* =====================================================
+   Hint
+===================================================== */
+
+.nqas-annual-report__hint {
+  color: #667085;
+  font-size: 12px;
+  font-weight: 400;
+  font-style: italic;
+}
+
+/* =====================================================
+   Number List
+===================================================== */
+
+.nqas-annual-report__number-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.nqas-annual-report__number-item {
+  display: grid;
+  grid-template-columns: 25px minmax(0, 1fr);
+  align-items: center;
+  gap: 8px;
+}
+
+.nqas-annual-report__number-item > span {
+  color: #475467;
+  font-size: 13px;
+}
+
+/* =====================================================
+   Nested Questions
+===================================================== */
+
+.nqas-annual-report__nested-question {
+  padding-left: 25px;
+}
+
+.nqas-annual-report__nested-question::before {
+  content: "";
+}
+
+/* =====================================================
+   Percentage Input
+===================================================== */
+
+.nqas-annual-report__input-suffix {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  max-width: 220px;
+}
+
+.nqas-annual-report__input-suffix .form-control {
+  flex: 1;
+}
+
+.nqas-annual-report__input-suffix > span {
+  color: #475467;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* ===========Publication / Paper=============== */
+
+.nqas-annual-report__publication-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 10px;
+  margin-left: 15px;
+}
+
+.nqas-annual-report__publication-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  max-width: 400px;
+}
+
+.nqas-annual-report__publication-item > :first-child {
+  flex: 0 1 600px;
+}
+
+.nqas-annual-report__publication-item > :last-child {
+  flex: 0 0 200px;
+}
+
+.nqas-annual-report__publication-item > span {
+  color: #475467;
+  font-size: 13px;
+}
+
+/* ==========Note==================== */
+
+.nqas-annual-report__note {
+  margin-top: 25px;
+  padding: 14px 16px;
+  background: #f8fafc;
+  border-left: 3px solid #087f8c;
+  border-radius: 5px;
+  color: #667085;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.7;
+}
+
+.nqas-annual-report__note strong {
+  color: #344054;
+}
+
+/* =========Textarea============= */
+
+.nqas-form--annual-report textarea.form-control {
+  min-height: 95px;
+  resize: vertical;
+}
+
+/* =============File Input=============== */
+
+.nqas-form--annual-report input[type="file"] {
+  min-height: 42px;
+  padding: 8px 10px;
+  font-size: 13px;
+}
+
+/* =======================Mobile Responsive============================= */
+
+@media (max-width: 767px) {
+  .nqas-annual-report__followup {
+    padding-left: 0;
+  }
+
+  .nqas-annual-report__nested-question {
+    padding-left: 0;
+  }
+
+  .nqas-annual-report__number-item {
+    grid-template-columns: 25px minmax(0, 1fr);
+  }
+
+  .nqas-annual-report__input-suffix {
+    max-width: 100%;
+  }
+
+  .nqas-annual-report__publication-item {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+
+  .nqas-annual-report__publication-item .form-control {
+    max-width: 180px;
+  }
+
+  .nqas-annual-report__note {
+    font-size: 11px;
+  }
+}
+
+/* ==============NQAS Annual Report End========================== */
+
 /* =================Footer Section Start==================== */
 .footer {
   padding: 18px 20px;
   text-align: center;
-  font-size: 12px;
-  font-weight: 400;
+  font-size: 15px;
+  font-weight: 600;
   color: #98a2b3;
   border-top: 1px solid #eef0f3;
   background: #ffffff;
@@ -310,7 +1050,7 @@ body {
 
 /* =================Footer Section End==================== */
 
-/* ============================== Main Container============================== */
+/* ============================== nqas Container============================== */
 .nqas-form-report-wrapper {
   width: 100%;
   padding: 30px 0px;
@@ -326,13 +1066,11 @@ body {
   padding-bottom: 10px;
   border-bottom: 1px solid #eaecf0;
   color: #087f8c;
-  font-size: 18px;
-  font-weight: 700;
+  font-size: 28px;
+  font-weight: 800;
 }
-.form-label {
-  color: #344054;
-  font-size: 14px;
-  font-weight: 600;
+.nqas-form-section-title i {
+  margin-right: 10px;
 }
 .form-control,
 .form-select {
@@ -632,6 +1370,3 @@ textarea.form-control {
   accent-color: #087f8c;
   cursor: pointer;
 }
-
-
-
