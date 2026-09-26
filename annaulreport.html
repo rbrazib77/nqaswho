@@ -71,14 +71,14 @@
               <!-- Medical College -->
               <div class="col-md-6">
                 <label class="nqas-annual-report__label">
-                  i. Name of the Medical College / Dental College
+                  i. Annual Report submit Year
                 </label>
 
                 <input
                   type="text"
                   name="college_name"
                   class="form-control"
-                  placeholder="Enter medical / dental college name"
+                  placeholder="Enter submit Year 2026"
                 />
               </div>
               <!-- Year -->
@@ -225,24 +225,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-md-6">
-                  <!-- Teachers -->
-                  <!-- <div class="nqas-annual-report__label">
-                    <label class="pb-2">
-                      iii. How many teachers are working in your college at
-                      present?
-                    </label>
-
-                    <input
-                      type="file"
-                      name="total_teachers"
-                      class="form-control"
-                      min="0"
-                    />
-                  </div> -->
-                </div>
                 <div class="row g-4">
-                  <!-- iii. How many teachers are working full-time / phase-wise -->
                   <div class="col-12">
                     <div class="nqas-annual-report__label mb-2">
                       <label class="form-label fw-semibold">
@@ -250,9 +233,10 @@
                         present? (Phase-wise breakdown)
                       </label>
                     </div>
+
                     <div class="row g-2 align-items-center">
                       <div class="col-6 col-sm-3 col-md-2">
-                        <label class="form-label small text-muted mb-1"
+                        <label class="nqas-annual-report__phase-label"
                           >Phase 1</label
                         >
                         <input
@@ -263,8 +247,9 @@
                           placeholder="0"
                         />
                       </div>
+
                       <div class="col-6 col-sm-3 col-md-2">
-                        <label class="form-label small text-muted mb-1"
+                        <label class="nqas-annual-report__phase-label"
                           >Phase 2</label
                         >
                         <input
@@ -275,8 +260,9 @@
                           placeholder="0"
                         />
                       </div>
+
                       <div class="col-6 col-sm-3 col-md-2">
-                        <label class="form-label small text-muted mb-1"
+                        <label class="nqas-annual-report__phase-label"
                           >Phase 3</label
                         >
                         <input
@@ -287,8 +273,9 @@
                           placeholder="0"
                         />
                       </div>
+
                       <div class="col-6 col-sm-3 col-md-2">
-                        <label class="form-label small text-muted mb-1"
+                        <label class="nqas-annual-report__phase-label"
                           >Phase 4</label
                         >
                         <input
@@ -299,16 +286,17 @@
                           placeholder="0"
                         />
                       </div>
+
                       <div class="col-12 col-md-4">
-                        <label class="form-label small text-muted mb-1"
-                          >Total Teachers</label
+                        <label class="nqas-annual-report__phase-label"
+                          >Total</label
                         >
                         <input
                           type="number"
                           name="teachers_total"
                           class="form-control text-center fw-bold bg-light"
                           readonly
-                          placeholder="Total"
+                          placeholder="0"
                         />
                       </div>
                     </div>
@@ -321,11 +309,10 @@
                         iv. How many teachers are working part-time?
                       </label>
                       <div class="row g-2 align-items-center">
-                        <div class="col-2">
-                          <!-- <label
-                            class="form-label small text-muted mb-1 text-center d-block"
-                            >P-1</label
-                          > -->
+                        <div class="col-6 col-sm-3 col-md-2">
+                          <label class="nqas-annual-report__phase-label"
+                            >Phase 1</label
+                          >
                           <input
                             type="number"
                             name="part_time_p1"
@@ -334,11 +321,10 @@
                             placeholder="0"
                           />
                         </div>
-                        <div class="col-2">
-                          <!-- <label
-                            class="form-label small text-muted mb-1 text-center d-block"
-                            >P-2</label
-                          > -->
+                        <div class="col-6 col-sm-3 col-md-2">
+                          <label class="nqas-annual-report__phase-label"
+                            >Phase 2</label
+                          >
                           <input
                             type="number"
                             name="part_time_p2"
@@ -347,11 +333,10 @@
                             placeholder="0"
                           />
                         </div>
-                        <div class="col-2">
-                          <!-- <label
-                            class="form-label small text-muted mb-1 text-center d-block"
-                            >P-3</label
-                          > -->
+                        <div class="col-6 col-sm-3 col-md-2">
+                          <label class="nqas-annual-report__phase-label"
+                            >Phase 3</label
+                          >
                           <input
                             type="number"
                             name="part_time_p3"
@@ -360,11 +345,10 @@
                             placeholder="0"
                           />
                         </div>
-                        <div class="col-2">
-                          <!-- <label
-                            class="form-label small text-muted mb-1 text-center d-block"
-                            >P-4</label
-                          > -->
+                        <div class="col-6 col-sm-3 col-md-2">
+                          <label class="nqas-annual-report__phase-label"
+                            >Phase 4</label
+                          >
                           <input
                             type="number"
                             name="part_time_p4"
@@ -373,24 +357,11 @@
                             placeholder="0"
                           />
                         </div>
-                        <div class="col-2">
-                          <!-- <label
-                            class="form-label small text-muted mb-1 text-center d-block"
-                            >P-5</label
-                          > -->
-                          <input
-                            type="number"
-                            name="part_time_p5"
-                            class="form-control text-center px-1"
-                            min="0"
-                            placeholder="0"
-                          />
-                        </div>
-                        <div class="col-2">
-                          <!-- <label
-                            class="form-label small text-muted mb-1 text-center d-block fw-bold"
+
+                        <div class="col-12 col-md-4">
+                          <label class="nqas-annual-report__phase-label"
                             >Total</label
-                          > -->
+                          >
                           <input
                             type="number"
                             name="part_time_teachers_total"
@@ -411,40 +382,65 @@
                         present?
                       </label>
                       <div class="row g-2">
-                        <div class="col-3">
+                        <div class="col-6 col-sm-3 col-md-2">
+                          <label class="nqas-annual-report__phase-label"
+                            >Phase 1</label
+                          >
                           <input
                             type="number"
                             name="students_year_1"
                             class="form-control text-center"
                             min="0"
-                            placeholder="1"
+                            placeholder="0"
                           />
                         </div>
-                        <div class="col-3">
+                        <div class="col-6 col-sm-3 col-md-2">
+                          <label class="nqas-annual-report__phase-label"
+                            >Phase 2</label
+                          >
                           <input
                             type="number"
                             name="students_year_2"
                             class="form-control text-center"
                             min="0"
-                            placeholder="2"
+                            placeholder="0"
                           />
                         </div>
-                        <div class="col-3">
+                        <div class="col-6 col-sm-3 col-md-2">
+                          <label class="nqas-annual-report__phase-label"
+                            >Phase 3</label
+                          >
                           <input
                             type="number"
                             name="students_year_3"
                             class="form-control text-center"
                             min="0"
-                            placeholder="3"
+                            placeholder="0"
                           />
                         </div>
-                        <div class="col-3">
+                        <div class="col-6 col-sm-3 col-md-2">
+                          <label class="nqas-annual-report__phase-label"
+                            >Phase 4</label
+                          >
                           <input
                             type="number"
                             name="students_year_4"
                             class="form-control text-center"
                             min="0"
-                            placeholder="Yr 4"
+                            placeholder="0"
+                          />
+                        </div>
+                        <div class="col-12 col-md-4">
+                          <label class="nqas-annual-report__phase-label"
+                            >Total</label
+                          >
+                          <input
+                            type="number"
+                            name="students_year_4"
+                            class="form-control text-center px-1 fw-bold bg-light"
+                            min="0"
+                            readonly
+                            placeholder="0"
                           />
                         </div>
                       </div>
@@ -471,7 +467,7 @@
                       </label>
                       <label class="nqas-annual-report__radio">
                         <input type="radio" name="qas_status" value="ongoing" />
-                        <span>Fully Going on</span>
+                        <span>Partially Going on</span>
                       </label>
 
                       <label class="nqas-annual-report__radio">
@@ -583,6 +579,7 @@
                       name="academic_council_meeting"
                       class="form-control"
                       min="0"
+                      placeholder="0"
                     />
                   </div>
 
@@ -593,6 +590,7 @@
                       name="academic_coordinator_meeting"
                       class="form-control"
                       min="0"
+                      placeholder="0"
                     />
                   </div>
 
@@ -603,6 +601,7 @@
                       name="faculty_development_meeting"
                       class="form-control"
                       min="0"
+                      placeholder="0"
                     />
                   </div>
 
@@ -613,6 +612,7 @@
                       name="phase_1_meeting"
                       class="form-control"
                       min="0"
+                      placeholder="0"
                     />
                   </div>
 
@@ -623,6 +623,7 @@
                       name="phase_2_meeting"
                       class="form-control"
                       min="0"
+                      placeholder="0"
                     />
                   </div>
 
@@ -633,6 +634,7 @@
                       name="phase_3_meeting"
                       class="form-control"
                       min="0"
+                      placeholder="0"
                     />
                   </div>
 
@@ -643,6 +645,7 @@
                       name="final_phase_meeting"
                       class="form-control"
                       min="0"
+                      placeholder="0"
                     />
                   </div>
                 </div>
@@ -658,15 +661,40 @@
                 <span>
                   a. The college has academic calendar for each phase
                 </span>
+
                 <label>
-                  <input type="radio" name="academic_calendar" value="yes" />
+                  <input
+                    type="radio"
+                    name="academic_calendar"
+                    value="yes"
+                    onchange="toggleAcademicCalendarFile()"
+                  />
                   Yes
                 </label>
 
                 <label>
-                  <input type="radio" name="academic_calendar" value="no" />
+                  <input
+                    type="radio"
+                    name="academic_calendar"
+                    value="no"
+                    onchange="toggleAcademicCalendarFile()"
+                  />
                   No
                 </label>
+              </div>
+              <!-- File Input -->
+              <div
+                id="academic-calendar-file"
+                class="nqas-annual-report__file-upload"
+                style="display: none; margin-left: 12px"
+              >
+                <input
+                  type="file"
+                  id="academic_calendar_document"
+                  name="academic_calendar_document"
+                  class="form-control"
+                  accept=".pdf,.jpg,.jpeg,.png"
+                />
               </div>
               <div class="nqas-annual-report__yesno-question">
                 <span>
@@ -722,7 +750,7 @@
               <div class="nqas-annual-report__label">
                 <label class="pb-2">
                   a. Do your college collect questionnaire of phase evaluation
-                  by students?(Annaul Report-I)
+                  by students?(Annexure-I)
                 </label>
                 <div class="nqas-annual-report__radio-group">
                   <label class="nqas-annual-report__radio">
@@ -759,7 +787,7 @@
               <div class="nqas-annual-report__label">
                 <label class="pb-2">
                   b. What were the major suggestions given by the
-                  students?(Annaul Report-I)
+                  students?(Annexure-I)
                 </label>
                 <div class="nqas-annual-report__phase-list">
                   <div class="nqas-annual-report__phase-item">
@@ -955,8 +983,7 @@
               <!-- Counselor -->
               <div class="nqas-annual-report__label">
                 <label>
-                  Do you divide your faculty members for group of students as
-                  counselor?
+                  Do you select your faculty members for students as counselor?
                 </label>
 
                 <div class="nqas-annual-report__radio-group">
@@ -1001,7 +1028,7 @@
           <!-- =========================5. Exchange Review Visit Between Pair Colleges========= -->
           <div class="nqas-annual-report__subsection">
             <h3 class="nqas-annual-report__subsection-title">
-              5. Exchange Review Visit Between Pair Colleges
+              5. Exchange Review Visit Between Pair Colleges.(Annexure-VII)
             </h3>
 
             <div class="nqas-annual-report__yesno-question">
@@ -1074,7 +1101,7 @@
           <!-- ========================6. External Examiners===================== -->
           <div class="nqas-annual-report__subsection">
             <h3 class="nqas-annual-report__subsection-title">
-              6. External Examiners
+              6. External Examiners(Annexure-III)
             </h3>
 
             <div class="nqas-annual-report__yesno-question">
@@ -1107,7 +1134,7 @@
 
               <div class="nqas-annual-report__number-list">
                 <div class="nqas-annual-report__number-item">
-                  <span>i)</span>
+                  <span>i.</span>
                   <input
                     type="text"
                     name="external_examiner_suggestion_1"
@@ -1117,7 +1144,7 @@
                 </div>
 
                 <div class="nqas-annual-report__number-item">
-                  <span>ii)</span>
+                  <span>ii.</span>
                   <input
                     type="text"
                     name="external_examiner_suggestion_2"
@@ -1131,8 +1158,8 @@
           <!-- ===================7. External Review Visi============================ -->
           <div class="nqas-annual-report__subsection">
             <h3 class="nqas-annual-report__subsection-title">
-              7. External Review Visit by Representatives of MOH, DGME, BMRC,
-              Respective University Dean
+              7. External Review Visit by Representatives of MOH, DGME,
+              BMRC,BMEAC Respective University Dean
             </h3>
 
             <div class="nqas-annual-report__question">
@@ -1232,7 +1259,8 @@
               class="nqas-annual-report__question nqas-annual-report__nested-question"
             >
               <label>
-                i) Do your faculty members fill up the personal review form?
+                i. Do your faculty members fill up the personal review
+                form?(Annexure-II)
               </label>
 
               <div class="nqas-annual-report__radio-group">
@@ -1252,7 +1280,7 @@
               class="nqas-annual-report__question nqas-annual-report__nested-question"
             >
               <label>
-                ii) Do you have provision of an annual review meeting for
+                ii. Do you have provision of an annual review meeting for
                 faculty development?
               </label>
 
@@ -1278,7 +1306,6 @@
               <span>
                 c. Do you have provision to evaluate class by students?
               </span>
-
               <label>
                 <input
                   type="radio"
@@ -1461,9 +1488,7 @@
             </div>
           </div>
 
-          <!-- =========================================================
-     13. Medical Skill Lab / Simulation Lab
-========================================================= -->
+          <!-- =================13. Medical Skill Lab / Simulation Lab============================= -->
 
           <div class="nqas-annual-report__subsection">
             <h3 class="nqas-annual-report__subsection-title">
@@ -1593,10 +1618,7 @@
             </div>
           </div>
 
-          <!-- =========================================================
-     17. Extra-Curricular Activities
-========================================================= -->
-
+          <!-- =====================17. Extra-Curricular Activities================================== -->
           <div class="nqas-annual-report__subsection">
             <h3 class="nqas-annual-report__subsection-title">
               17. Extra-Curricular Activities
@@ -1743,7 +1765,6 @@
               18. What is your suggestions to improve academic environment /
               activities in your college
             </h3>
-
             <textarea
               name="qas_improvement_suggestions"
               class="form-control"
@@ -1783,5 +1804,6 @@
     <!-- Bootstrap JS -->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="asstes/js/custom.js"></script>
   </body>
 </html>

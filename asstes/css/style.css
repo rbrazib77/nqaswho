@@ -412,14 +412,14 @@ body {
 }
 
 /* Question Text */
-.nqas-teacher-evaluation__question-content .form-label {
+/* .nqas-teacher-evaluation__question-content .form-label {
   display: block;
   margin-bottom: 10px;
   color: #344054;
-  font-size: 13px;
+  font-size: 20px !important;
   font-weight: 600;
   line-height: 1.5;
-}
+} */
 
 /* Rating Options */
 .nqas-teacher-evaluation__rating-options {
@@ -823,7 +823,7 @@ body {
   }
 
   .nqas-annual-report__meeting-item .form-control {
-    max-width: 120px;
+    max-width: 100%;
   }
 
   /* Yes / No */
@@ -1049,18 +1049,6 @@ body {
 }
 
 /* =================Footer Section End==================== */
-
-/* ============================== nqas Container============================== */
-.nqas-form-report-wrapper {
-  width: 100%;
-  padding: 30px 0px;
-}
-
-.nqas-form-report-body {
-  width: 100%;
-  margin: 0 auto;
-}
-
 .nqas-form-section-title {
   margin-bottom: 24px;
   padding-bottom: 10px;
@@ -1072,301 +1060,11 @@ body {
 .nqas-form-section-title i {
   margin-right: 10px;
 }
-.form-control,
-.form-select {
-  min-height: 42px;
-  border-color: #d0d5dd;
-  border-radius: 8px;
-  font-size: 14px;
-}
 
-.form-control:focus,
-.form-select:focus {
-  border-color: #087f8c;
-  box-shadow: 0 0 0 3px rgba(8, 127, 140, 0.1);
-}
-
-textarea.form-control {
-  min-height: 80px;
-  resize: vertical;
-}
-.exam-type {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 18px;
-  margin-top: 10px;
-  padding: 12px 14px;
-  background: #f8fafc;
-  border: 1px solid #eaecf0;
-  border-radius: 10px;
-}
-.form-check-input {
-  width: 17px;
-  height: 17px;
-  cursor: pointer;
-}
-.form-check-input:checked {
-  background-color: #087f8c;
-  border-color: #087f8c;
-}
-
-.form-check-label {
-  cursor: pointer;
-  font-size: 14px;
-}
-
-.assessment-note {
+.nqas-annual-report__phase-label {
   display: block;
-  margin-top: 4px;
-  color: #667085;
-  font-size: 11px;
-  font-weight: 400;
-}
-.table-scroll {
-  width: 100%;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  border: 1px solid #eaecf0;
-  border-radius: 10px;
-}
-.report-table {
-  min-width: 720px;
-  margin: 0;
-  vertical-align: middle;
-}
-.report-table th {
-  padding: 11px 8px;
-  background: #087f8c;
-  color: #ffffff;
-  border-color: #087f8c;
-  text-align: center;
-  white-space: nowrap;
-  font-size: 13px;
-}
-.report-table th.statement {
-  min-width: 360px;
-  text-align: left;
-}
-
-.report-table td {
-  padding: 11px 8px;
-  border-color: #e4e7ec;
-  font-size: 13px;
-}
-
-.report-table tbody tr:hover {
-  background: #f8fafc;
-}
-
-.report-table input[type="radio"] {
-  width: 18px;
-  height: 18px;
-  transform: scale(1.05);
-  cursor: pointer;
-  accent-color: #087f8c;
-}
-.nqas-question {
-  margin-bottom: 24px;
-}
-
-.nqas-question-label {
-  display: block;
-  margin-bottom: 10px;
-}
-
-.nqas-inline-field {
-  align-items: center;
-}
-
-.nqas-inline-field .form-label {
-  margin-bottom: 0;
-  font-size: 13px;
-}
-
-.comment-box {
-  min-height: 140px !important;
-}
-
-.signature-box {
-  padding: 20px;
-  background: #f8fafc;
-  border: 1px solid #eaecf0;
-  border-radius: 12px;
-}
-
-.btn-submit,
-.btn-reset {
-  min-height: 42px;
-  padding: 8px 18px;
-  border-radius: 8px;
-  font-size: 14px;
-  font-weight: 600;
-}
-
-.btn-submit {
-  background: #087f8c;
-  border-color: #087f8c;
-  color: #ffffff;
-}
-
-.btn-submit:hover {
-  background: #066b76;
-  border-color: #066b76;
-  color: #ffffff;
-}
-
-/* Tablet */
-@media (max-width: 768px) {
-  .report-wrapper {
-    padding: 20px 10px;
-  }
-
-  .report-body {
-    padding: 22px 18px;
-    border-radius: 12px;
-  }
-
-  .section-title {
-    font-size: 17px;
-  }
-
-  .nqas-inline-field {
-    align-items: stretch;
-  }
-
-  .nqas-inline-field .form-label {
-    margin-bottom: 7px;
-  }
-
-  .signature-box {
-    padding: 16px;
-  }
-}
-
-/* Mobile */
-@media (max-width: 576px) {
-  .report-wrapper {
-    padding: 10px 6px;
-  }
-
-  .report-body {
-    padding: 18px 12px;
-    border-radius: 10px;
-  }
-
-  .section-title {
-    align-items: flex-start;
-    font-size: 16px;
-    line-height: 1.4;
-    margin-bottom: 18px;
-  }
-
-  .form-label {
-    font-size: 13px;
-  }
-
-  .form-control,
-  .form-select {
-    min-height: 44px;
-    font-size: 14px;
-  }
-
-  .exam-type {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 12px;
-  }
-
-  .assessment-note {
-    line-height: 1.5;
-  }
-
-  .table-scroll {
-    border-radius: 8px;
-  }
-
-  .report-table {
-    min-width: 700px;
-  }
-
-  .report-table th,
-  .report-table td {
-    padding: 10px 7px;
-  }
-
-  .report-table th.statement {
-    min-width: 330px;
-  }
-
-  .nqas-inline-field {
-    margin-left: 0 !important;
-  }
-
-  .signature-box {
-    padding: 14px;
-  }
-
-  .form-actions {
-    display: grid !important;
-    grid-template-columns: 1fr;
-    width: 100%;
-  }
-
-  .form-actions .btn {
-    width: 100%;
-  }
-}
-
-/* Very small mobile */
-@media (max-width: 360px) {
-  .exam-type {
-    grid-template-columns: 1fr;
-  }
-
-  .report-body {
-    padding: 15px 10px;
-  }
-
-  .section-title {
-    font-size: 15px;
-  }
-}
-.nqas-form-instruction {
-  font-size: 14px;
-  font-weight: 500;
-}
-.nqas-form-instruction {
-  padding: 16px 18px;
-  margin-bottom: 24px;
-  background: #f8fafc;
-  border: 1px solid #eaecf0;
-  border-left: 4px solid var(--nqas-primary);
-  border-radius: 8px;
-  line-height: 1.6;
+  margin-bottom: 7px;
   color: #475467;
-}
-.nqas-choice-box {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px 18px;
-  padding: 12px 14px;
-  min-height: 44px;
-  background: #f8fafc;
-  border: 1px solid #eaecf0;
-  border-radius: 8px;
-}
-
-.nqas-choice {
-  display: inline-flex;
-  align-items: center;
-  gap: 7px;
-  cursor: pointer;
   font-size: 13px;
-}
-
-.nqas-choice input {
-  width: 17px;
-  height: 17px;
-  accent-color: #087f8c;
-  cursor: pointer;
+  font-weight: 600;
 }
