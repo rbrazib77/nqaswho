@@ -68,37 +68,78 @@
           <!-- ====================== A. Cover Page ============================ -->
           <section class="nqas-annual-report__section">
             <div class="row g-3">
-              <!-- Medical College -->
+                <!-- Annual Report Submit Year -->
               <div class="col-md-6">
-                <label class="nqas-annual-report__label">
-                  i. Annual Report submit Year
-                </label>
+                  <label class="nqas-annual-report__label">
+                      i. Annual Report Submit Year:
+                  </label>
 
-                <input
-                  type="text"
-                  name="college_name"
-                  class="form-control"
-                  placeholder="Enter submit Year 2026"
-                />
+                  <div class="nqas-year-picker">
+                      <input
+                          type="text"
+                          id="submitYear"
+                          name="submit_year"
+                          class="form-control"
+                          placeholder="Select Year"
+                          readonly
+                      >
+
+                      <div class="nqas-year-calendar">
+                          <div class="nqas-year-calendar__header">
+                              <button type="button" class="nqas-year-prev">
+                                  &lsaquo;
+                              </button>
+
+                              <span class="nqas-year-range"></span>
+
+                              <button type="button" class="nqas-year-next">
+                                  &rsaquo;
+                              </button>
+                          </div>
+
+                          <div class="nqas-year-list"></div>
+                      </div>
+                  </div>
               </div>
-              <!-- Year -->
-              <div class="col-md-6">
-                <label class="nqas-annual-report__label">
-                  ii. Year of Establishment
-                </label>
 
-                <input
-                  type="number"
-                  name="establishment_year"
-                  class="form-control"
-                  placeholder="Enter year"
-                />
+              <!-- Year of Establishment -->
+              <div class="col-md-6">
+                  <label class="nqas-annual-report__label">
+                      ii. Year of Establishment:
+                  </label>
+
+                  <div class="nqas-year-picker">
+                      <input
+                          type="text"
+                          id="establishmentYear"
+                          name="establishment_year"
+                          class="form-control"
+                          placeholder="Select Year"
+                          readonly
+                      >
+
+                      <div class="nqas-year-calendar">
+                          <div class="nqas-year-calendar__header">
+                              <button type="button" class="nqas-year-prev">
+                                  &lsaquo;
+                              </button>
+
+                              <span class="nqas-year-range"></span>
+
+                              <button type="button" class="nqas-year-next">
+                                  &rsaquo;
+                              </button>
+                          </div>
+
+                          <div class="nqas-year-list"></div>
+                      </div>
+                  </div>
               </div>
 
               <!-- Mailing Address -->
               <div class="col-md-12">
                 <label class="nqas-annual-report__label">
-                  iii. Mailing Address
+                  iii. Mailing Address:
                 </label>
 
                 <textarea
@@ -112,7 +153,7 @@
               <!-- Phone -->
               <div class="col-md-6">
                 <label class="nqas-annual-report__label">
-                  iv. Contact Phone / WhatsApp
+                  iv. Contact Phone / WhatsApp:
                 </label>
                 <input
                   type="tel"
@@ -124,9 +165,9 @@
 
               <!-- Fax -->
               <div class="col-md-6">
-                <label class="nqas-annual-report__label"> v. Fax </label>
+                <label class="nqas-annual-report__label"> v. Fax: </label>
                 <input
-                  type="text"
+                  type="tel"
                   name="fax"
                   class="form-control"
                   placeholder="Enter fax number"
@@ -136,7 +177,7 @@
               <!-- Email -->
               <div class="col-md-6">
                 <label class="nqas-annual-report__label">
-                  vi. E-mail <span class="text-danger">*</span>
+                  vi. E-mail: <span class="text-danger">*</span>
                 </label>
                 <input
                   type="email"
@@ -147,7 +188,7 @@
               </div>
               <!-- Website -->
               <div class="col-md-6">
-                <label class="nqas-annual-report__label"> vii. Website </label>
+                <label class="nqas-annual-report__label"> vii. Website: </label>
                 <input
                   type="url"
                   name="website"
@@ -160,7 +201,7 @@
           <!-- =====================B. Executive Summary============================ -->
           <section class="nqas-annual-report__section">
             <div class="nqas-annual-report__subsection-title">
-              B. Executive Summary
+              B. Executive Summary:
             </div>
 
             <div class="nqas-annual-report__guideline">
@@ -230,7 +271,7 @@
                     <div class="nqas-annual-report__label mb-2">
                       <label class="form-label fw-semibold">
                         iii. How many teachers are working in your college at
-                        present? (Phase-wise breakdown)
+                        present?
                       </label>
                     </div>
 

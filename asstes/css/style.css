@@ -1068,3 +1068,101 @@ body {
   font-size: 13px;
   font-weight: 600;
 }
+
+
+
+
+  .nqas-year-picker {
+    position: relative;
+}
+
+.nqas-year-calendar {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1050;
+
+    width: 280px;
+    margin-top: 5px;
+    padding: 12px;
+
+    background: #fff;
+    border: 1px solid #dfe4ea;
+    border-radius: 8px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.12);
+}
+
+.nqas-year-calendar.show {
+    display: block;
+}
+
+.nqas-year-calendar__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+
+.nqas-year-calendar__header button {
+    width: 32px;
+    height: 32px;
+    padding: 0;
+
+    font-size: 22px;
+    border: none;
+    border-radius: 5px;
+
+    background: #f3f8fa;
+    color: #087f8c;
+}
+
+.nqas-year-calendar__header button:hover {
+    background: #087f8c;
+    color: #fff;
+}
+
+.nqas-year-calendar__years {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 6px;
+}
+
+.nqas-year-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 6px;
+}
+
+.nqas-year-list button {
+    padding: 8px 4px;
+
+    border: none;
+    border-radius: 5px;
+
+    background: transparent;
+
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.nqas-year-list button:hover {
+    background: #087f8c;
+    color: #fff;
+}
+
+.nqas-year-list button.current-year {
+    background: #087f8c;
+    color: #fff;
+}
+
+@media (max-width: 576px) {
+    .nqas-year-calendar {
+        width: 100%;
+        max-width: 280px;
+    }
+}
+
