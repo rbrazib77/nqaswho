@@ -4,6 +4,21 @@ body {
   background: linear-gradient(135deg, #eef7f7, #eaf2fb);
   font-family: "Roboto", sans-serif;
 }
+
+.form-control::placeholder,
+.form-select::placeholder,
+textarea::placeholder {
+    color: #98a2b3d0 !important;
+    font-size: 15px;
+    font-weight: 400;
+    opacity: 1;
+}
+
+input[type="date"] {
+    color: #98a2b398;
+     font-size: 15px;
+}
+
 .main-wrapper {
   min-height: 100vh;
   display: flex;
@@ -962,7 +977,6 @@ body {
 }
 
 
-
 /* =========Textarea============= */
 
 .nqas-form--annual-report textarea.form-control {
@@ -1149,4 +1163,5 @@ body {
         max-width: 280px;
     }
 }
+
 
