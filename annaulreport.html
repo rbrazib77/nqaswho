@@ -534,13 +534,43 @@
 
                 <div class="col-md-5">
                   <div class="nqas-annual-report__label">
-                    <label class="pb-2"> b. Scheme started in the year </label>
+                     <label class="nqas-annual-report__label">
+                      b. Scheme started in the year:
+                  </label>
+
+                  <div class="nqas-year-picker">
+                      <input
+                          type="text"
+                          id="establishmentYear"
+                          name="establishment_year"
+                          class="form-control"
+                          placeholder="Select Year"
+                          readonly
+                      >
+
+                      <div class="nqas-year-calendar">
+                          <div class="nqas-year-calendar__header">
+                              <button type="button" class="nqas-year-prev">
+                                  &lsaquo;
+                              </button>
+
+                              <span class="nqas-year-range"></span>
+
+                              <button type="button" class="nqas-year-next">
+                                  &rsaquo;
+                              </button>
+                          </div>
+
+                          <div class="nqas-year-list"></div>
+                      </div>
+                  </div>
+                    <!-- <label class="pb-2"> b. Scheme started in the year </label>
                     <input
                       type="number"
                       name="qas_start_year"
                       class="form-control"
                       placeholder="start year"
-                    />
+                    /> -->
                   </div>
                 </div>
               </div>
