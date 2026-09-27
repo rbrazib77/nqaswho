@@ -204,7 +204,7 @@
               B. Executive Summary:
             </div>
 
-            <div class="nqas-annual-report__label mb-2">
+            <div class="nqas-annual-report__guideline nqas-annual-report__label mb-2">
               Guideline: A brief description of strength and future prospects
             </div>
 
@@ -228,7 +228,7 @@
                   <!-- Name -->
                   <div class="nqas-annual-report__label">
                     <label class="pb-2">
-                      i. Name of medical / Dental college
+                      i. Name of medical / Dental college:
                     </label>
 
                     <input
@@ -242,7 +242,7 @@
                 <div class="col-md-6">
                   <div class="nqas-annual-report__label">
                     <label class="pb-2">
-                      ii. Type of medical / Dental college
+                      ii. Type of medical / Dental college:
                     </label>
 
                     <div class="nqas-annual-report__radio-group">
@@ -494,7 +494,7 @@
             <div class="nqas-annual-report__subsection">
               <h3 class="nqas-annual-report__subsection-title">
                 2. Quality Assurance Scheme—Background Information of QAS of
-                your medical college
+                your medical college:
               </h3>
               <div class="row">
                 <div class="col-md-7">
@@ -819,41 +819,59 @@
               </h3>
               <!-- 4.a -->
               <div class="nqas-annual-report__label">
-                <label class="pb-2">
-                  a. Do your college collect questionnaire of phase evaluation
-                  by students?(Annexure-I)
-                </label>
-                <div class="nqas-annual-report__radio-group">
-                  <label class="nqas-annual-report__radio">
-                    <input
-                      type="radio"
-                      name="phase_wise_evaluation"
-                      value="yes"
-                    />
-                    <span>Yes</span>
-                  </label>
 
-                  <label class="nqas-annual-report__radio">
-                    <input
-                      type="radio"
-                      name="phase_wise_evaluation"
-                      value="no"
-                    />
-                    <span>No</span>
-                  </label>
-                </div>
+    <label class="pb-2">
+        a. Do your college collect questionnaire of phase evaluation
+        by students? (Annexure-I)
+    </label>
 
-                <div class="nqas-annual-report__followup">
-                  <label> If yes, how often do you do that? </label>
+    <div class="nqas-annual-report__radio-group">
 
-                  <input
-                    type="text"
-                    name="phase_evaluation_frequency"
-                    class="form-control"
-                    placeholder="Mention frequency"
-                  />
-                </div>
-              </div>
+        <label class="nqas-annual-report__radio">
+            <input
+                type="radio"
+                name="phase_wise_evaluation"
+                value="yes"
+                onchange="togglePhaseEvaluation()"
+            />
+            <span>Yes</span>
+        </label>
+
+        <label class="nqas-annual-report__radio">
+            <input
+                type="radio"
+                name="phase_wise_evaluation"
+                value="no"
+                onchange="togglePhaseEvaluation()"
+            />
+            <span>No</span>
+        </label>
+
+    </div>
+
+
+    <!-- Follow-up -->
+    <div
+        id="phase-evaluation-followup"
+        class="nqas-annual-report__followup"
+        style="display: none;"
+    >
+
+        <label>
+            If yes, how often do you do that?
+        </label>
+
+        <input
+            type="text"
+            name="phase_evaluation_frequency"
+            id="phase_evaluation_frequency"
+            class="form-control"
+            placeholder="Mention frequency"
+        />
+
+    </div>
+
+</div>
               <!-- 4.b -->
               <div class="nqas-annual-report__label">
                 <label class="pb-2">

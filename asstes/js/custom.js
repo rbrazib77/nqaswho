@@ -1,22 +1,63 @@
 
-function toggleAcademicCalendarFile() {
-    const yesRadio = document.querySelector(
-    'input[name="academic_calendar"][value="yes"]',
-    );
+document.addEventListener("change", function (event) {
+    if (
+        event.target.matches(
+            'input[name="academic_calendar"]'
+        )
+    ) {
+        const fileBox =
+            document.getElementById(
+                "academic-calendar-file"
+            );
 
-    const fileBox = document.getElementById(
-    "academic-calendar-file",
-    );
+        const fileInput =
+            fileBox.querySelector(
+                'input[type="file"]'
+            );
 
-    if (yesRadio.checked) {
-    fileBox.style.display = "block";
-    } else {
-    fileBox.style.display = "none";
-    document.getElementById(
-        "academic_calendar_document",
-    ).value = "";
+        if (event.target.value === "yes") {
+
+            fileBox.style.display = "block";
+
+        } else {
+
+            fileBox.style.display = "none";
+
+            fileInput.value = "";
+        }
     }
-}
+
+    /* Phase Wise Evaluation */
+    if (
+        event.target.matches(
+            'input[name="phase_wise_evaluation"]'
+        )
+    ) {
+
+        const followupBox =
+            document.getElementById(
+                "phase-evaluation-followup"
+            );
+
+        const frequencyInput =
+            followupBox.querySelector(
+                'input[name="phase_evaluation_frequency"]'
+            );
+
+        if (event.target.value === "yes") {
+
+            followupBox.style.display = "block";
+
+        } else {
+
+            followupBox.style.display = "none";
+
+            frequencyInput.value = "";
+        }
+    }
+
+});
+
 
 // Only Year Picker
 document.addEventListener("DOMContentLoaded", function () {
