@@ -961,23 +961,7 @@ body {
   font-size: 13px;
 }
 
-/* ==========Note==================== */
 
-.nqas-annual-report__note {
-  margin-top: 25px;
-  padding: 14px 16px;
-  background: #f8fafc;
-  border-left: 3px solid #087f8c;
-  border-radius: 5px;
-  color: #667085;
-  font-size: 16px;
-  font-weight: 600;
-  line-height: 1.7;
-}
-
-.nqas-annual-report__note strong {
-  color: #344054;
-}
 
 /* =========Textarea============= */
 
