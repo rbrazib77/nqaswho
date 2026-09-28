@@ -646,22 +646,11 @@ input[type="date"] {
 /* =====================================================
    Questions
 ===================================================== */
-
 .nqas-annual-report__question {
   padding: 13px 0;
-
-  /* border-bottom: 1px solid #f0f2f5; */
 }
 
-/* =====================================================
-   Radio
-===================================================== */
-
-
-
-
-
-
+/* ======================Radio======================== */
 
 
 /* ===================Actions========================= */
@@ -671,7 +660,6 @@ input[type="date"] {
   gap: 10px;
   margin-top: 30px;
   padding-top: 20px;
-  border-top: 1px solid #eaecf0;
 }
 
 .nqas-annual-report__actions .btn {
@@ -698,12 +686,12 @@ input[type="date"] {
     font-size: 14px;
   }
 
-  .nqas-annual-report__small-input {
+  .nqas-annual-report_small-input {
     max-width: 100%;
   }
 
   /* Radio নিচে নিচে */
-  .nqas-annual-report__radio-group {
+  .nqas-annual-report_radio-group {
     flex-direction: column;
     align-items: flex-start;
     gap: 10px;
@@ -711,14 +699,14 @@ input[type="date"] {
 
   /* Phase */
 
-  .nqas-annual-report__phase-item {
+  .nqas-annual-report_phase-item {
     grid-template-columns: 1fr;
     gap: 5px;
   }
 
   /* Meeting */
 
-  .nqas-annual-report__meeting-item {
+  .nqas-annual-report_meeting-item {
     grid-template-columns: 1fr;
     gap: 5px;
   }
@@ -774,7 +762,7 @@ input[type="date"] {
   display: flex;
   flex-direction: column;
   gap: 12px;
-}
+} 
 
 .nqas-annual-report_number-item {
   display: grid;
@@ -1029,6 +1017,7 @@ input[type="date"] {
   flex-wrap: wrap;
   align-items: center;
   gap: 22px;
+ 
 }
 
 .nqas-annual-report_radio {
@@ -1143,7 +1132,9 @@ input[type="date"] {
 }
 
 /* ================== Annual Report Curriculum Execution Section Start================ */
-
+.nqas-annual-report_curriculum_execution_item{
+  margin-left: 10px;
+}
 .nqas-annual-report_yesno-question {
   display: flex;
   flex-wrap: wrap;
@@ -1152,7 +1143,7 @@ input[type="date"] {
   padding: 5px 0;
   border-bottom: 1px solid #f0f2f5;
   font-size: 13px;
-  margin-left: 15px;
+  /* margin-left: 15px; */
 }
 .nqas-annual-report_yesno-question .nqas-annual-report_label{
    display: block;
@@ -1211,8 +1202,8 @@ input[type="date"] {
 
 .nqas-annual-report_student_performance_yesno-question{
   margin: 0;
-  padding: 0;
-  border: none;
+  padding: 5px 0px;
+
 }
 .nqas-annual-report_student_performance_yesno-question span{
   display: block;
@@ -1233,3 +1224,60 @@ input[type="date"] {
   font-weight: 500;
 }
 
+
+
+
+.nqas-annual-report_exchange_review_item{
+  margin-left: 10px;
+}
+.nqas-annual-report_exchange_review_yesno-question span{
+  display: block;
+  color: #344054;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+/* ================External Examiners===================== */
+
+.nqas-annual-report_external_examiners_item{
+  margin-left: 10px;
+}
+
+
+.nqas-annual-report_external_review_visit_epresentatives_item{
+   margin-left: 10px;
+}
+
+.nqas-annual-report_faculty_development_item{
+   margin-left: 10px;
+}
+.nqas-annual-report_administrative_external_review_item{
+  margin-left: 10px;
+}
+.nqas-annual-report_remarkable_achievement_item{
+  margin-left: 10px;
+}
+
+.nqas-annual-report_journal_item{
+  margin-left: 10px;
+}
+
+.nnqas-annual-report_medical_education_item{
+  margin-left: 10px;
+}
+
+.nqas-annual-report_medical_skill_lab_item{
+  margin-left: 10px;
+}
+.nqas-annual-report_research_item{
+  margin-left: 10px;
+}
+.nqas-annual-report_research_item{
+  margin-left: 10px;
+}
+.nqas-annual-report_publications_item{
+  margin-left: 10px;
+}
+.nqas-annual-report_extra-curricular_activities_item{
+  margin-left: 10px;
+}
