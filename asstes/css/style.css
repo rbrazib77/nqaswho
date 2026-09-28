@@ -1154,6 +1154,14 @@ input[type="date"] {
   font-size: 13px;
   margin-left: 15px;
 }
+.nqas-annual-report_yesno-question .nqas-annual-report_label{
+   display: block;
+  /* margin-bottom: 7px; */
+  /* margin-left: 10px; */
+  color: #344054;
+  font-size: 15px;
+  font-weight: 600;
+}
 
 /* Question */
 .nqas-annual-report_yesno-question > span {
