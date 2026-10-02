@@ -8,15 +8,15 @@ body {
 .form-control::placeholder,
 .form-select::placeholder,
 textarea::placeholder {
-    color: #98a2b3d0 !important;
-    font-size: 15px;
-    font-weight: 400;
-    opacity: 1;
+  color: #98a2b3d0 !important;
+  font-size: 15px;
+  font-weight: 400;
+  opacity: 1;
 }
 
 input[type="date"] {
-    color: #98a2b398;
-     font-size: 15px;
+  color: #98a2b398;
+  font-size: 15px;
 }
 
 .main-wrapper {
@@ -607,18 +607,6 @@ input[type="date"] {
   margin-top: 25px;
 }
 
-
-
-/* ==================Labels & Inputs============================= */
-.nqas-annual-report_label {
-  display: block;
-  margin-bottom: 7px;
-  /* margin-left: 10px; */
-  color: #344054;
-  font-size: 15px;
-  font-weight: 600;
-}
-
 .nqas-annual-report__section .form-control {
   min-height: 42px;
   border: 1px solid #d0d5dd;
@@ -651,7 +639,6 @@ input[type="date"] {
 }
 
 /* ======================Radio======================== */
-
 
 /* ===================Actions========================= */
 .nqas-annual-report__actions {
@@ -686,10 +673,6 @@ input[type="date"] {
     font-size: 14px;
   }
 
-  .nqas-annual-report_small-input {
-    max-width: 100%;
-  }
-
   /* Radio নিচে নিচে */
   .nqas-annual-report_radio-group {
     flex-direction: column;
@@ -702,17 +685,6 @@ input[type="date"] {
   .nqas-annual-report_phase-item {
     grid-template-columns: 1fr;
     gap: 5px;
-  }
-
-  /* Meeting */
-
-  .nqas-annual-report_meeting-item {
-    grid-template-columns: 1fr;
-    gap: 5px;
-  }
-
-  .nqas-annual-report__meeting-item .form-control {
-    max-width: 100%;
   }
 
   /* Yes / No */
@@ -741,8 +713,6 @@ input[type="date"] {
    NQAS Annual Report - Additional Questions
 ===================================================== */
 
-
-
 /* =====================================================
    Hint
 ===================================================== */
@@ -758,24 +728,6 @@ input[type="date"] {
    Number List
 ===================================================== */
 
-.nqas-annual-report_number-list {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-} 
-
-.nqas-annual-report_number-item {
-  display: grid;
-  grid-template-columns: 25px minmax(0, 1fr);
-  align-items: center;
-  gap: 8px;
-}
-
-.nqas-annual-report__number-item > span {
-  color: #475467;
-  font-size: 13px;
-}
-
 /* =====================================================
    Nested Questions
 ===================================================== */
@@ -787,43 +739,6 @@ input[type="date"] {
 .nqas-annual-report__nested-question::before {
   content: "";
 }
-
-/* =====================================================
-   Percentage Input
-===================================================== */
-
-
-
-/* ===========Publication / Paper=============== */
-
-.nqas-annual-report__publication-list {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  margin-top: 10px;
-  margin-left: 15px;
-}
-
-.nqas-annual-report__publication-item {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  max-width: 400px;
-}
-
-.nqas-annual-report__publication-item > :first-child {
-  flex: 0 1 600px;
-}
-
-.nqas-annual-report__publication-item > :last-child {
-  flex: 0 0 200px;
-}
-
-.nqas-annual-report__publication-item > span {
-  color: #475467;
-  font-size: 13px;
-}
-
 
 /* =========Textarea============= */
 
@@ -907,377 +822,226 @@ input[type="date"] {
   margin-right: 10px;
 }
 
-
-
-
-
-
-  .nqas-year-picker {
-    position: relative;
+.nqas-year-picker {
+  position: relative;
 }
 
 .nqas-year-calendar {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    z-index: 1050;
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1050;
 
-    width: 280px;
-    margin-top: 5px;
-    padding: 12px;
+  width: 280px;
+  margin-top: 5px;
+  padding: 12px;
 
-    background: #fff;
-    border: 1px solid #dfe4ea;
-    border-radius: 8px;
+  background: #fff;
+  border: 1px solid #dfe4ea;
+  border-radius: 8px;
 
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.12);
 }
 
 .nqas-year-calendar.show {
-    display: block;
+  display: block;
 }
 
 .nqas-year-calendar__header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 
-    margin-bottom: 12px;
-    font-weight: 600;
+  margin-bottom: 12px;
+  font-weight: 600;
 }
 
 .nqas-year-calendar__header button {
-    width: 32px;
-    height: 32px;
-    padding: 0;
+  width: 32px;
+  height: 32px;
+  padding: 0;
 
-    font-size: 22px;
-    border: none;
-    border-radius: 5px;
+  font-size: 22px;
+  border: none;
+  border-radius: 5px;
 
-    background: #f3f8fa;
-    color: #087f8c;
+  background: #f3f8fa;
+  color: #087f8c;
 }
 
 .nqas-year-calendar__header button:hover {
-    background: #087f8c;
-    color: #fff;
+  background: #087f8c;
+  color: #fff;
 }
 
 .nqas-year-calendar__years {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 6px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 6px;
 }
 
 .nqas-year-list {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 6px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 6px;
 }
 
 .nqas-year-list button {
-    padding: 8px 4px;
+  padding: 8px 4px;
 
-    border: none;
-    border-radius: 5px;
+  border: none;
+  border-radius: 5px;
 
-    background: transparent;
+  background: transparent;
 
-    cursor: pointer;
-    font-size: 14px;
-}
-
-.nqas-year-list button:hover {
-    background: #087f8c;
-    color: #fff;
-}
-
-.nqas-year-list button.current-year {
-    background: #087f8c;
-    color: #fff;
-}
-
-@media (max-width: 576px) {
-    .nqas-year-calendar {
-        width: 100%;
-        max-width: 280px;
-    }
-}
-
-
-
-
-/* ============28-09-2026============== */
-
-/* ================== Commom Class Name  Start================ */
-.nqas-annual-report_radio-group {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 22px;
- 
-}
-
-.nqas-annual-report_radio {
-  display: inline-flex;
-  align-items: center;
-  gap: 7px;
   cursor: pointer;
-  color: #475467;
   font-size: 14px;
 }
 
-.nqas-annual-report_radio input {
-  width: 17px;
-  height: 17px;
-  margin: 0;
-  accent-color: #087f8c;
-  cursor: pointer;
+.nqas-year-list button:hover {
+  background: #087f8c;
+  color: #fff;
 }
 
-/* ================== Commom Class Name  End================ */
-
-/* ================== Annual Report Basic Information Section Start================ */
-.nqas-annual-report_basic_information{
-
+.nqas-year-list button.current-year {
+  background: #087f8c;
+  color: #fff;
 }
-.nqas-annual-report_section_title{
-  margin-bottom: 18px;
+
+@media (max-width: 576px) {
+  .nqas-year-calendar {
+    width: 100%;
+    max-width: 280px;
+  }
+}
+
+/* ============28-09-2026============== */
+
+/* nqas report 1-10-2026 */
+
+.nqas-annual-report-label-input {
+  margin-bottom: 10px;
   color: #344054;
   font-size: 18px;
-  font-weight: 800;
-  line-height: 1.5;
-}
-.nqas-annual-report_basic_information_item{
-  margin-left: 10px;
-}
-.nqas-annual-report_basic_information_item .nqas-annual-report_label{
-  display: block;
-  margin-bottom: 5px;
-  color: #344054;
-  font-size: 15px;
   font-weight: 600;
 }
 
-.nqas-annual-report_phase-label {
-  display: block;
-  margin-bottom: 7px;
-  color: #475467;
-  font-size: 13px;
-  font-weight: 600;
-}
-/* ================== Annual Report Basic Information Section End================ */
-
-/* ================== Annual Report Quality Assurance Section Start================ */
-
-.nqas-annual-report_quality_assurance_background{
-  
-}
-
-.nqas-annual-report_quality_assurance_background_item{
-  margin-left: 10px;
-}
-
-.nqas-annual-report_quality_assurance_background_item .nqas-annual-report_label{
-  display: block;
-  margin-bottom: 5px;
-  color: #344054;
-  font-size: 15px;
-  font-weight: 600;
-}
-
-/* ----Phase Coordinator----- */
-.nqas-annual-report_phase-list {
+.nqas-annual-report-yesno-options {
   display: flex;
-  flex-direction: column;
-  gap: 10px;
-  margin-bottom: 10px;
-}
-
-.nqas-annual-report_phase-item {
-  display: grid;
-  grid-template-columns: 240px 1fr;
   align-items: center;
-  gap: 12px;
-  margin-left: 10px;
-  margin-bottom: 5px;
-}
-.nqas-annual-report_phase-item > span {
-  color: #475467;
-  font-size: 13px;
-  font-weight: 600;
-}
-/* ----Meeting List---- */
-.nqas-annual-report_meeting-list {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  margin-top: 10px;
+  gap: 20px;
 }
 
-.nqas-annual-report_meeting-item {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) 800px;
-  align-items: center;
-  gap: 15px;
-  margin-left: 10px;
-}
-
-.nqas-annual-report_meeting-item span {
-  color: #475467;
-  font-weight: 600;
-  font-size: 13px;
-}
-
-/* ================== Annual Report Curriculum Execution Section Start================ */
-.nqas-annual-report_curriculum_execution_item{
-  margin-left: 10px;
-}
-.nqas-annual-report_yesno-question {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 10px 20px;
-  padding: 5px 0;
-  border-bottom: 1px solid #f0f2f5;
-  font-size: 13px;
-  /* margin-left: 15px; */
-}
-.nqas-annual-report_yesno-question .nqas-annual-report_label{
-   display: block;
-  /* margin-bottom: 7px; */
-  /* margin-left: 10px; */
-  color: #344054;
-  font-size: 15px;
-  font-weight: 600;
-}
-
-/* Question */
-.nqas-annual-report_yesno-question > span {
-  flex: 0 0 100%;
-  color: #475467;
-  font-size: 13px;
-  font-weight: 600;
-}
-/* Yes / No */
-.nqas-annual-report_yesno-question label {
+.nqas-annual-report-option {
   display: inline-flex;
   align-items: center;
-  gap: 5px;
-  color: #475467;
-  font-size: 13px;
-  cursor: pointer;
-  white-space: nowrap;
-}
-
-.nqas-annual-report_yesno-question input {
-  width: 16px;
-  height: 16px;
-  margin: 0;
-  accent-color: #087f8c;
-}
-
-/* ================== Annual Report Student Performance Section Start================ */
-.nqas-annual-report_student_performance_item{
-  margin-left: 10px;
-}
-.nqas-annual-report_input-suffix {
-  display: flex;
-  align-items: center;
   gap: 8px;
-  max-width: 220px;
-}
-
-.nqas-annual-report_input-suffix .form-control {
-  flex: 1;
-}
-
-.nqas-annual-report_input-suffix > span {
-  color: #475467;
-  font-size: 13px;
-  font-weight: 600;
-}
-
-.nqas-annual-report_student_performance_yesno-question{
   margin: 0;
-  padding: 5px 0px;
-
-}
-.nqas-annual-report_student_performance_yesno-question span{
-  display: block;
+  cursor: pointer;
   color: #344054;
-  font-size: 15px;
-  font-weight: 600;
-}
-
-.nqas-annual-report_followup {
-  margin-top: 15px;
-  padding-left: 20px;
-}
-
-.nqas-annual-report_followup > label {
-  display: block;
-  color: #475467;
-  font-size: 13px;
+  font-size: 16px;
   font-weight: 500;
 }
 
+.nqas-annual-report-option input[type="radio"] {
+  width: 18px;
+  height: 18px;
+  margin: 0;
+  cursor: pointer;
+  accent-color: #087f8c;
+}
 
+.nqas-annual-report-section-title {
+  margin-bottom: 10px;
+  color: #344054;
+  font-size: 20px;
+  font-weight: 800;
+  line-height: 1.5;
+}
 
-
-.nqas-annual-report_exchange_review_item{
+.nqas-annual-report-guideline {
   margin-left: 10px;
 }
-.nqas-annual-report_exchange_review_yesno-question span{
-  display: block;
-  color: #344054;
-  font-size: 15px;
+
+.nqas-annual-report-guideline p {
+  font-size: 17px;
   font-weight: 600;
 }
 
-/* ================External Examiners===================== */
-
-.nqas-annual-report_external_examiners_item{
-  margin-left: 10px;
+.nqas-annual-report-basic-information {
 }
 
-
-.nqas-annual-report_external_review_visit_epresentatives_item{
-   margin-left: 10px;
-}
-
-.nqas-annual-report_faculty_development_item{
-   margin-left: 10px;
-}
-.nqas-annual-report_administrative_external_review_item{
-  margin-left: 10px;
-}
-.nqas-annual-report_remarkable_achievement_item{
+.nqas-annual-report-basic-information-item {
   margin-left: 10px;
 }
 
-.nqas-annual-report_journal_item{
+.nqas-annual-report-phase-label {
+  display: block;
+  margin-bottom: 10px;
+  color: #475467;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.nqas-annual-report-quality-assurance-background {
+}
+
+.nqas-annual-report-quality-assurance-background-item {
   margin-left: 10px;
 }
 
-.nnqas-annual-report_medical_education_item{
+.nqas-annual-report-curriculum-execution-item {
   margin-left: 10px;
 }
 
-.nqas-annual-report_medical_skill_lab_item{
+.nqas-annual-report-student-performance-item {
   margin-left: 10px;
 }
-.nqas-annual-report_research_item{
+
+.nqas-annual-report-exchange-review-item {
   margin-left: 10px;
 }
-.nqas-annual-report_research_item{
+
+.nqas-annual-report-external-examiners-item {
   margin-left: 10px;
 }
-.nqas-annual-report_publications_item{
+
+.nqas-annual-report-external-review-visit-epresentatives-item {
   margin-left: 10px;
 }
-.nqas-annual-report_extra-curricular_activities_item{
+
+.nqas-annual-report-faculty-development-item {
+  margin-left: 10px;
+}
+.nqas-annual-report-administrative-external-review-item {
+  margin-left: 10px;
+}
+.nqas-annual-report-remarkable-achievement-item {
+  margin-left: 10px;
+}
+.nqas-annual-report-journal-item {
+  margin-left: 10px;
+}
+
+.nnqas-annual-report-medical-education-item {
+  margin-left: 10px;
+}
+
+.nqas-annual-report-medical-skill-lab-item {
+  margin-left: 10px;
+}
+
+.nqas-annual-report-research-item {
+  margin-left: 10px;
+}
+
+.nqas-annual-report-publications-item {
+  margin-left: 10px;
+}
+.nqas-annual-report-extra-curricular-activities-item {
+  margin-left: 10px;
+}
+.nqas-annual-report-paper-presented-item {
   margin-left: 10px;
 }

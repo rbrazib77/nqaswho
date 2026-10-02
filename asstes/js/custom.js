@@ -1,62 +1,73 @@
 
-document.addEventListener("change", function (event) {
-    if (
-        event.target.matches(
-            'input[name="academic_calendar"]'
-        )
-    ) {
-        const fileBox =
-            document.getElementById(
-                "academic-calendar-file"
-            );
+// Curriculum Execution 
+    function toggleCurriculumExecutionFile() {
+        const yesOption = document.querySelector(
+            'input[name="curriculum_execution"][value="yes"]'
+        );
 
-        const fileInput =
-            fileBox.querySelector(
-                'input[type="file"]'
-            );
+        const fileSection = document.getElementById(
+            'curriculumExecutionFile'
+        );
 
-        if (event.target.value === "yes") {
-
-            fileBox.style.display = "block";
-
+        if (yesOption.checked) {
+            fileSection.style.display = 'block';
         } else {
-
-            fileBox.style.display = "none";
-
-            fileInput.value = "";
+            fileSection.style.display = 'none';
         }
     }
 
-    /* Phase Wise Evaluation */
-    if (
-        event.target.matches(
-            'input[name="phase_wise_evaluation"]'
-        )
-    ) {
+// Only Year Picker
+    function togglePhaseEvaluation() {
+        const yesOption = document.querySelector(
+            'input[name="phase_wise_evaluation"][value="yes"]'
+        );
 
-        const followupBox =
-            document.getElementById(
-                "phase-evaluation-followup"
-            );
+        const fileSection = document.getElementById(
+            'phaseEvaluationFile'
+        );
 
-        const frequencyInput =
-            followupBox.querySelector(
-                'input[name="phase_evaluation_frequency"]'
-            );
-
-        if (event.target.value === "yes") {
-
-            followupBox.style.display = "block";
-
+        if (yesOption.checked) {
+            fileSection.style.display = 'block';
         } else {
-
-            followupBox.style.display = "none";
-
-            frequencyInput.value = "";
+            fileSection.style.display = 'none';
         }
     }
 
-});
+
+
+// 7
+function toggleExternalVisitDate() {
+    const selectedOption = document.querySelector(
+        'input[name="student_counseling"]:checked',
+    );
+
+    const dateField =
+        document.getElementById("externalVisitDate");
+
+    if (selectedOption && selectedOption.value === "yes") {
+        dateField.style.display = "block";
+    } else {
+        dateField.style.display = "none";
+    }
+}
+               
+
+// 12
+    function toggleMEUNumber() {
+        const yesOption = document.querySelector(
+            'input[name="functioning_meu"][value="yes"]'
+        );
+
+        const numberField = document.getElementById(
+            'meuNumberField'
+        );
+
+        if (yesOption.checked) {
+            numberField.style.display = 'block';
+        } else {
+            numberField.style.display = 'none';
+        }
+    }
 
 
 // Only Year Picker
