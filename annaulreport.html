@@ -236,7 +236,7 @@
                     </label>
                     <input
                       type="text"
-                      name="basic_college_name"
+                      name="total_seats"
                       class="form-control"
                       placeholder="Enter Seats"
                     />
@@ -346,7 +346,6 @@
                       </div>
                     </div>
                   </div>
-                  <!-- iv. How many teachers are working part-time? -->
                   <div class="col-md-12 mb-4">
                     <div class="nqas-annual-report-basic-information-item mb-2">
                       <label class="nqas-annual-report-label-input">
@@ -417,8 +416,6 @@
                       </div>
                     </div>
                   </div>
-
-                  <!-- v. How many students are studying in your college at present? -->
                   <div class="col-md-12 mb-4">
                     <div class="nqas-annual-report-basic-information-item">
                       <label class="nqas-annual-report-label-input">
@@ -572,7 +569,7 @@
                       <input
                         type="text"
                         id="establishmentYear"
-                        name="establishment_year"
+                        name="qas_started_year"
                         class="form-control"
                         placeholder="Select Year"
                         readonly
@@ -1479,20 +1476,18 @@
                 </div>
 
                 <!-- Date Field -->
-                <div
-                  id="externalVisitDate"
-                  class="mt-3"
-                  style="display: none; width: 350px"
-                >
-                  <label class="nqas-annual-report-label-input">
-                    If yes, when?
-                  </label>
+                <div id="externalVisitDate" class="mt-3" style="display: none">
+                  <div class="col-12 col-sm-8 col-md-6 col-lg-4 px-0">
+                    <label class="nqas-annual-report-label-input">
+                      If yes, when?
+                    </label>
 
-                  <input
-                    type="date"
-                    name="external_visit_date"
-                    class="form-control"
-                  />
+                    <input
+                      type="date"
+                      name="external_visit_date"
+                      class="form-control"
+                    />
+                  </div>
                 </div>
               </div>
 
@@ -1759,27 +1754,35 @@
                 <div class="nqas-annual-report-number-list">
                   <div class="row g-3">
                     <!-- Suggestion 1 -->
-                    <div class="col-12 col-md-6">
+                    <div class="col-12 col-md-12">
                       <div class="nqas-annual-report-number-item">
                         <div class="row align-items-center g-2">
                           <div class="col-auto">
                             <span>i.</span>
                           </div>
-
                           <div class="col">
-                            <input
-                              type="text"
+                            <textarea
                               name="remarkable_achievement_1"
-                              class="form-control"
+                              class="form-control remarkable-achievement-word-limit-120"
+                              rows="6"
                               placeholder="Mention remarkable achievement"
-                            />
+                            ></textarea>
+                            <p
+                              class="mt-2 d-flex justify-content-between align-items-center"
+                            >
+                              <strong class="text-danger">
+                                Maximum 120 words allowed.
+                              </strong>
+                              <small class="word-counter">
+                                0 / Words Maximum Allowed.</small
+                              >
+                            </p>
                           </div>
                         </div>
                       </div>
                     </div>
-
                     <!-- Suggestion 2 -->
-                    <div class="col-12 col-md-6">
+                    <div class="col-12 col-md-12">
                       <div class="nqas-annual-report-number-item">
                         <div class="row align-items-center g-2">
                           <div class="col-auto">
@@ -1787,23 +1790,94 @@
                           </div>
 
                           <div class="col">
-                            <input
-                              type="text"
+                            <textarea
                               name="remarkable_achievement_2"
-                              class="form-control"
+                              class="form-control remarkable-achievement-word-limit-120"
+                              rows="6"
                               placeholder="Mention remarkable achievement"
-                            />
+                            ></textarea>
+                            <p
+                              class="mt-2 d-flex justify-content-between align-items-center"
+                            >
+                              <strong class="text-danger">
+                                Maximum 120 words allowed.
+                              </strong>
+                              <small class="word-counter">
+                                0 / Words Maximum Allowed.</small
+                              >
+                            </p>
                           </div>
                         </div>
                       </div>
                     </div>
+                    <script>
+                      document.addEventListener(
+                        "DOMContentLoaded",
+                        function () {
+                          document
+                            .querySelectorAll(
+                              ".remarkable-achievement-word-limit-120",
+                            )
+                            .forEach(function (textarea) {
+                              const counter =
+                                textarea.parentElement.querySelector(
+                                  ".word-counter",
+                                );
+                              const maxWords = 120;
+
+                              textarea.addEventListener("input", function () {
+                                let words = textarea.value
+                                  .trim()
+                                  .split(/\s+/)
+                                  .filter(Boolean);
+
+                                if (words.length > maxWords) {
+                                  textarea.value = words
+                                    .slice(0, maxWords)
+                                    .join(" ");
+                                }
+
+                                words = textarea.value
+                                  .trim()
+                                  .split(/\s+/)
+                                  .filter(Boolean);
+
+                                counter.textContent =
+                                  words.length +
+                                  " / " +
+                                  maxWords +
+                                  " Words Maximum Allowed.";
+                              });
+
+                              textarea.addEventListener(
+                                "keydown",
+                                function (e) {
+                                  let words = textarea.value
+                                    .trim()
+                                    .split(/\s+/)
+                                    .filter(Boolean);
+
+                                  if (
+                                    words.length >= maxWords &&
+                                    e.key === " "
+                                  ) {
+                                    e.preventDefault();
+                                  }
+                                },
+                              );
+                            });
+                        },
+                      );
+                    </script>
                   </div>
                 </div>
               </div>
             </div>
             <!-- ===========================11. Journal================================= -->
             <div class="nqas-annual-report-journal mt-4">
-              <h3 class="nqas-annual-report-section-title mb-4">11. Journal</h3>
+              <h3 class="nqas-annual-report-section-title mb-4">
+                11. Journal:
+              </h3>
               <div class="nqas-annual-report-journal-item">
                 <label class="nqas-annual-report-label-input">
                   i. Total No of issues of your Journal published last year:
@@ -1817,7 +1891,6 @@
                   min="0"
                   placeholder="Number of issues"
                 />
-
                 <div class="mt-2">
                   <input
                     type="file"
@@ -1826,12 +1899,17 @@
                     accept=".pdf,.doc,.docx,.jpg,.jpeg,.png"
                   />
                 </div>
+                <p class="mt-2">
+                  <strong class="text-danger">
+                    1st Page(Cover Page of each Issues)
+                  </strong>
+                </p>
               </div>
             </div>
             <!-- =====================12. Medical Education Unit========================= -->
             <div class="nqas-annual-report-edical-education mt-4">
               <h3 class="nqas-annual-report-section-title mb-4">
-                12. Medical Education Unit (MEU)
+                12. Medical Education Unit (MEU):
               </h3>
               <div class="nnqas-annual-report-medical-education-item mt-2">
                 <span class="nqas-annual-report-label-input">
@@ -1860,29 +1938,40 @@
                   </label>
                 </div>
                 <!-- MEU Number Field -->
-                <div
-                  id="meuNumberField"
-                  class="mt-3"
-                  style="display: none; width: 350px"
-                >
-                  <label class="nqas-annual-report-label-input">
-                    Number of MEU Members
-                  </label>
+                <div id="meuNumberField" class="mt-3" style="display: none">
+                  <div class="row">
+                    <div class="col-12 col-sm-8 col-md-6 col-lg-6">
+                      <label class="nqas-annual-report-label-input">
+                        Number of MEU Members
+                      </label>
 
-                  <input
-                    type="number"
-                    name="meu_members"
-                    class="form-control"
-                    min="0"
-                    placeholder="Enter number"
-                  />
+                      <input
+                        type="number"
+                        name="meu_members"
+                        class="form-control"
+                        min="0"
+                        placeholder="Enter number"
+                      />
+                    </div>
+                    <div class="col-12 col-sm-8 col-md-6 col-lg-6">
+                      <label class="nqas-annual-report-label-input">
+                        List of Members Attached
+                      </label>
+                      <input
+                        type="file"
+                        name="meu_members"
+                        class="form-control pt-1 pb-1"
+                        min="0"
+                      />
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
             <!-- =================13. Medical Skill Lab / Simulation Lab============================= -->
             <div class="nqas-annual-report-medical-skill-lab mt-4">
               <h3 class="nqas-annual-report-section-title mb-4">
-                13. Medical Skill lab/Simulation lab
+                13. Medical Skill lab/Simulation lab:
               </h3>
               <div class="nqas-annual-report-medical-skill-lab-item">
                 <span class="nqas-annual-report-label-input">
@@ -1904,7 +1993,7 @@
             <!-- ==================14. Research================= -->
             <div class="nqas-annual-report-research mt-4">
               <h3 class="nqas-annual-report-section-title mb-4">
-                14. Research
+                14. Research:
               </h3>
 
               <div class="nqas-annual-report-research-item mb-2">
@@ -1938,7 +2027,7 @@
             <!-- =================15. Publications================================= -->
             <div class="nqas-annual-report-publications mt-4">
               <h3 class="nqas-annual-report-section-title mb-4">
-                15. Publications
+                15. Publications:
               </h3>
               <div class="nqas-annual-report-publications-item mb-2">
                 <label class="nqas-annual-report-label-input">
@@ -1983,7 +2072,7 @@
             <!-- =========================16. Paper Presented=================================== -->
             <div class="nqas-annual-report-paper-presented mt-4">
               <h3 class="nqas-annual-report-section-title mb-4">
-                16. Paper Presented
+                16. Paper Presented:
               </h3>
 
               <div class="nqas-annual-report-paper-presented-item">
@@ -2186,10 +2275,67 @@
 
                 <textarea
                   name="extracurricular_details"
-                  class="form-control"
-                  rows="3"
+                  class="form-control extra-curricular-activities-word-limit-120"
+                  rows="6"
                   placeholder="Mention the activities..."
                 ></textarea>
+                <p
+                  class="mt-2 d-flex justify-content-between align-items-center"
+                >
+                  <strong class="text-danger">
+                    Maximum 120 words allowed.
+                  </strong>
+
+                  <small class="word-counter">
+                    0 / Words Maximum Allowed.</small
+                  >
+                </p>
+                <script>
+                  document.addEventListener("DOMContentLoaded", function () {
+                    document
+                      .querySelectorAll(
+                        ".extra-curricular-activities-word-limit-120",
+                      )
+                      .forEach(function (textarea) {
+                        const counter =
+                          textarea.parentElement.querySelector(".word-counter");
+                        const maxWords = 120;
+
+                        textarea.addEventListener("input", function () {
+                          let words = textarea.value
+                            .trim()
+                            .split(/\s+/)
+                            .filter(Boolean);
+
+                          if (words.length > maxWords) {
+                            textarea.value = words.slice(0, maxWords).join(" ");
+                          }
+
+                          words = textarea.value
+                            .trim()
+                            .split(/\s+/)
+                            .filter(Boolean);
+
+                          counter.textContent =
+                            words.length +
+                            " / " +
+                            maxWords +
+                            " Words Maximum Allowed.";
+                        });
+
+                        textarea.addEventListener("keydown", function (e) {
+                          let words = textarea.value
+                            .trim()
+                            .split(/\s+/)
+                            .filter(Boolean);
+
+                          if (words.length >= maxWords && e.key === " ") {
+                            e.preventDefault();
+                          }
+                        });
+                      });
+                  });
+                </script>
               </div>
             </div>
             <!-- ===================18. Suggestions======================= -->
@@ -2200,10 +2346,60 @@
               </h3>
               <textarea
                 name="qas_improvement_suggestions"
-                class="form-control"
-                rows="6"
+                class="form-control activities-college-word-limit-70"
+                rows="4"
                 placeholder="Write your suggestions..."
               ></textarea>
+              <p class="mt-2 d-flex justify-content-between align-items-center">
+                <strong class="text-danger">
+                  Maximum 150 words allowed.
+                </strong>
+                <small class="word-counter"> 0 / Words Maximum Allowed.</small>
+              </p>
+              <script>
+                document.addEventListener("DOMContentLoaded", function () {
+                  document
+                    .querySelectorAll(".activities-college-word-limit-70")
+                    .forEach(function (textarea) {
+                      const counter =
+                        textarea.parentElement.querySelector(".word-counter");
+                      const maxWords = 70;
+
+                      textarea.addEventListener("input", function () {
+                        let words = textarea.value
+                          .trim()
+                          .split(/\s+/)
+                          .filter(Boolean);
+
+                        if (words.length > maxWords) {
+                          textarea.value = words.slice(0, maxWords).join(" ");
+                        }
+
+                        words = textarea.value
+                          .trim()
+                          .split(/\s+/)
+                          .filter(Boolean);
+
+                        counter.textContent =
+                          words.length +
+                          " / " +
+                          maxWords +
+                          " Words Maximum Allowed.";
+                      });
+
+                      textarea.addEventListener("keydown", function (e) {
+                        let words = textarea.value
+                          .trim()
+                          .split(/\s+/)
+                          .filter(Boolean);
+
+                        if (words.length >= maxWords && e.key === " ") {
+                          e.preventDefault();
+                        }
+                      });
+                    });
+                });
+              </script>
             </div>
             <div class="nqas-annual-report__actions">
               <button type="reset" class="btn btn-outline-secondary">
