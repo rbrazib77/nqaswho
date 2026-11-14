@@ -204,10 +204,56 @@
                 </p>
                 <textarea
                   name="executive_summary"
+                  id="executive_summary"
                   class="form-control"
-                  rows="5"
+                  rows="12"
                   placeholder="Write a brief description of strength and future prospects..."
                 ></textarea>
+
+                <div class="d-flex justify-content-between mt-1">
+                  <p class="mb-0">
+                    <strong class="text-danger">
+                      Maximum 300 words allowed.
+                    </strong>
+                  </p>
+                  <small id="wordCount" class="text-muted"
+                    >0 / Maximum words allowed.</small
+                  >
+                </div>
+                <script>
+                  const textarea = document.getElementById("executive_summary");
+                  const wordCount = document.getElementById("wordCount");
+
+                  const maxWords = 300;
+
+                  textarea.addEventListener("input", function () {
+                    let words = this.value.trim().split(/\s+/).filter(Boolean);
+
+                    if (words.length > maxWords) {
+                      this.value = words.slice(0, maxWords).join(" ");
+                      words = this.value.trim().split(/\s+/).filter(Boolean);
+                    }
+
+                    wordCount.textContent = `${words.length} / ${maxWords} Maximum 300 words allowed.`;
+                  });
+
+                  // ৩০০ শব্দ হলে নতুন শব্দ আটকানো
+                  textarea.addEventListener("keydown", function (e) {
+                    const words = this.value
+                      .trim()
+                      .split(/\s+/)
+                      .filter(Boolean);
+
+                    if (words.length >= maxWords) {
+                      const isAllowedKey =
+                        e.key.length > 1 || e.ctrlKey || e.metaKey;
+
+                      if (!isAllowedKey && !/\s/.test(e.key)) {
+                        e.preventDefault();
+                      }
+                    }
+                  });
+                </script>
               </div>
             </div>
             <!-- 1. Basic Information -->
@@ -682,7 +728,7 @@
                   class="nqas-annual-report-quality-assurance-background-item mb-4"
                 >
                   <label class="nqas-annual-report-label-input">
-                    e. Total number of meetings within last 12 months:
+                    E. Total number of meetings within last 12 months:
                   </label>
 
                   <div class="row g-3">
@@ -695,9 +741,15 @@
                           type="number"
                           name="academic_council_meeting"
                           class="form-control"
-                          min="0"
-                          placeholder="0"
+                          min="20"
+                          placeholder="Meeting No:--"
                         />
+                        <input type="file" class="form-control mt-2" />
+                        <ul style="color: #ff7081; font-weight: 700">
+                          <li>Meeting Notice 1 page</li>
+                          <li>Attendance 1 page (frist page)</li>
+                          <li>Meeting Minutes 2 page (frist to last)</li>
+                        </ul>
                       </div>
                     </div>
 
@@ -711,8 +763,12 @@
                           name="academic_coordinator_meeting"
                           class="form-control"
                           min="0"
-                          placeholder="0"
+                          placeholder="Meeting No:--"
                         />
+                        <input type="file" class="form-control mt-2" />
+                        <p style="color: #ff7081; font-weight: 700">
+                          Content (4 × 4) = Minimum Total: 16 Pages
+                        </p>
                       </div>
                     </div>
 
@@ -726,8 +782,12 @@
                           name="faculty_development_meeting"
                           class="form-control"
                           min="0"
-                          placeholder="0"
+                          placeholder="Meeting No:--"
                         />
+                        <input type="file" class="form-control mt-2" />
+                          <p style="color: #ff7081; font-weight: 700">
+                          Content 4 page (3 × 4) =  Total: 12 Pages
+                        </p>
                       </div>
                     </div>
 
@@ -741,8 +801,9 @@
                           name="phase_1_meeting"
                           class="form-control"
                           min="0"
-                          placeholder="0"
+                          placeholder="Meeting No:--"
                         />
+                        <input type="file" class="form-control mt-2" />
                       </div>
                     </div>
 
@@ -756,8 +817,12 @@
                           name="phase_2_meeting"
                           class="form-control"
                           min="0"
-                          placeholder="0"
+                          placeholder="Meeting No:--"
                         />
+                        <input type="file" class="form-control mt-2" />
+                         <p style="color: #ff7081; font-weight: 700">
+                          6  meeting 6 X 4 =24 page 
+                        </p>
                       </div>
                     </div>
 
@@ -771,8 +836,12 @@
                           name="phase_3_meeting"
                           class="form-control"
                           min="0"
-                          placeholder="0"
+                          placeholder="Meeting No:--"
                         />
+                        <input type="file" class="form-control mt-2" />
+                         <p style="color: #ff7081; font-weight: 700">
+                          6  meeting 6 X 4 =24 page 
+                        </p>
                       </div>
                     </div>
 
@@ -786,8 +855,12 @@
                           name="final_phase_meeting"
                           class="form-control"
                           min="0"
-                          placeholder="0"
+                          placeholder="Meeting No:--"
                         />
+                        <input type="file" class="form-control mt-2" />
+                         <p style="color: #ff7081; font-weight: 700">
+                          6  meeting 6 X 4 =24 page 
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -965,76 +1038,170 @@
 
                 <div class="row g-3">
                   <!-- 1st Phase -->
-                  <div class="col-12 col-lg-6">
-                    <div
-                      class="nqas-annual-report_phase-item d-flex align-items-center gap-2"
-                    >
+                  <div class="col-12 col-md-12">
+                    <div class="nqas-annual-report_phase-item">
                       <span class="nqas-annual-report-phase-label flex-shrink-0"
                         >1st Phase</span
                       >
+                      <div>
+                        <textarea
+                          name=""
+                          id=""
+                          rows="8"
+                          name="student_suggestion_1st_phase"
+                          class="form-control student-performance-word-limit-150"
+                          placeholder="Major suggestion"
+                        ></textarea>
+                        <p
+                          class="mt-2 d-flex justify-content-between align-items-center"
+                        >
+                          <strong class="text-danger">
+                            Maximum 150 words allowed.
+                          </strong>
 
-                      <input
-                        type="text"
-                        name="student_suggestion_1st_phase"
-                        class="form-control"
-                        placeholder="Major suggestion"
-                      />
+                          <small class="word-counter">
+                            0 /Words Maximum Allowed.</small
+                          >
+                        </p>
+                      </div>
                     </div>
                   </div>
 
                   <!-- 2nd Phase -->
-                  <div class="col-12 col-lg-6">
-                    <div
-                      class="nqas-annual-report_phase-item d-flex align-items-center gap-2"
-                    >
-                      <span class="nqas-annual-report-phase-label flex-shrink-0"
+                  <div class="col-12 col-md-12">
+                    <div class="nqas-annual-report_phase-item">
+                      <span class="nqas-annual-report-phase-label"
                         >2nd Phase</span
                       >
+                      <div>
+                        <textarea
+                          id=""
+                          rows="10"
+                          name="student_suggestion_2nd_phase"
+                          class="form-control student-performance-word-limit-150"
+                          placeholder="Major suggestion"
+                        ></textarea>
+                        <p
+                          class="mt-2 d-flex justify-content-between align-items-center"
+                        >
+                          <strong class="text-danger">
+                            Maximum 150 words allowed.
+                          </strong>
 
-                      <input
-                        type="text"
-                        name="student_suggestion_2nd_phase"
-                        class="form-control"
-                        placeholder="Major suggestion"
-                      />
+                          <small class="word-counter">
+                            0 /Words Maximum Allowed.</small
+                          >
+                        </p>
+                      </div>
                     </div>
                   </div>
 
                   <!-- 3rd Phase -->
-                  <div class="col-12 col-lg-6">
-                    <div
-                      class="nqas-annual-report_phase-item d-flex align-items-center gap-2"
-                    >
-                      <span class="nqas-annual-report-phase-label flex-shrink-0"
+                  <div class="col-12 col-md-12">
+                    <div class="nqas-annual-report_phase-item">
+                      <span class="nqas-annual-report-phase-label"
                         >3rd Phase</span
                       >
+                      <div>
+                        <textarea
+                          id=""
+                          rows="10"
+                          name="student_suggestion_3rd_phase"
+                          class="form-control student-performance-word-limit-150"
+                          placeholder="Major suggestion"
+                        ></textarea>
+                        <p
+                          class="mt-2 d-flex justify-content-between align-items-center"
+                        >
+                          <strong class="text-danger">
+                            Maximum 150 words allowed.
+                          </strong>
 
-                      <input
-                        type="text"
-                        name="student_suggestion_3rd_phase"
-                        class="form-control"
-                        placeholder="Major suggestion"
-                      />
+                          <small class="word-counter">
+                            0 /Words Maximum Allowed.</small
+                          >
+                        </p>
+                      </div>
                     </div>
                   </div>
 
                   <!-- Final Phase -->
-                  <div class="col-12 col-lg-6">
-                    <div
-                      class="nqas-annual-report_phase-item d-flex align-items-center gap-2"
-                    >
-                      <span class="nqas-annual-report-phase-label flex-shrink-0"
+                  <div class="col-12 col-md-12">
+                    <div class="nqas-annual-report_phase-item">
+                      <span class="nqas-annual-report-phase-label"
                         >Final Phase</span
                       >
+                      <div>
+                        <textarea
+                          id=""
+                          rows="10"
+                          name="student_suggestion_final_phase"
+                          class="form-control student-performance-word-limit-150"
+                          placeholder="Major suggestion"
+                        ></textarea>
+                        <p
+                          class="mt-2 d-flex justify-content-between align-items-center"
+                        >
+                          <strong class="text-danger">
+                            Maximum 150 words allowed.
+                          </strong>
 
-                      <input
-                        type="text"
-                        name="student_suggestion_final_phase"
-                        class="form-control"
-                        placeholder="Major suggestion"
-                      />
+                          <small class="word-counter">
+                            0 /Words Maximum Allowed.</small
+                          >
+                        </p>
+                      </div>
                     </div>
                   </div>
+                  <script>
+                    document.addEventListener("DOMContentLoaded", function () {
+                      document
+                        .querySelectorAll(".student-performance-word-limit-150")
+                        .forEach(function (textarea) {
+                          const counter =
+                            textarea.parentElement.querySelector(
+                              ".word-counter",
+                            );
+                          const maxWords = 150;
+
+                          textarea.addEventListener("input", function () {
+                            let words = textarea.value
+                              .trim()
+                              .split(/\s+/)
+                              .filter(Boolean);
+
+                            if (words.length > maxWords) {
+                              textarea.value = words
+                                .slice(0, maxWords)
+                                .join(" ");
+                            }
+
+                            words = textarea.value
+                              .trim()
+                              .split(/\s+/)
+                              .filter(Boolean);
+
+                            counter.textContent =
+                              words.length +
+                              " / " +
+                              maxWords +
+                              " Words Maximum Allowed.";
+                          });
+
+                          textarea.addEventListener("keydown", function (e) {
+                            let words = textarea.value
+                              .trim()
+                              .split(/\s+/)
+                              .filter(Boolean);
+
+                            // 150 words হলে নতুন শব্দ শুরু করতে দেবে না
+                            if (words.length >= maxWords && e.key === " ") {
+                              e.preventDefault();
+                            }
+                          });
+                        });
+                    });
+                  </script>
                 </div>
               </div>
               <!-- 4.c -->
@@ -1224,8 +1391,9 @@
               <div class="nqas-annual-report-student-performance-item mb-4">
                 <div class="nqas-annual-report-yesno-question mb-3">
                   <span class="nqas-annual-report-label-input">
-                    g. Do you have provision for student counseling?</span
-                  >
+                    g. Do you have provision for student counseling?
+                  </span>
+
                   <div class="nqas-annual-report-yesno-options mt-2">
                     <label class="nqas-annual-report-option">
                       <input
@@ -1246,48 +1414,85 @@
                     </label>
                   </div>
                 </div>
-              </div>
-              <div class="nqas-annual-report-student-performance-item mb-4">
-                <div class="nqas-annual-report-yesno-question mb-3">
-                  <span class="nqas-annual-report-label-input">
-                    Do you select your faculty members for students as
-                    counselor?</span
-                  >
-                  <div class="nqas-annual-report-yesno-options mt-2">
-                    <label class="nqas-annual-report-option">
-                      <input
-                        type="radio"
-                        name="student_counseling"
-                        value="yes"
-                      />
-                      <span>Yes</span>
-                    </label>
 
-                    <label class="nqas-annual-report-option">
-                      <input
-                        type="radio"
-                        name="student_counseling"
-                        value="no"
-                      />
-                      <span>No</span>
-                    </label>
-                  </div>
-                  <div class="nqas-annual-report_followup">
-                    <label> Please mention the name of counselors— </label>
-                    <div class="nqas-annual-report_number-list">
-                      <div class="nqas-annual-report_number-item">
-                        <span></span>
-                        <input
-                          type="text"
-                          name="counselor_1"
-                          class="form-control"
-                          placeholder="Name of counselor"
-                        />
+                <!-- Followup Question -->
+                <div id="studentCounselingFollowup" style="display: none">
+                  <div class="nqas-annual-report-student-performance-item mb-4">
+                    <div class="nqas-annual-report-yesno-question mb-3">
+                      <span class="nqas-annual-report-label-input">
+                        Do you select your faculty members for students as
+                        counselor?
+                      </span>
+
+                      <div class="nqas-annual-report-yesno-options mt-2">
+                        <label class="nqas-annual-report-option">
+                          <input
+                            type="radio"
+                            name="faculty_members_for_students"
+                            value="yes"
+                          />
+                          <span>Yes</span>
+                        </label>
+
+                        <label class="nqas-annual-report-option">
+                          <input
+                            type="radio"
+                            name="faculty_members_for_students"
+                            value="no"
+                          />
+                          <span>No</span>
+                        </label>
+                      </div>
+
+                      <div class="nqas-annual-report_followup">
+                        <label>Please mention the name of counselors —</label>
+
+                        <div class="nqas-annual-report_number-list">
+                          <div class="nqas-annual-report_number-item">
+                            <span></span>
+                            <input
+                              type="text"
+                              name="counselor_1"
+                              class="form-control"
+                              placeholder="Name of counselor"
+                            />
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
+
+              <script>
+                document.addEventListener("DOMContentLoaded", function () {
+                  const radios = document.querySelectorAll(
+                    'input[name="student_counseling"]',
+                  );
+
+                  const followup = document.getElementById(
+                    "studentCounselingFollowup",
+                  );
+
+                  function toggleFollowup() {
+                    const selected = document.querySelector(
+                      'input[name="student_counseling"]:checked',
+                    );
+
+                    if (selected && selected.value === "yes") {
+                      followup.style.display = "block";
+                    } else {
+                      followup.style.display = "none";
+                    }
+                  }
+
+                  radios.forEach((radio) => {
+                    radio.addEventListener("change", toggleFollowup);
+                  });
+
+                  toggleFollowup();
+                });
+              </script>
             </div>
             <!-- =========================5. Exchange Review Visit Between Pair Colleges========= -->
             <div class="nqas-annual-report-exchange-review mt-4">
@@ -2403,7 +2608,6 @@
             </div>
 
             <div class="picture-uploaded py-4">
-            
               <h3 class="nqas-annual-report-section-title mb-4">
                 19. Picture Uploaded
               </h3>
