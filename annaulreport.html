@@ -236,8 +236,6 @@
 
                     wordCount.textContent = `${words.length} / ${maxWords} Maximum 300 words allowed.`;
                   });
-
-                  // ৩০০ শব্দ হলে নতুন শব্দ আটকানো
                   textarea.addEventListener("keydown", function (e) {
                     const words = this.value
                       .trim()
@@ -878,7 +876,7 @@
               <div class="nqas-annual-report-curriculum-execution-item">
                 <div class="nqas-annual-report-yesno-question mb-3">
                   <span class="nqas-annual-report-label-input">
-                    a. The college has academic calendar for each phase
+                    A. The college has academic calendar for each phase
                   </span>
 
                   <div class="nqas-annual-report-yesno-options mt-2">
@@ -926,7 +924,7 @@
                 </div>
                 <div class="nqas-annual-report-yesno-question mb-3">
                   <span class="nqas-annual-report-label-input">
-                    b. The college has daily schedule for each batch compatible
+                    B. The college has daily schedule for each batch compatible
                     to curriculum</span
                   >
                   <div class="nqas-annual-report-yesno-options mt-2">
@@ -943,50 +941,71 @@
                 </div>
                 <div class="nqas-annual-report-yesno-question mb-3">
                   <span class="nqas-annual-report-label-input">
-                    c. The college has regular schedule of Integrated
-                    teaching(phase wise)</span
-                  >
-                  <div class="nqas-annual-report-yesno-options mt-2">
-                    <label class="nqas-annual-report-option">
-                      <input
-                        type="radio"
-                        name="integrated_teaching"
-                        value="yes"
-                      />
-                      <span>Yes</span>
-                    </label>
+                      C. The college has regular schedule of Integrated teaching (phase wise)
+                  </span>
 
-                    <label class="nqas-annual-report-option">
-                      <input
-                        type="radio"
-                        name="integrated_teaching"
-                        value="no"
-                      />
-                      <span>No</span>
-                    </label>
+                  <div class="nqas-annual-report-yesno-options mt-2">
+                      <label class="nqas-annual-report-option">
+                          <input type="radio" name="integrated_teaching"
+                                value="yes"
+                                onchange="toggleCurriculumExecutionFile()">
+                          <span>Yes</span>
+                      </label>
+
+                      <label class="nqas-annual-report-option">
+                          <input type="radio" name="integrated_teaching"
+                                value="no"
+                                onchange="toggleCurriculumExecutionFile()">
+                          <span>No</span>
+                      </label>
                   </div>
-                  <p style="color: #ff7081; font-weight: 700">
-                    Each phase 1 page 1 X 4 =4
-                  </p>
+
+                  <div id="integratedTeachingFile" class="mt-3" style="display:none;">
+                      <label class="nqas-annual-report-label-input">
+                          Upload Integrated Teaching Document
+                      </label>
+
+                      <input type="file" name="integrated_teaching_file"
+                            class="form-control" accept=".pdf,.jpg,.jpeg,.png">
+
+                      <p style="color:#ff7081;font-weight:700">
+                          Each phase 1 page 1 × 4 = 4
+                      </p>
+                  </div>
                 </div>
                 <div class="nqas-annual-report-yesno-question mb-3">
-                  <span class="nqas-annual-report-label-input">
-                    d. The college has regular schedule of generic topics</span
-                  >
-                  <div class="nqas-annual-report-yesno-options mt-2">
-                    <label class="nqas-annual-report-option">
-                      <input type="radio" name="generic_topics" value="yes" />
-                      <span>Yes</span>
-                    </label>
+                    <span class="nqas-annual-report-label-input">
+                        D. The college has regular schedule of generic topics
+                    </span>
 
-                    <label class="nqas-annual-report-option">
-                      <input type="radio" name="generic_topics" value="no" />
-                      <span>No</span>
-                    </label>
+                    <div class="nqas-annual-report-yesno-options mt-2">
+                        <label class="nqas-annual-report-option">
+                            <input type="radio" name="generic_topics"
+                                  value="yes"
+                                  onchange="toggleCurriculumExecutionFile()">
+                            <span>Yes</span>
+                        </label>
+
+                        <label class="nqas-annual-report-option">
+                            <input type="radio" name="generic_topics"
+                                  value="no"
+                                  onchange="toggleCurriculumExecutionFile()">
+                            <span>No</span>
+                        </label>
+                    </div>
+
+                  <div id="genericTopicsFile" class="mt-3" style="display:none;">
+                      <label class="nqas-annual-report-label-input">
+                          Upload Generic Topics Document
+                      </label>
+
+                      <input type="file" name="generic_topics_file"
+                            class="form-control" accept=".pdf,.jpg,.jpeg,.png">
+
+                      <p style="color:#ff7081;font-weight:700">
+                          Each phase 1 page + Internship = 5
+                      </p>
                   </div>
-                  <p style="color: #ff7081; font-weight: 700">
-                    Each phase 1 page + internaship =5
-                  </p>
                 </div>
               </div>
             </div>
@@ -998,7 +1017,7 @@
               <!-- 4.a -->
               <div class="nqas-annual-report-student-performance-item mb-4">
                 <label class="nqas-annual-report-label-input">
-                  a. Do your college collect questionnaire of phase evaluation
+                  A. Do your college collect questionnaire of phase evaluation
                   by students? (Annexure-I)
                 </label>
                 <div class="nqas-annual-report-yesno-options mt-2">
@@ -1047,7 +1066,7 @@
               <!-- 4.b -->
               <div class="nqas-annual-report-student-performance-item mb-4">
                 <label class="nqas-annual-report-label-input">
-                  b. What were the major suggestions given by the
+                  B. What were the major suggestions given by the
                   students?(Annexure-I)
                 </label>
 
@@ -1222,7 +1241,7 @@
               <!-- 4.c -->
               <div class="nqas-annual-report-student-performance-item mb-4">
                 <label class="nqas-annual-report-label-input">
-                  c. What percentage of students passed in the last year?
+                  C. What percentage of students passed in the last year?
                 </label>
 
                 <div class="row g-3">
@@ -1327,7 +1346,7 @@
               <div class="nqas-annual-report-student-performance-item mb-4">
                 <div class="nqas-annual-report-yesno-question mb-3">
                   <span class="nqas-annual-report-label-input">
-                    d. Do you give feedback about their performance?</span
+                    D. Do you give feedback about their performance?</span
                   >
                   <div class="nqas-annual-report-yesno-options mt-2">
                     <label class="nqas-annual-report-option">
@@ -1354,7 +1373,7 @@
               <div class="nqas-annual-report-student-performance-item mb-4">
                 <div class="nqas-annual-report-yesno-question mb-3">
                   <span class="nqas-annual-report-label-input">
-                    e. If yes, how do you do that?</span
+                    E. If yes, how do you do that?</span
                   >
                   <div class="nqas-annual-report-yesno-options mt-2">
                     <label class="nqas-annual-report-option">
@@ -1378,7 +1397,7 @@
               <div class="nqas-annual-report-student-performance-item mb-4">
                 <div class="nqas-annual-report-yesno-question mb-3">
                   <span class="nqas-annual-report-label-input">
-                    f. Do you have functioning students' support system?</span
+                    F. Do you have functioning students' support system?</span
                   >
                   <div class="nqas-annual-report-yesno-options mt-2">
                     <label class="nqas-annual-report-option">
@@ -1406,7 +1425,7 @@
               <div class="nqas-annual-report-student-performance-item mb-4">
                 <div class="nqas-annual-report-yesno-question mb-3">
                   <span class="nqas-annual-report-label-input">
-                    g. Do you have provision for student counseling?
+                    G. Do you have provision for student counseling?
                   </span>
 
                   <div class="nqas-annual-report-yesno-options mt-2">
@@ -1516,23 +1535,24 @@
               </h3>
               <div class="nqas-annual-report-exchange-review-item">
                 <span class="nqas-annual-report-label-input">
-                  a. Do you have a pair college?</span
+                  A. Do you have a pair college?</span
                 >
                 <div class="nqas-annual-report-yesno-options mt-2">
                   <label class="nqas-annual-report-option">
-                    <input type="radio" name="student_counseling" value="yes" />
+                    <input type="radio" name="exchange_pair_college" value="yes" />
                     <span>Yes</span>
                   </label>
 
                   <label class="nqas-annual-report-option">
-                    <input type="radio" name="student_counseling" value="no" />
+                    <input type="radio" name="exchange_pair_college" value="no" />
                     <span>No</span>
                   </label>
                 </div>
               </div>
-              <div class="nqas-annual-report-exchange-review-item mt-2">
+              <div id="pairCollegeYes" style="display: none;">
+                   <div class="nqas-annual-report-exchange-review-item mt-2">
                 <label class="nqas-annual-report-label-input">
-                  b. If yes, Name of the pair college:
+                  I. Name of the pair college:
                 </label>
                 <input
                   type="text"
@@ -1541,10 +1561,9 @@
                   placeholder="Enter pair college name"
                 />
               </div>
-
               <div class="nqas-annual-report-exchange-review-item mt-2">
                 <label class="nqas-annual-report-label-input">
-                  c. Number of visits by academic coordinator of the pair
+                  II. Number of visits by academic coordinator of the pair
                   college:
                 </label>
 
@@ -1556,24 +1575,79 @@
                   placeholder="Number of visits"
                 />
               </div>
-
               <div class="nqas-annual-report-exchange-review-item mt-2">
                 <label class="nqas-annual-report-label-input">
-                  d. Major suggestions given by the academic coordinator of the
+                  III. Major suggestions given by the academic coordinator of the
                   pair college:
                 </label>
-
                 <textarea
                   name="pair_college_suggestions"
-                  class="form-control"
-                  rows="3"
+                  class="form-control pair-college-word-limit-120"
+                  rows="6"
                   placeholder="Write major suggestions..."
                 ></textarea>
-              </div>
+                  <p
+                          class="mt-2 d-flex justify-content-between align-items-center"
+                        >
+                          <strong class="text-danger">
+                            Maximum 120 words Allowed.
+                          </strong>
+                          <small class="word-counter">
+                            0 /Words Maximum Allowed.</small
+                          >
+                        </p>
+                 <script>
+                    document.addEventListener("DOMContentLoaded", function () {
+                      document
+                        .querySelectorAll(".pair-college-word-limit-120")
+                        .forEach(function (textarea) {
+                          const counter =
+                            textarea.parentElement.querySelector(
+                              ".word-counter",
+                            );
+                          const maxWords = 120;
 
+                          textarea.addEventListener("input", function () {
+                            let words = textarea.value
+                              .trim()
+                              .split(/\s+/)
+                              .filter(Boolean);
+
+                            if (words.length > maxWords) {
+                              textarea.value = words
+                                .slice(0, maxWords)
+                                .join(" ");
+                            }
+
+                            words = textarea.value
+                              .trim()
+                              .split(/\s+/)
+                              .filter(Boolean);
+
+                            counter.textContent =
+                              words.length +
+                              " / " +
+                              maxWords +
+                              " Words Maximum Allowed.";
+                          });
+
+                          textarea.addEventListener("keydown", function (e) {
+                            let words = textarea.value
+                              .trim()
+                              .split(/\s+/)
+                              .filter(Boolean);
+
+                            if (words.length >= maxWords && e.key === " ") {
+                              e.preventDefault();
+                            }
+                          });
+                        });
+                    });
+                  </script>
+              </div>
               <div class="nqas-annual-report-exchange-review-item mt-2">
                 <label class="nqas-annual-report-label-input">
-                  e. If your medical/Dental college does not have a pair college
+                  IV. If your medical/Dental college does not have a pair college
                   mention Why:
                 </label>
 
@@ -1584,6 +1658,45 @@
                   placeholder="Mention reason..."
                 ></textarea>
               </div>
+              </div>
+           
+              <script>
+                document.addEventListener("DOMContentLoaded", function () {
+                    const radios = document.querySelectorAll(
+                        'input[name="exchange_pair_college"]'
+                    );
+
+                    const yesSection = document.getElementById("pairCollegeYes");
+                    const noSection = document.getElementById("pairCollegeNo");
+
+                    function togglePairCollege() {
+
+                        const selected = document.querySelector(
+                            'input[name="exchange_pair_college"]:checked'
+                        );
+
+                        const isYes = selected?.value === "yes";
+
+                        // Yes হলে সব প্রশ্ন Show
+                        yesSection.style.display = isYes ? "block" : "none";
+                        noSection.style.display = isYes ? "block" : "none";
+
+                        // Hidden inputs disable
+                        [yesSection, noSection].forEach(section => {
+                            section.querySelectorAll("input, textarea").forEach(input => {
+                                input.disabled = !isYes;
+                            });
+                        });
+                    }
+
+                    radios.forEach(radio => {
+                        radio.addEventListener("change", togglePairCollege);
+                    });
+
+                    togglePairCollege();
+
+                });
+              </script>
             </div>
             <!-- ========================6. External Examiners===================== -->
             <div class="nqas-annual-report-external-examiners mt-4">
@@ -1592,17 +1705,17 @@
               </h3>
               <div class="nqas-annual-report-external-examiners-item mt-2">
                 <span class="nqas-annual-report-label-input">
-                  a. External examiners' report collected during professional
+                  A. External examiners' report collected during professional
                   examinations
                 </span>
                 <div class="nqas-annual-report-yesno-options mt-2">
                   <label class="nqas-annual-report-option">
-                    <input type="radio" name="student_counseling" value="yes" />
+                    <input type="radio" name="external_examiner" value="yes" />
                     <span>Yes</span>
                   </label>
 
                   <label class="nqas-annual-report-option">
-                    <input type="radio" name="student_counseling" value="no" />
+                    <input type="radio" name="external_examiner" value="no" />
                     <span>No</span>
                   </label>
                 </div>
@@ -1610,7 +1723,7 @@
 
               <div class="nqas-annual-report-external-examiners-item mt-2">
                 <label class="nqas-annual-report-label-input">
-                  b. Major Suggestions given by external examiners:
+                  B. Major Suggestions given by external examiners:
                 </label>
                 <div class="nqas-annual-report-number-list">
                   <div class="row g-3">
@@ -1619,16 +1732,24 @@
                       <div class="nqas-annual-report-number-item">
                         <div class="row align-items-center g-2">
                           <div class="col-auto">
-                            <span>i.</span>
+                            <span>I.</span>
                           </div>
-
-                          <div class="col">
-                            <input
-                              type="text"
+                          <div class="col-12 col-md-12">
+                            <textarea  type="text"
+                            rows="3"
                               name="external_examiner_suggestion_1"
-                              class="form-control"
-                              placeholder="Major suggestion"
-                            />
+                              class="form-control external-examiner-limit-30"
+                              placeholder="Major suggestion"></textarea>
+                                 <p
+                          class="mt-2 d-flex justify-content-between align-items-center"
+                        >
+                          <strong class="text-danger">
+                            Maximum 30 words Allowed.
+                          </strong>
+                          <small class="word-counter">
+                            0 /Words Maximum Allowed.</small
+                          >
+                        </p>
                           </div>
                         </div>
                       </div>
@@ -1639,20 +1760,80 @@
                       <div class="nqas-annual-report-number-item">
                         <div class="row align-items-center g-2">
                           <div class="col-auto">
-                            <span>ii.</span>
+                            <span>II.</span>
+                          </div>
+                             <div class="col-12 col-md-12">
+                            <textarea  type="text"
+                            rows="3"
+                              name="external_examiner_suggestion_2"
+                              class="form-control external-examiner-limit-30"
+                              placeholder="Major suggestion"></textarea>
+                                 <p
+                          class="mt-2 d-flex justify-content-between align-items-center"
+                        >
+                          <strong class="text-danger">
+                            Maximum 30 words Allowed.
+                          </strong>
+
+                          <small class="word-counter">
+                            0 /Words Maximum Allowed.</small
+                          >
+                        </p>
                           </div>
 
-                          <div class="col">
-                            <input
-                              type="text"
-                              name="external_examiner_suggestion_2"
-                              class="form-control"
-                              placeholder="Major suggestion"
-                            />
-                          </div>
+                         
                         </div>
                       </div>
                     </div>
+                    <script>
+                    document.addEventListener("DOMContentLoaded", function () {
+                      document
+                        .querySelectorAll(".external-examiner-limit-30")
+                        .forEach(function (textarea) {
+                          const counter =
+                            textarea.parentElement.querySelector(
+                              ".word-counter",
+                            );
+                          const maxWords = 30;
+
+                          textarea.addEventListener("input", function () {
+                            let words = textarea.value
+                              .trim()
+                              .split(/\s+/)
+                              .filter(Boolean);
+
+                            if (words.length > maxWords) {
+                              textarea.value = words
+                                .slice(0, maxWords)
+                                .join(" ");
+                            }
+
+                            words = textarea.value
+                              .trim()
+                              .split(/\s+/)
+                              .filter(Boolean);
+
+                            counter.textContent =
+                              words.length +
+                              " / " +
+                              maxWords +
+                              " Words Maximum Allowed.";
+                          });
+
+                          textarea.addEventListener("keydown", function (e) {
+                            let words = textarea.value
+                              .trim()
+                              .split(/\s+/)
+                              .filter(Boolean);
+
+                            // 150 words হলে নতুন শব্দ শুরু করতে দেবে না
+                            if (words.length >= maxWords && e.key === " ") {
+                              e.preventDefault();
+                            }
+                          });
+                        });
+                    });
+                  </script>
                   </div>
                 </div>
               </div>
@@ -1670,7 +1851,7 @@
                 class="nqas-annual-report-external-review-visit-epresentatives-item mt-2"
               >
                 <label class="nqas-annual-report-label-input mt-2">
-                  a. Have your college gone through the external review visit?
+                  A. Have your college gone through the external review visit?
                 </label>
 
                 <div class="nqas-annual-report-yesno-options mt-2">
@@ -1715,7 +1896,7 @@
                 class="nqas-annual-report-external-review-visit-epresentatives-item mt-2"
               >
                 <label class="nqas-annual-report-label-input">
-                  b. Major suggestions given by external review visit team:
+                  B. Major suggestions given by external review visit team:
                 </label>
 
                 <div class="nqas-annual-report-number-list">
@@ -1725,16 +1906,25 @@
                       <div class="nqas-annual-report-number-item">
                         <div class="row align-items-center g-2">
                           <div class="col-auto">
-                            <span>i.</span>
+                            <span>I.</span>
                           </div>
-
-                          <div class="col">
-                            <input
-                              type="text"
+                          <div class="col-12 col-md-12">
+                            <textarea  type="text"
+                            rows="3"
                               name="external_examiner_suggestion_1"
-                              class="form-control"
-                              placeholder="Major suggestion"
-                            />
+                              class="form-control external-review-visit-team-word-limit-30"
+                              placeholder="Major suggestion"></textarea>
+                                 <p
+                          class="mt-2 d-flex justify-content-between align-items-center"
+                        >
+                          <strong class="text-danger">
+                            Maximum 30 words Allowed.
+                          </strong>
+
+                          <small class="word-counter">
+                            0 /Words Maximum Allowed.</small
+                          >
+                        </p>
                           </div>
                         </div>
                       </div>
@@ -1745,20 +1935,80 @@
                       <div class="nqas-annual-report-number-item">
                         <div class="row align-items-center g-2">
                           <div class="col-auto">
-                            <span>ii.</span>
+                            <span>II.</span>
+                          </div>
+                           <div class="col-12 col-md-12">
+                            <textarea  type="text"
+                            rows="3"
+                              name="external_examiner_suggestion_2"
+                              class="form-control external-review-visit-team-word-limit-30"
+                              placeholder="Major suggestion"></textarea>
+                                 <p
+                          class="mt-2 d-flex justify-content-between align-items-center"
+                        >
+                          <strong class="text-danger">
+                            Maximum 30 words Allowed.
+                          </strong>
+
+                          <small class="word-counter">
+                            0 /Words Maximum Allowed.</small
+                          >
+                        </p>
                           </div>
 
-                          <div class="col">
-                            <input
-                              type="text"
-                              name="external_examiner_suggestion_2"
-                              class="form-control"
-                              placeholder="Major suggestion"
-                            />
-                          </div>
+                         
                         </div>
                       </div>
                     </div>
+                     <script>
+                    document.addEventListener("DOMContentLoaded", function () {
+                      document
+                        .querySelectorAll(".external-review-visit-team-word-limit-30")
+                        .forEach(function (textarea) {
+                          const counter =
+                            textarea.parentElement.querySelector(
+                              ".word-counter",
+                            );
+                          const maxWords = 30;
+
+                          textarea.addEventListener("input", function () {
+                            let words = textarea.value
+                              .trim()
+                              .split(/\s+/)
+                              .filter(Boolean);
+
+                            if (words.length > maxWords) {
+                              textarea.value = words
+                                .slice(0, maxWords)
+                                .join(" ");
+                            }
+
+                            words = textarea.value
+                              .trim()
+                              .split(/\s+/)
+                              .filter(Boolean);
+
+                            counter.textContent =
+                              words.length +
+                              " / " +
+                              maxWords +
+                              " Words Maximum Allowed.";
+                          });
+
+                          textarea.addEventListener("keydown", function (e) {
+                            let words = textarea.value
+                              .trim()
+                              .split(/\s+/)
+                              .filter(Boolean);
+
+                            // 150 words হলে নতুন শব্দ শুরু করতে দেবে না
+                            if (words.length >= maxWords && e.key === " ") {
+                              e.preventDefault();
+                            }
+                          });
+                        });
+                    });
+                  </script>
                   </div>
                 </div>
               </div>

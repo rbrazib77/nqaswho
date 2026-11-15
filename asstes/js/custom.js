@@ -1,20 +1,39 @@
 
-// Curriculum Execution 
-    function toggleCurriculumExecutionFile() {
-        const yesOption = document.querySelector(
-            'input[name="curriculum_execution"][value="yes"]'
-        );
+function toggleCurriculumExecutionFile() {
 
-        const fileSection = document.getElementById(
-            'curriculumExecutionFile'
-        );
-
-        if (yesOption.checked) {
-            fileSection.style.display = 'block';
-        } else {
-            fileSection.style.display = 'none';
+    const fields = [
+        {
+            radio: 'curriculum_execution',
+            section: 'curriculumExecutionFile'
+        },
+        {
+            radio: 'integrated_teaching',
+            section: 'integratedTeachingFile'
+        },
+        {
+            radio: 'generic_topics',
+            section: 'genericTopicsFile'
         }
-    }
+    ];
+
+    fields.forEach(field => {
+
+        const selected = document.querySelector(
+            `input[name="${field.radio}"]:checked`
+        );
+
+        const section = document.getElementById(field.section);
+
+        const isYes = selected?.value === 'yes';
+
+        section.style.display = isYes ? 'block' : 'none';
+
+        section.querySelectorAll('input, textarea').forEach(input => {
+            input.disabled = !isYes;
+        });
+
+    });
+}
 
 // Only Year Picker
     function togglePhaseEvaluation() {
