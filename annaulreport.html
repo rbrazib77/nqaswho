@@ -1955,8 +1955,6 @@
                           >
                         </p>
                           </div>
-
-                         
                         </div>
                       </div>
                     </div>
@@ -2018,89 +2016,110 @@
               <h3 class="nqas-annual-report-section-title mb-4">
                 8. Faculty Development and Review Scheme
               </h3>
-
               <div class="nqas-annual-report-faculty-development-item">
                 <label class="nqas-annual-report-label-input">
-                  a. Do you have faculty development program in your medical
-                  college?
+                    A. Do you have faculty development program in your medical college?
                 </label>
-
                 <div class="nqas-annual-report-yesno-options mt-2">
-                  <label class="nqas-annual-report-option">
-                    <input type="radio" name="student_counseling" value="yes" />
-                    <span>Yes</span>
-                  </label>
+                    <label class="nqas-annual-report-option">
+                        <input type="radio"
+                              name="development_program"
+                              value="yes"
+                              onchange="toggleDevelopmentProgram()">
+                        <span>Yes</span>
+                    </label>
 
-                  <label class="nqas-annual-report-option">
-                    <input type="radio" name="student_counseling" value="no" />
-                    <span>No</span>
-                  </label>
+                    <label class="nqas-annual-report-option">
+                        <input type="radio"
+                              name="development_program"
+                              value="no"
+                              onchange="toggleDevelopmentProgram()">
+                        <span>No</span>
+                    </label>
+                </div>
+              </div>
+              <div id="developmentProgramQuestions" style="display:none;">
+                <div class="nqas-annual-report__question nqas-annual-report__nested-question">
+                    <label class="nqas-annual-report-label-input">
+                        I. Do your faculty members fill up the personal review form? (Annexure-II)
+                    </label>
+
+                    <div class="nqas-annual-report-yesno-options mt-2">
+                        <label class="nqas-annual-report-option">
+                            <input type="radio" name="faculty_personal_review" value="yes">
+                            <span>Yes</span>
+                        </label>
+
+                        <label class="nqas-annual-report-option">
+                            <input type="radio" name="faculty_personal_review" value="no">
+                            <span>No</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="nqas-annual-report__question nqas-annual-report__nested-question">
+                    <label class="nqas-annual-report-label-input">
+                        II. Do you have provision of an annual review meeting for faculty development?
+                    </label>
+
+                    <div class="nqas-annual-report-yesno-options mt-2">
+                        <label class="nqas-annual-report-option">
+                            <input type="radio" name="annual_review_meeting" value="yes">
+                            <span>Yes</span>
+                        </label>
+
+                        <label class="nqas-annual-report-option">
+                            <input type="radio" name="annual_review_meeting" value="no">
+                            <span>No</span>
+                        </label>
+                    </div>
                 </div>
               </div>
 
-              <div
-                class="nqas-annual-report__question nqas-annual-report__nested-question"
-              >
-                <label class="nqas-annual-report-label-input">
-                  i. Do your faculty members fill up the personal review
-                  form?(Annexure-II)
-                </label>
+              <script>
+                function toggleDevelopmentProgram() {
+                      const selected = document.querySelector(
+                          'input[name="development_program"]:checked'
+                      );
 
-                <div class="nqas-annual-report-yesno-options mt-2">
-                  <label class="nqas-annual-report-option">
-                    <input type="radio" name="student_counseling" value="yes" />
-                    <span>Yes</span>
-                  </label>
+                      const section = document.getElementById(
+                          'developmentProgramQuestions'
+                      );
 
-                  <label class="nqas-annual-report-option">
-                    <input type="radio" name="student_counseling" value="no" />
-                    <span>No</span>
-                  </label>
-                </div>
-              </div>
+                      const isYes = selected?.value === 'yes';
 
-              <div
-                class="nqas-annual-report__question nqas-annual-report__nested-question"
-              >
-                <label class="nqas-annual-report-label-input">
-                  ii. Do you have provision of an annual review meeting for
-                  faculty development?
-                </label>
+                      section.style.display = isYes ? 'block' : 'none';
 
-                <div class="nqas-annual-report-yesno-options mt-2">
-                  <label class="nqas-annual-report-option">
-                    <input type="radio" name="student_counseling" value="yes" />
-                    <span>Yes</span>
-                  </label>
+                      section.querySelectorAll('input').forEach(input => {
+                          input.disabled = !isYes;
+                      });
+                  }
 
-                  <label class="nqas-annual-report-option">
-                    <input type="radio" name="student_counseling" value="no" />
-                    <span>No</span>
-                  </label>
-                </div>
-              </div>
+                  toggleDevelopmentProgram();
+              </script>
+              
               <div class="nqas-annual-report-faculty-development-item mt-2">
                 <label class="nqas-annual-report-label-input">
-                  b. Mention the names of training conducted for the faculties
-                  at your colleges with number of 25 participating members—
+                  B. Mention the names of training conducted for the faculties
+                  at your colleges with number of participating members—
                 </label>
                 <div class="nqas-annual-report-number-list">
                   <div class="row g-3">
                     <div class="col-12 col-md-12">
                       <input
-                        type="text"
+                        type="number"
                         name="faculty_development_recommendation_1"
                         class="form-control"
                         placeholder="participating members"
                       />
                     </div>
                   </div>
+                  <input type="file" class="form-control mt-3">
                 </div>
               </div>
               <!-- 8.c -->
               <div class="nqas-annual-report-faculty-development-item mt-2">
                 <span class="nqas-annual-report-label-input">
-                  c. Do you have provision to evaluate class by students?
+                  C. Do you have provision to evaluate class by students?
                 </span>
                 <div class="nqas-annual-report-yesno-options mt-2">
                   <label class="nqas-annual-report-option">
@@ -2117,7 +2136,7 @@
               <!-- 8.d -->
               <div class="nqas-annual-report-faculty-development-item mt-2">
                 <label class="nqas-annual-report-label-input">
-                  d. Specific Recommendations for Faculty Development &amp;
+                  D. Specific Recommendations for Faculty Development &amp;
                   Review scheme:
                 </label>
 
@@ -2128,17 +2147,29 @@
                       <div class="nqas-annual-report-number-item">
                         <div class="row align-items-center g-2">
                           <div class="col-auto">
-                            <span>i.</span>
+                            <span>I.</span>
                           </div>
 
-                          <div class="col">
-                            <input
-                              type="text"
+                            <div class="col-12 col-md-12">
+                            <textarea  type="text"
+                            rows="3"
                               name="faculty_development_recommendation_1"
-                              class="form-control"
-                              placeholder="Specific recommendation"
-                            />
+                              class="form-control specific-recommendations-faculty-development-word-limit-120"
+                              placeholder="Major suggestion"></textarea>
+                                 <p
+                          class="mt-2 d-flex justify-content-between align-items-center"
+                        >
+                          <strong class="text-danger">
+                            Maximum 30 words Allowed.
+                          </strong>
+
+                          <small class="word-counter">
+                            0 /Words Maximum Allowed.</small
+                          >
+                        </p>
                           </div>
+
+                          
                         </div>
                       </div>
                     </div>
@@ -2148,22 +2179,81 @@
                       <div class="nqas-annual-report-number-item">
                         <div class="row align-items-center g-2">
                           <div class="col-auto">
-                            <span>ii.</span>
+                            <span>II.</span>
                           </div>
 
-                          <div class="col">
-                            <input
-                              type="text"
+                           <div class="col-12 col-md-12">
+                            <textarea  type="text"
+                            rows="3"
                               name="faculty_development_recommendation_2"
-                              class="form-control"
-                              placeholder="Specific recommendation"
-                            />
+                              class="form-control specific-recommendations-faculty-development-word-limit-120"
+                              placeholder="Major suggestion"></textarea>
+                                 <p
+                          class="mt-2 d-flex justify-content-between align-items-center"
+                        >
+                          <strong class="text-danger">
+                            Maximum 30 words Allowed.
+                          </strong>
+
+                          <small class="word-counter">
+                            0 /Words Maximum Allowed.</small
+                          >
+                        </p>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
+                 <script>
+                    document.addEventListener("DOMContentLoaded", function () {
+                      document
+                        .querySelectorAll(".specific-recommendations-faculty-development-word-limit-120")
+                        .forEach(function (textarea) {
+                          const counter =
+                            textarea.parentElement.querySelector(
+                              ".word-counter",
+                            );
+                          const maxWords = 120;
+
+                          textarea.addEventListener("input", function () {
+                            let words = textarea.value
+                              .trim()
+                              .split(/\s+/)
+                              .filter(Boolean);
+
+                            if (words.length > maxWords) {
+                              textarea.value = words
+                                .slice(0, maxWords)
+                                .join(" ");
+                            }
+
+                            words = textarea.value
+                              .trim()
+                              .split(/\s+/)
+                              .filter(Boolean);
+
+                            counter.textContent =
+                              words.length +
+                              " / " +
+                              maxWords +
+                              " Words Maximum Allowed.";
+                          });
+
+                          textarea.addEventListener("keydown", function (e) {
+                            let words = textarea.value
+                              .trim()
+                              .split(/\s+/)
+                              .filter(Boolean);
+
+                            // 150 words হলে নতুন শব্দ শুরু করতে দেবে না
+                            if (words.length >= maxWords && e.key === " ") {
+                              e.preventDefault();
+                            }
+                          });
+                        });
+                    });
+                  </script>
               </div>
             </div>
             <!-- ========================9. Administrative External Review=============================== -->
